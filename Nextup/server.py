@@ -144,10 +144,25 @@ def tips_process():
     if not validators.email(email):
         error.append("error14")
     
+    print category
+    print event_name
+    print start_date
+    print end_date
+    print start_time
+    print end_time
+    print location
+    print address
+    print organizer
+    print website
+    print image
+    print desc
+    print tipster
+    print email
+    
     if len(error) > 0:
         return template("tips", error=error)
-    
-    '''print category
+    '''
+    print category
     print event_name
     print start_date
     print end_date

@@ -94,6 +94,10 @@ header.carousel .fill {
 footer {
     margin: 50px 0;
 }
+#copy{
+    text-align: center;
+    
+}
 
 /* Responsive Styles */
 
