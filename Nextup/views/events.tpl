@@ -1,3 +1,4 @@
+<!-- Include headsection and global navigation -->
 % include("head.tpl")
 
     <!-- Page Content -->
@@ -31,4 +32,5 @@
                 <a class="btn btn-primary" href="portfolio-item.html">View Project</i></a>
             </div>
         </div>
+<!-- Include footsection -->
 % include("foot.tpl")

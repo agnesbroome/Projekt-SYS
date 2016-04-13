@@ -1,3 +1,4 @@
+<!-- Include headsection and global navigation -->
 % include("head.tpl")
 
     <!-- Page Content -->
@@ -96,5 +97,5 @@
         </div>
 
         <hr>
-
+<!-- Include footsection -->
 % include("foot.tpl")

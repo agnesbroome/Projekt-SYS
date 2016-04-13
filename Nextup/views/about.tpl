@@ -1,3 +1,4 @@
+<!-- Include headsection and global navigation -->
 % include("head.tpl")
 <!-- testar bara -->
     <!-- Page Content -->
@@ -162,5 +163,5 @@
         <!-- /.row -->
 
         <hr>
-
-       % include("foot.tpl")
+<!-- Include footsection -->
+% include("foot.tpl")

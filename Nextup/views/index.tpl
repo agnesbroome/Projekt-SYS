@@ -1,4 +1,6 @@
+<!-- Include headsection and global navigation -->
 % include("head.tpl")
+
     <!-- Header Carousel -->
     <header id="myCarousel" class="carousel slide">
         <!-- Indicators -->
@@ -7,13 +9,14 @@
             <li data-target="#myCarousel" data-slide-to="1"></li>
             <li data-target="#myCarousel" data-slide-to="2"></li>
         </ol>
-
+        <!-- /Indicators -->
+        
         <!-- Wrapper for slides -->
         <div class="carousel-inner">
             <div class="item active">
                 <div class="fill" style="background-image:url('/static/images/one.jpg');"></div>
                 <div class="carousel-caption">
-                    <!--ref: http://static1.squarespace.com/static/55c37beae4b0336075603f86/55c3cd80e4b01531b3208f2e/5603032be4b008bd0ad4e6fb/1455546867623/?format=1500w -->
+                    <!--ref:  http://static1.squarespace.com/static/55c37beae4b0336075603f86/55c3cd80e4b01531b3208f2e/5603032be4b008bd0ad4e6fb/1455546867623/?format=1500w -->
                     <h2>Exempel 1</h2>
                 </div>
             </div>
@@ -32,6 +35,7 @@
                 </div>
             </div>
         </div>
+        <!-- /Wrapper for slides -->
 
         <!-- Controls -->
         <a class="left carousel-control" href="#myCarousel" data-slide="prev">
@@ -40,12 +44,14 @@
         <a class="right carousel-control" href="#myCarousel" data-slide="next">
             <span class="icon-next"></span>
         </a>
+        <!-- /Controls -->        
     </header>
+    <!-- /Header Carousel -->
 
     <!-- Page Content -->
     <div class="container">
 
-        <!-- Marketing Icons Section -->
+        <!-- Main funktionality Section -->
         <div class="row">
             <div class="col-lg-12">
                 <h1 class="page-header" id="indexheader">
@@ -70,8 +76,35 @@
                         <h4><i class="glyphicon glyphicon-star"></i> Kommande events</h4>
                     </div>
                     <div class="panel-body">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus eveniet incidunt dicta nostrum quod?</p>
-                        <a href="#" class="btn btn-default">Learn More</a>
+                        <table class="table table-hover table-condensed">
+                            <tbody>
+                                <tr>
+                                    <td>Datum</td>
+                                    <td>Tid</td>
+                                    <td>Eventnamn </td>
+                                </tr>
+                                <tr>
+                                    <td>Datum</td>
+                                    <td>Tid</td>
+                                    <td>Eventnamn </td>
+                                </tr>
+                                <tr>
+                                    <td>Datum</td>
+                                    <td>Tid</td>
+                                    <td>Eventnamn </td>
+                                </tr>
+                                <tr>
+                                    <td>Datum</td>
+                                    <td>Tid</td>
+                                    <td>Eventnamn </td>
+                                </tr>
+                                <tr>
+                                    <td>Datum</td>
+                                    <td>Tid</td>
+                                    <td>Eventnamn </td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>
@@ -87,7 +120,9 @@
                 </div>
             </div>
         </div>
-
+        <!-- /Main funktionality Section -->
+        <!-- /Page Content -->
 
         <hr>
+<!-- Include footsection -->
 % include("foot.tpl")

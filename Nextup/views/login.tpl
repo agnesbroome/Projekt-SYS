@@ -1,3 +1,4 @@
+<!-- Include headsection and global navigation -->
 % include("head.tpl")
   <!-- Page Content -->
     <div class="container">
@@ -25,4 +26,5 @@
         <script src="/static/js/loginscript.js"></script>
        
 
+<!-- Include footsection -->
 % include("foot.tpl")   
