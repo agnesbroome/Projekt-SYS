@@ -9,7 +9,7 @@
             <div class="col-lg-12">
                 <h1 class="page-header">Tipsa om event</h1>
                 <ol class="breadcrumb">
-                    <li><a href="index.html">Hem</a>
+                    <li><a href="/">Hem</a>
                     </li>
                     <li class="active">Tipsa om event</li>
                 </ol>

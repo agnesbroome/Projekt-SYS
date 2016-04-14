@@ -88,9 +88,9 @@ def process():
         session["Username"] = result["Username"]
         session["ID"] = result["ID"]
         session.save()
-        redirect("/admin")
+        redirect("admin")
     else:
-        return template("/login", user=get_user(), error=True)
+        return template("login", user=get_user(), error=True)
     
 @route("/tipsprocess", method="post")
 def tips_process():

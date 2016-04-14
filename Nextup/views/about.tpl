@@ -12,9 +12,9 @@
                     <small>Kontakt</small>
                 </h1>
                 <ol class="breadcrumb">
-                    <li><a href="index.html">Hem</a>
+                    <li><a href="/">Hem</a>
                     </li>
-                    <li class="active">Kontakt</li>
+                    <li class="active">Om oss</li>
                 </ol>
             </div>
         </div>
@@ -41,7 +41,7 @@
             </div>
             <div class="col-md-4 text-center">
                 <div class="thumbnail">
-                    <img class="img-responsive" src="images/maria.jpg" alt="">
+                    <img class="img-responsive" src="static/images/maria.jpg" alt="">
                     <div class="caption">
                         <h3>Maria Holmberg<br>
                             <small>Job Title</small>
@@ -60,7 +60,7 @@
             </div>
             <div class="col-md-4 text-center">
                 <div class="thumbnail">
-                    <img class="img-responsive" src="images/emma.jpg" alt="">
+                    <img class="img-responsive" src="static/images/emma.jpg" alt="">
                     <div class="caption">
                         <h3>Emma Zachs<br>
                             <small>Job Title</small>
@@ -79,7 +79,7 @@
             </div>
             <div class="col-md-4 text-center">
                 <div class="thumbnail">
-                    <img class="img-responsive" src="images/daniel.jpg" alt="">
+                    <img class="img-responsive" src="static/images/daniel.jpg" alt="">
                     <div class="caption">
                         <h3>Daniel Hägerström<br>
                             <small>Job Title</small>
@@ -98,7 +98,7 @@
             </div>
             <div class="col-md-4 text-center">
                 <div class="thumbnail">
-                    <img class="img-responsive" src="images/niklas.jpg" alt="">
+                    <img class="img-responsive" src="static/images/niklas.jpg" alt="">
                     <div class="caption">
                         <h3>Niklas Sätterwall<br>
                             <small>Job Title</small>
@@ -117,7 +117,7 @@
             </div>
             <div class="col-md-4 text-center">
                 <div class="thumbnail">
-                    <img class="img-responsive" src="images/agnes.jpg" alt="">
+                    <img class="img-responsive" src="static/images/agnes.jpg" alt="">
                     <div class="caption">
                         <h3>Agnes Broomé Clason<br>
                             <small>Job Title</small>

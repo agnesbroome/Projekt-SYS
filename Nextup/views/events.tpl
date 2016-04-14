@@ -10,7 +10,7 @@
                 <h1 class="page-header">Eventsamling
                 </h1>
                 <ol class="breadcrumb">
-                    <li><a href="index.html">Hem</a>
+                    <li><a href="/">Hem</a>
                     </li>
                     <li class="active">Eventsamling</li>
                 </ol>

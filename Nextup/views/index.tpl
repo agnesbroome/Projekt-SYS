@@ -69,7 +69,7 @@
                     </div>
                     <div class="panel-body">
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus eveniet incidunt dicta nostrum quod?</p>
-                        <a href="events" class="btn btn-default">Tipsa här</a>
+                        <a href="tips" class="btn btn-default">Tipsa här</a>
                     </div>
                 </div>
             </div>
