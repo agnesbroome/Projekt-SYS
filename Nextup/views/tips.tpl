@@ -15,7 +15,8 @@
                 </ol>
             </div>
         </div>
-        <!-- /.row -->
+        <!-- /Page Heading/Breadcrumbs -->
+        <!-- Tip form -->
         <div class="row">
             <div class="col-md-8">
                 <form action="/tipsprocess" method="post" accept-charset="UTF-8">
@@ -91,8 +92,9 @@
                     </div>
                 <button type="submit" class="btn btn-lg btn-primary">Skicka</button>
             </div>
+        <!-- /Tip form -->
         </form>
-
+    <!-- /Page Content -->
         <!-- /.row -->
 <!-- Include footsection -->
 % include("foot.tpl")

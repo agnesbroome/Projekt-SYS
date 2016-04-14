@@ -2,7 +2,9 @@
 % include("head.tpl")
 
     <!-- Header Carousel -->
+    <!-- JS for Carusel speed is in foot.tpl -->
     <header id="myCarousel" class="carousel slide">
+        
         <!-- Indicators -->
         <ol class="carousel-indicators">
             <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -50,15 +52,16 @@
 
     <!-- Page Content -->
     <div class="container">
-
-        <!-- Main funktionality Section -->
         <div class="row">
             <div class="col-lg-12">
                 <h1 class="page-header" id="indexheader">
                     Next UP! <small>Eventscen Malmö</small>
                 </h1>
-
             </div>
+            <!-- /Page header -->
+            
+            <!-- Main funktionality Section -->
+            <!-- Section 1 - Left -->
             <div class="col-md-4">
                 <div class="panel panel-default">
                     <div class="panel-heading">
@@ -70,6 +73,9 @@
                     </div>
                 </div>
             </div>
+            <!-- /Section 1 - Left -->
+            
+            <!-- Section 2 - Center -->
             <div class="col-md-4">
                 <div class="panel panel-default">
                     <div class="panel-heading">
@@ -108,6 +114,9 @@
                     </div>
                 </div>
             </div>
+            <!-- /Section 2 - Center -->
+            
+            <!-- Section 3 - Right -->
             <div class="col-md-4">
                 <div class="panel panel-default">
                     <div class="panel-heading">
@@ -119,6 +128,7 @@
                     </div>
                 </div>
             </div>
+            <!-- /Section 3 - Right -->
         </div>
         <!-- /Main funktionality Section -->
         <!-- /Page Content -->

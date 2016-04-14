@@ -1,6 +1,7 @@
 <!-- Include headsection and global navigation -->
 % include("head.tpl")
-<!-- testar bara -->
+
+
     <!-- Page Content -->
     <div class="container">
 
@@ -17,7 +18,7 @@
                 </ol>
             </div>
         </div>
-        <!-- /.row -->
+        <!-- /Page Heading/Breadcrumbs -->
 
         <!-- Intro Content -->
         <div class="row">
@@ -31,7 +32,7 @@
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et, consequuntur, modi mollitia corporis ipsa voluptate corrupti eum ratione ex ea praesentium quibusdam? Aut, in eum facere corrupti necessitatibus perspiciatis quis?</p>
             </div>
         </div>
-        <!-- /.row -->
+        <!-- /Intro Content -->
 
         <!-- Team Members -->
         <div class="row">
@@ -134,33 +135,9 @@
                 </div>
             </div>
         </div>
-        <!-- /.row -->
+        <!-- /Team Members -->
 
-        <!-- Our Customers -->
-        <div class="row">
-            <div class="col-lg-12">
-                <h2 class="page-header">Our Customers</h2>
-            </div>
-            <div class="col-md-2 col-sm-4 col-xs-6">
-                <img class="img-responsive customer-img" src="http://placehold.it/500x300" alt="">
-            </div>
-            <div class="col-md-2 col-sm-4 col-xs-6">
-                <img class="img-responsive customer-img" src="http://placehold.it/500x300" alt="">
-            </div>
-            <div class="col-md-2 col-sm-4 col-xs-6">
-                <img class="img-responsive customer-img" src="http://placehold.it/500x300" alt="">
-            </div>
-            <div class="col-md-2 col-sm-4 col-xs-6">
-                <img class="img-responsive customer-img" src="http://placehold.it/500x300" alt="">
-            </div>
-            <div class="col-md-2 col-sm-4 col-xs-6">
-                <img class="img-responsive customer-img" src="http://placehold.it/500x300" alt="">
-            </div>
-            <div class="col-md-2 col-sm-4 col-xs-6">
-                <img class="img-responsive customer-img" src="http://placehold.it/500x300" alt="">
-            </div>
-        </div>
-        <!-- /.row -->
+        
 
         <hr>
 <!-- Include footsection -->
