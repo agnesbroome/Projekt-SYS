@@ -6,10 +6,12 @@ import datetime
 import validators
 
 #OPTIONS
+#Här skapas inloggningen till databasen.
 db = MySQLdb.connect(host="localhost", user="root", passwd="", db="nextup", charset="utf8");
 cur = db.cursor(MySQLdb.cursors.DictCursor)
 
 #SESSIONS
+#Här finns vad som skall lagras i vår "cookie".
 session_opts = {
 'session.type': 'file',
 'session.cookie_expires': 3000,
@@ -17,6 +19,7 @@ session_opts = {
 'session.auto': True
 }
 #APP
+#App är egentligen bara en variabel som används vid körning av serverfilen.
 app = SessionMiddleware(app(), session_opts)
 
 def get_user():
@@ -31,11 +34,14 @@ def get_user():
 
 #Static Routes
 
+#Här har vi länken till alla statiska filer, dvs. bilder, javascript, css osv.
 @route('/static/<filename:path>')
 def server_static(filename):
     return static_file(filename, root='static')
 
 #Routes
+
+#Här är alla routes, de man kan nå via vår hemsida efter grundnamnet. typ www.nextup.se. Så www.nextup.se/ är hem, som ni ser nedan. www.nextup.se/tips så kommer man till den routen. Allt detta sköter vår serverfil, dvs. denna filen.
 @route("/")
 def index():
     return template("index")
@@ -75,6 +81,7 @@ def events():
 def login():
     return template("login", user=get_user(), error=False)
 
+#Detta är det som händer ner man trycker på "login" knappen via vår admin sida. Vi skapar två variablar där vi lagrar det som användaren skriver i de två fälten. Dvs. User och password. Sedan skapas en fråga, query. Som vi skickar till vår databas med hjälp av SQL. Som ni kan se försöker frågan hämta ut username och password ifrån databasen, existerar inte dessa, skickas man tillbaka till loginsidan med error satt till True, det är False ifrån början.
 @route("/process", method="post")
 def process():
     user = request.forms.get("id")
@@ -92,6 +99,7 @@ def process():
     else:
         return template("login", user=get_user(), error=True)
     
+#Denna route hanterar vad som händer med formuläret när det skickats, I html filen står det att den skall postas till /tipsprocess. Vilket är denna. Sedan hämtar vi ut alla värden ifrån formuläret, dessa skall sedan lagras i databasen. Vi kontrollerar även samtliga värden med diverse insticksmoduler! Vi skapar en tom error "lista" sedan lagras alla fel i den listan, om de existerar.
 @route("/tipsprocess", method="post")
 def tips_process():
     error = []
@@ -144,20 +152,7 @@ def tips_process():
     if not validators.email(email):
         error.append("error14")
     
-    print category
-    print event_name
-    print start_date
-    print end_date
-    print start_time
-    print end_time
-    print location
-    print address
-    print organizer
-    print website
-    print image
-    print desc
-    print tipster
-    print email
+    print error
     
     if len(error) > 0:
         return template("tips", error=error)

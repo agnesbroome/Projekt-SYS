@@ -1,3 +1,6 @@
+<!DOCTYPE html>
+<html lang="en">
+
 <!-- Include headsection and global navigation -->
 % include("head.tpl")
 
@@ -19,10 +22,10 @@
         <!-- Tip form -->
         <div class="row">
             <div class="col-md-8">
-                <form action="/tipsprocess" method="post" accept-charset="UTF-8">
+                <form id="tipsform" action="/tipsprocess" method="post" accept-charset="UTF-8">
                     <div class="input-group form-group">
                           <span class="input-group-addon" id="basic-addon3">Eventnamn</span>
-                        <input type="text" class="form-control" aria-describedby="basic-addon3" name="eventname">
+                        <input type="text" class="form-control" aria-describedby="basic-addon3" name="eventname" id="eventname">
                     </div>
                     <div class="form-group">
                         <label class="checkbox-inline">
@@ -98,3 +101,5 @@
         <!-- /.row -->
 <!-- Include footsection -->
 % include("foot.tpl")
+<script src="static/js/tipsscript.js"></script>
+</html>

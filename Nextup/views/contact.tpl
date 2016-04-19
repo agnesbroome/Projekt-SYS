@@ -1,3 +1,6 @@
+<!DOCTYPE html>
+<html lang="en">
+
 <!-- Include headsection and global navigation -->
 % include("head.tpl")
 
@@ -63,3 +66,4 @@
         <hr>
 <!-- Include footsection -->
 % include("foot.tpl")
+</html>
