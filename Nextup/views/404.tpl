@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="utf-8">
 
 <!-- Include headsection and global navigation -->
 % include("head.tpl")
@@ -20,7 +20,7 @@
                 </ol>
             </div>
         </div>
-        <!-- /.row -->
+        <!-- /Page Heading/Breadcrumbs -->
 
         <div class="row">
 
@@ -100,6 +100,7 @@
         </div>
 
         <hr>
+    <!-- Page Content -->
 <!-- Include footsection -->
 % include("foot.tpl")
 </html>

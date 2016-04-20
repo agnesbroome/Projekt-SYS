@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="utf-8">
 
 <!-- Include headsection and global navigation -->
 % include("head.tpl")
@@ -101,5 +101,5 @@
         <!-- /.row -->
 <!-- Include footsection -->
 % include("foot.tpl")
-<script src="static/js/tipsscript.js"></script>
+<!-- <script src="static/js/tipsscript.js"></script>-->
 </html>

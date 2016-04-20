@@ -73,9 +73,9 @@ def contact():
 def faq():
     return template("faq")
 
-@route("/events")
+@route("/eventpage")
 def events():
-    return template("events")
+    return template("eventpage")
 
 @route("/login")
 def login():
@@ -153,6 +153,7 @@ def tips_process():
         error.append("error14")
     
     print error
+
     
     if len(error) > 0:
         return template("tips", error=error)
