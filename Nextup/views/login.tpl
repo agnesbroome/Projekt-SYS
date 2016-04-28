@@ -2,7 +2,7 @@
 <html lang="utf-8">
 
 <!-- Include headsection and global navigation -->
-% include("head.tpl")
+%include("headadminlogin.tpl")
 
   <!-- Page Content -->
     <div class="container">
@@ -22,7 +22,7 @@
                             <div class="input-group form-group">
                                 <span class="input-group-addon" id="basic-addon2">Lösenord</span><input type="password" class="form-control" aria-describedby="basic-addon2" name="pw">
                             </div>
-                            <button type="submit" class="btn btn-primary">Logga in</button>
+                            <button type="submit" id = "loginbutton"  class="btn btn-primary">Logga in</button>
                         </form>
                 </div>
             </div>

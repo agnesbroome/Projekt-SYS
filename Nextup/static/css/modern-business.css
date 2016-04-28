@@ -23,6 +23,13 @@ body {
 .input-group-addon{
     min-width: 100px;
 }
+#basic-addon2{
+    min-width: 120px;
+}
+#basic-addon1{
+    min-width: 120px;
+}
+
 label{
     font-weight: normal;
 }
@@ -43,6 +50,11 @@ h1 > small {
 
 .img-hover:hover {
     opacity: 0.8;
+}
+
+#loginbutton {
+    background-color: #4671D5;
+    min-width: 120px;
 }
 
 /* Home Page Carousel */

@@ -15,7 +15,7 @@ cur = db.cursor(MySQLdb.cursors.DictCursor)
 #Storage in "cookie".
 session_opts = {
 'session.type': 'file',
-'session.cookie_expires': 3000,
+'session.cookie_expires': 1000,
 'session.data_dir': './',
 'session.auto': True
 }
@@ -99,6 +99,12 @@ def process():
         redirect("admin")
     else:
         return template("login", user=get_user(), error=True)
+    
+@route("/end_process")   
+def end_process():
+    log.end_process()
+    redirect("/login")
+    
     
 #Denna route hanterar vad som händer med formuläret när det skickats, I html filen står det att den skall postas till /tipsprocess. Vilket är denna. Sedan hämtar vi ut alla värden ifrån formuläret, dessa skall sedan lagras i databasen. Vi kontrollerar även samtliga värden med diverse insticksmoduler! Vi skapar en tom error "lista" sedan lagras alla fel i den listan, om de existerar.
 @route("/tipsprocess", method="post")
