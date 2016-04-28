@@ -90,7 +90,7 @@
                                 <tr>
                                     <td>Datum</td>
                                     <td>Tid</td>
-                                    <td>Eventnamn </td>
+                                    <td><a href="eventpage">Eventnamn</a></td>
                                 </tr>
                                 <tr>
                                     <td>Datum</td>

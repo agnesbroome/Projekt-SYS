@@ -29,34 +29,26 @@
             <div class="col-md-8">
                 <h3>Kontaktformulär</h3>
                 <form name="sentMessage" id="contactForm" novalidate>
-                    <div class="control-group form-group">
-                        <div class="controls">
-                            <label>Namn:</label>
-                            <input type="text" class="form-control" id="name" required data-validation-required-message="Please enter your name.">
+                    <div class="input-group form-group">
+                            <span class="input-group-addon" id="basic-addon3">Namn</span>
+                            <input type="text" class="form-control" aria-describedby="basic-addon3" id="name" required data-validation-required-message="Please enter your name.">
                             <p class="help-block"></p>
-                        </div>
                     </div>
-                    <div class="control-group form-group">
-                        <div class="controls">
-                            <label>Telefon:</label>
-                            <input type="tel" class="form-control" id="phone" required data-validation-required-message="Please enter your phone number.">
-                        </div>
+                    <div class="input-group form-group">
+                            <span class="input-group-addon" id="basic-addon3">Telefon</span>
+                            <input type="tel" class="form-control" aria-describedby="basic-addon3" id="phone" required data-validation-required-message="Please enter your phone number.">
                     </div>
-                    <div class="control-group form-group">
-                        <div class="controls">
-                            <label>Email:</label>
-                            <input type="email" class="form-control" id="email" required data-validation-required-message="Please enter your email address.">
-                        </div>
+                    <div class="input-group form-group">
+                            <span class="input-group-addon" id="basic-addon3">Email</span>
+                            <input type="email" class="form-control" aria-describedby="basic-addon3" id="email" required data-validation-required-message="Please enter your email address.">
                     </div>
-                    <div class="control-group form-group">
-                        <div class="controls">
-                            <label>Meddelande:</label>
-                            <textarea rows="10" cols="100" class="form-control" id="message" required data-validation-required-message="Please enter your message" maxlength="999" style="resize:none"></textarea>
-                        </div>
+                    <div class="input-group form-group">
+                            <label class="form-group">Meddelande</label>
+                            <textarea rows="10" cols="100" class="form-control" aria-describedby="basic-addon3" id="message" required data-validation-required-message="Please enter your message" maxlength="999" style="resize:none"></textarea>
                     </div>
                     <div id="success"></div>
                     <!-- For success/fail messages -->
-                    <button type="submit" class="btn btn-primary">Skicka</button>
+                    <button type="submit" class="btn btn-lg btn-primary">Skicka</button>
                 </form>
             </div>
 
