@@ -101,6 +101,16 @@ header.carousel .fill {
     font-style: italic;
 }
 
+/* Eventpage Styles */
+#symbols{
+    margin-top: 0px;
+}
+#calender{
+    max-height: 293px;
+}
+#eventinfo{
+    max-height: 220px;
+}
 /* Footer Styles */
 
 footer {
