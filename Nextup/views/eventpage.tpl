@@ -27,6 +27,7 @@
             </div>
             <div class="col-md-6">
                 <h2>Event 1</h2>
+                <h3><i class="glyphicon glyphicon-glass"></i> <i class="glyphicon glyphicon-music"></i></h3>
                 <h4>Datum</h4>
                 <h4>HH:MM</h4>
                 <h4>Plats</h4>
