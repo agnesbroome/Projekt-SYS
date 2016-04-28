@@ -28,7 +28,7 @@
             </div>
         </div>
         <!-- /Page Heading/Breadcrumbs -->
-        <script src="/static/js/loginscript.js"></script> //
+        <script src="/static/js/loginscript.js"></script> 
        
 
 <!-- Include footsection -->
