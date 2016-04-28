@@ -4,7 +4,7 @@ from beaker.middleware import SessionMiddleware
 import MySQLdb
 import datetime
 import validators
-
+#from modules import log
 
 #OPTIONS
 #Logg in to server.
@@ -100,13 +100,14 @@ def process():
     else:
         return template("login", user=get_user(), error=True)
     
-@route("/end_process")   
-def end_process():
-    log.end_process()
-    redirect("/login")
-    
+#@route("/end_process")   
+#def end_process():
+    #session = session.delete("beaker.session")
+    #redirect("login")
+
     
 #Denna route hanterar vad som händer med formuläret när det skickats, I html filen står det att den skall postas till /tipsprocess. Vilket är denna. Sedan hämtar vi ut alla värden ifrån formuläret, dessa skall sedan lagras i databasen. Vi kontrollerar även samtliga värden med diverse insticksmoduler! Vi skapar en tom error "lista" sedan lagras alla fel i den listan, om de existerar.
+
 @route("/tipsprocess", method="post")
 def tips_process():
     error = []
