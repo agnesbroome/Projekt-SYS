@@ -8,7 +8,7 @@ import validators
 
 #OPTIONS
 #Logg in to server.
-db = MySQLdb.connect("195.178.232.7", user="AF6712", passwd="Kanelbulle88", db="AF6712", charset="utf8");
+db = MySQLdb.connect("195.178.232.7", port=4040, user="AF6712", passwd="Kanelbulle88", db="AF6712", charset="utf8");
 cur = db.cursor(MySQLdb.cursors.DictCursor)
 
 #SESSIONS
