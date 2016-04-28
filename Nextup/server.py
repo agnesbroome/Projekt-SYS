@@ -5,13 +5,14 @@ import MySQLdb
 import datetime
 import validators
 
+
 #OPTIONS
-#Här skapas inloggningen till databasen.
-db = MySQLdb.connect(host="localhost", user="root", passwd="", db="nextup", charset="utf8");
+#Logg in to server.
+db = MySQLdb.connect("195.178.232.7", user="AF6712", passwd="Kanelbulle88", db="AF6712", charset="utf8");
 cur = db.cursor(MySQLdb.cursors.DictCursor)
 
 #SESSIONS
-#Här finns vad som skall lagras i vår "cookie".
+#Storage in "cookie".
 session_opts = {
 'session.type': 'file',
 'session.cookie_expires': 3000,
@@ -19,7 +20,7 @@ session_opts = {
 'session.auto': True
 }
 #APP
-#App är egentligen bara en variabel som används vid körning av serverfilen.
+#Variable that runs with the server file.
 app = SessionMiddleware(app(), session_opts)
 
 def get_user():
@@ -34,7 +35,7 @@ def get_user():
 
 #Static Routes
 
-#Här har vi länken till alla statiska filer, dvs. bilder, javascript, css osv.
+#Link to the static file with images, javascript, css
 @route('/static/<filename:path>')
 def server_static(filename):
     return static_file(filename, root='static')
