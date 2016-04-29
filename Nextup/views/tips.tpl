@@ -47,7 +47,7 @@
                             <input type="checkbox" name="category" value="Konst"> Konst
                         </label>
                         <label class="checkbox-inline">
-                            <input type="checkbox" name="category" value="Annat"> Annat
+                            <input type="checkbox" name="category" value="Annat"> Övrigt
                         </label>                                                
                     </div>
                     <div class="form-group form-inline">
