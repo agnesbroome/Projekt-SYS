@@ -162,15 +162,13 @@ def tips_process():
     if not validators.email(tipster_mail):
         error.append("error14")
     
-    query = ("INSERT INTO event (event_name, first_day, last_day, first_time, last_time, location, adress, organizer, website, image, description, tipster, tipster_mail) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)")
-    cur.execute(query, (event_name, first_day, last_day,    first_time, last_time, location, adress, organizer, website, image, description, tipster, tipster_mail))
-    db.commit()
-    redirect("/")
-
-    
-
-
-
+    if len(error) > 0:
+        redirect("tips")
+        else:    
+            query = ("INSERT INTO event (event_name, first_day, last_day, first_time, last_time, location, adress, organizer, website, image, description, tipster, tipster_mail) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)")
+            cur.execute(query, (event_name, first_day, last_day,    first_time, last_time, location, adress, organizer, website, image, description, tipster, tipster_mail))
+            db.commit()
+            redirect("/")
 
 run(app=app)
 
