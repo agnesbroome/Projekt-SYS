@@ -8,7 +8,7 @@ import validators
 
 #OPTIONS
 #Log in to database
-db = MySQLdb.connect("195.178.232.7", port=4040, user="AF9250", passwd="Ankdamm1", db="AF9250", charset='utf8');
+db = MySQLdb.connect("195.178.232.7", port=4040, user="AF6712", passwd="Kanelbulle88", db="AF6712", charset='utf8');
 cur = db.cursor(MySQLdb.cursors.DictCursor)
 
 #SESSIONS
@@ -164,7 +164,7 @@ def tips_process():
     
     if len(error) > 0:
         redirect("tips")
-        else:    
+    else:    
             query = ("INSERT INTO event (event_name, first_day, last_day, first_time, last_time, location, adress, organizer, website, image, description, tipster, tipster_mail) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)")
             cur.execute(query, (event_name, first_day, last_day,    first_time, last_time, location, adress, organizer, website, image, description, tipster, tipster_mail))
             db.commit()
