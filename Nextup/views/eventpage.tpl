@@ -21,14 +21,12 @@
         <!-- /Page Heading/Breadcrumbs -->
 
         <!-- Eventpage -->
-        <div class="headevent">
-            <h2>Event 1</h2>  
-        </div>
-        <div class="row">
+        <div class="row" id="eventrow">
             <div class="col-md-6">
                 <img class="img-responsive" src="http://placehold.it/750x450" alt="">
             </div>
             <div id="eventinfo" class="col-md-6">
+                <h2>Event 1</h2> 
                 <h3 id="symbols"><i class="glyphicon glyphicon-glass"></i> <i class="glyphicon glyphicon-music"></i></h3>
                 <h4>Datum</h4>
                 <h4>HH:MM</h4>
@@ -38,7 +36,7 @@
                 <h4>www.webbsida.se</h4>
             </div>
         </div>
-        <div>
+        <div id="eventtext">
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed voluptate nihil eum consectetur similique? Consectetur, quod, incidunt, harum nisi dolores delectus reprehenderit voluptatem perferendis dicta dolorem non blanditiis ex fugiat.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed voluptate nihil eum consectetur similique? Consectetur, quod, incidunt, harum nisi dolores delectus reprehenderit voluptatem perferendis dicta dolorem non blanditiis ex fugiat. </p>
         </div>
             </div>  

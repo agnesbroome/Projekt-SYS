@@ -7,8 +7,8 @@ import validators
 #from modules import log
 
 #OPTIONS
-#Logg in to server.
-db = MySQLdb.connect("195.178.232.7", port=4040, user="AF6712", passwd="Kanelbulle88", db="AF6712", charset="utf8");
+#Log in to database
+db = MySQLdb.connect("195.178.232.7", port=4040, user="AF6712", passwd="Kanelbulle88", db="AF6712", charset='utf8');
 cur = db.cursor(MySQLdb.cursors.DictCursor)
 
 #SESSIONS
@@ -16,7 +16,7 @@ cur = db.cursor(MySQLdb.cursors.DictCursor)
 session_opts = {
 'session.type': 'file',
 'session.cookie_expires': 1000,
-'session.data_dir': './',
+'session.data_dir': './data',
 'session.auto': True
 }
 #APP
@@ -78,6 +78,12 @@ def faq():
 def events():
     return template("eventpage")
 
+@route("/logout")
+def logout():
+    session = request.environ.get("beaker.session")
+    session.delete()
+    redirect("/login")
+
 @route("/login")
 def login():
     return template("login", user=get_user(), error=False)
@@ -99,11 +105,7 @@ def process():
         redirect("admin")
     else:
         return template("login", user=get_user(), error=True)
-    
-#@route("/end_process")   
-#def end_process():
-    #session = session.delete("beaker.session")
-    #redirect("login")
+
 
     
 #Denna route hanterar vad som händer med formuläret när det skickats, I html filen står det att den skall postas till /tipsprocess. Vilket är denna. Sedan hämtar vi ut alla värden ifrån formuläret, dessa skall sedan lagras i databasen. Vi kontrollerar även samtliga värden med diverse insticksmoduler! Vi skapar en tom error "lista" sedan lagras alla fel i den listan, om de existerar.
@@ -184,3 +186,6 @@ def tips_process():
 
 
 run(app=app)
+
+
+

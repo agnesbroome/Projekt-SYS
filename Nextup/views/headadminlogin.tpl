@@ -50,7 +50,7 @@
                         <a href="login">Logga in</a>
                     </li>
                     <li>
-                        <a action="/end_process" id="logout" href="login">Logga ut</a>
+                        <a action="/logout" id="logout" href="login">Logga ut</a>
                     </li>
                 </ul>
             </div>
