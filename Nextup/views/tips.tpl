@@ -22,10 +22,10 @@
         <!-- Tip form -->
         <div class="row">
             <div class="col-md-8">
-                <form id="tipsform" action="/tipsprocess" method="post" accept-charset="UTF-8">
+                <form id="tipsform" action="/tips_process" method="post" accept-charset="UTF-8">
                     <div class="input-group form-group">
                           <span class="input-group-addon" id="basic-addon3">Eventnamn</span>
-                        <input type="text" class="form-control" aria-describedby="basic-addon3" name="eventname" id="eventname">
+                        <input type="text" class="form-control" aria-describedby="basic-addon3" name="event_name" id="event_name">
                     </div>
                     <div class="form-group">
                         <label class="checkbox-inline">
@@ -52,21 +52,21 @@
                     </div>
                     <div class="form-group form-inline">
                         <label class="labelclass">Start</label><span class="glyphicon glyphicon-calendar"></span>
-                        <input class="form-control" placeholder="ÅÅÅÅ-MM-DD" name="startdate">
+                        <input class="form-control" placeholder="ÅÅÅÅ-MM-DD" name="first_day">
                         <label class="labelclass">Slut</label><span class="glyphicon glyphicon-calendar"></span>
-                        <input class="form-control" placeholder="ÅÅÅÅ-MM-DD" name="enddate">
+                        <input class="form-control" placeholder="ÅÅÅÅ-MM-DD" name="last_day">
                     </div>
                     <div class="form-group form-inline">
                         <label class="labelclass">Start</label><span class="glyphicon glyphicon-time"></span>
-                        <input class="form-control" placeholder="HH:MM" name="starttime">
+                        <input class="form-control" placeholder="HH:MM" name="first_time">
                         <label class="labelclass">Slut</label><span class="glyphicon glyphicon-time"></span>
-                        <input class="form-control" placeholder="HH:MM" name="endtime">
+                        <input class="form-control" placeholder="HH:MM" name="last_time">
                     </div>
                     <div class="input-group form-group">
                           <span class="input-group-addon" id="basic-addon3">Plats</span><input type="text" class="form-control" name="location">
                     </div>
                     <div class="input-group form-group">
-                          <span class="input-group-addon">Adress</span><input type="text" class="form-control" name="address">
+                          <span class="input-group-addon">Adress</span><input type="text" class="form-control" name="adress">
                     </div>
                     <div class="input-group form-group">
                           <span class="input-group-addon" id="basic-addon3">Arrangör</span>
@@ -82,7 +82,7 @@
                         <p class="help-block">Bilden får inte överstiga X kb</p>
                     </div>
                     <div class="form-group">
-                        <label>Beskrivning (Max 500 ord!)</label>
+                        <label>Beskrivning (Max 500 ord)</label>
                           <textarea class="form-control" rows="10" name="description"></textarea>
                     </div>
                     <div class="input-group form-group">
@@ -91,7 +91,7 @@
                     </div>
                     <div class="input-group form-group">
                           <span class="input-group-addon" id="basic-addon3">E-post</span>
-                        <input type="text" class="form-control" aria-describedby="basic-addon3" name="email">
+                        <input type="text" class="form-control" aria-describedby="basic-addon3" name="tipster_mail">
                     </div>
                 <button type="submit" class="btn btn-lg btn-primary">Skicka</button>
             </div>

@@ -110,40 +110,40 @@ def process():
     
 #Denna route hanterar vad som händer med formuläret när det skickats, I html filen står det att den skall postas till /tipsprocess. Vilket är denna. Sedan hämtar vi ut alla värden ifrån formuläret, dessa skall sedan lagras i databasen. Vi kontrollerar även samtliga värden med diverse insticksmoduler! Vi skapar en tom error "lista" sedan lagras alla fel i den listan, om de existerar.
 
-@route("/tipsprocess", method="post")
+@route("/tips_process", method="post")
 def tips_process():
     error = []
-    event_name = request.forms.get("eventname")
+    event_name = request.forms.get("event_name")
     if event_name == "":
         error.append("error01")
     category = request.POST.getall("category")
     if len(category) == 0:
         error.append("error02")
-    start_date = request.forms.get("startdate")
+    first_day = request.forms.get("first_day")
     try:
-        datetime.datetime.strptime(start_date, '%Y-%m-%d')
+        datetime.datetime.strptime(first_day, '%Y-%m-%d')
     except:
         error.append("error03")
-    end_date = request.forms.get("enddate")
+    last_day = request.forms.get("last_day")
     try:
-        datetime.datetime.strptime(end_date, '%Y-%m-%d')
+        datetime.datetime.strptime(last_day, '%Y-%m-%d')
     except:
         error.append("error04")
-    start_time = request.forms.get("starttime")
+    first_time = request.forms.get("first_time")
     try:
-        datetime.datetime.strptime(start_time, '%H:%M')
+        datetime.datetime.strptime(first_time, '%H:%M')
     except:
         error.append("error05")
-    end_time = request.forms.get("endtime")
+    last_time = request.forms.get("last_time")
     try:
-        datetime.datetime.strptime(end_time, '%H:%M')
+        datetime.datetime.strptime(last_time, '%H:%M')
     except:
         error.append("error06")
     location = request.forms.get("location")
     if location == "":
         error.append("error07")
-    address = request.forms.get("address")
-    if address == "":
+    adress = request.forms.get("adress")
+    if adress == "":
         error.append("error08")
     organizer = request.forms.get("organizer")
     if organizer == "":
@@ -152,37 +152,24 @@ def tips_process():
     if not validators.url(website):
         error.append("error10")
     image = request.files.get("image")
-    desc = request.forms.get("description")
-    if desc == "":
+    description = request.forms.get("description")
+    if description == "":
         error.append("error12")
     tipster = request.forms.get("tipster")
     if tipster == "":
         error.append("error13")
-    email = request.forms.get("email")
-    if not validators.email(email):
+    tipster_mail = request.forms.get("tipster_mail")
+    if not validators.email(tipster_mail):
         error.append("error14")
     
-    print error
+    query = ("INSERT INTO event (event_name, first_day, last_day, first_time, last_time, location, adress, organizer, website, image, description, tipster, tipster_mail) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)")
+    cur.execute(query, (event_name, first_day, last_day,    first_time, last_time, location, adress, organizer, website, image, description, tipster, tipster_mail))
+    db.commit()
+    redirect("/")
 
     
-    if len(error) > 0:
-        return template("tips", error=error)
-    '''
-    print category
-    print event_name
-    print start_date
-    print end_date
-    print start_time
-    print end_time
-    print location
-    print address
-    print organizer
-    print website
-    print image
-    print desc
-    print tipster
-    print email
-    '''
+
+
 
 
 run(app=app)
