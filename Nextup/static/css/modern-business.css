@@ -103,22 +103,22 @@ header.carousel .fill {
 
 /* Eventpage Styles */
 #symbols{
-    margin-top: 0px;
+    margin-top: 20px;
 }
-#calender{
-    max-height: 293px;
+
+#eventtext{
+    margin-top: 15px;
+    margin-bottom: 20px;
 }
-#eventinfo{
-    max-height: 220px;
-}
+
+
 /* Footer Styles */
 
 footer {
     margin: 50px 0;
 }
 #copy{
-    text-align: center;
-    
+    text-align: center;   
 }
 
 /* Responsive Styles */
