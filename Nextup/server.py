@@ -34,7 +34,7 @@ def get_user():
         return None
 
 def get_tips():
-    query = ("SELECT event_name, first_day, last_day, first_time, last_time, location, adress, organizer, website, description, tipster FROM event ORDER BY location DESC")
+    query = ("SELECT event_name, first_day, last_day, first_time, last_time, location, adress, organizer, website, image, description, tipster FROM event ORDER BY location DESC")
     
     cur.execute(query)
     return cur.fetchall() 
@@ -66,7 +66,8 @@ def tips():
 
 @route("/events")
 def events():
-    return template("events")
+    tips = get_tips()
+    return template("events", tips=tips)
 
 @route("/about")
 def about():
@@ -83,7 +84,6 @@ def faq():
 @route("/eventpage")
 def eventpage():
     tips = get_tips()
-    print tips
     return template("eventpage", tips=tips)
 
 @route("/logout")

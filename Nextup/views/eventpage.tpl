@@ -22,10 +22,13 @@
         <!-- /Page Heading/Breadcrumbs -->
 
         <!-- Eventpage -->
-            % for tip in tips:
+        %for tip in tips:
         <div class="headevent">
             <h2>{{tip['event_name']}}</h2>  
         </div>
+        
+            %if tips == tips:
+                
         <div class="row">
             <div class="col-md-6">
                  <img class="img-responsive" src="static/images/two.jpg" alt="">
@@ -42,13 +45,13 @@
             </div>
             </div>
             <div id="description">
-                <p>{{!tip['description']}}</p>
+                <p>{{tip['description']}}</p>
             </div>
             <div id="tipster">
                 <p>Lagt till av: <strong>{{tip['tipster']}} </strong></p>
             </div>
-% end
-
+            %end
+        %end
         </div>  
         <!-- /Eventpage -->
     <!-- /Page Content -->

@@ -105,6 +105,9 @@ header.carousel .fill {
 #symbols{
     margin-top: 20px;
 }
+#tipster {
+    float:right
+}
 
 /* Footer Styles */
 
