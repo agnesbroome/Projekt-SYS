@@ -28,7 +28,13 @@
                 <h2>{{tip['event_name']}}</h2>  
             </div>
         
+<<<<<<< HEAD
                 %if tips == tips:
+=======
+            <!--%if tips == tips:-->
+           
+                %if tip ['event_ID'] == i:
+>>>>>>> origin/master
                 
             <div class="row">
                 <div class="col-md-6">
