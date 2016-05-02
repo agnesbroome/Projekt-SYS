@@ -12,11 +12,14 @@
             <div class="col-lg-12">
                 <div class="col-md-6 col-md-offset-3">
                     <h1 class="page-header">Logga in som administratör</h1>
+                   <!-- %if session.delete:
+                    <div class="alert alert-success">Fel användarnamn eller lösenord!</div>
+                    %end-->
+                    
                     %if error == True:
                     <div class="alert alert-danger">Fel användarnamn eller lösenord!</div>
                     %end
-                    <!--%if session.delete():
-                        <div class="alert alert-success">Du är  nu utloggad</div>-->
+                    
                         <form action="/process" method="post">
                             <div class="input-group form-group">
                                 <span class="input-group-addon" id="basic-addon1">Användarnamn</span><input type="text" class="form-control" aria-describedby="basic-addon1" name="id">

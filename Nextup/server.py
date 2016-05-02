@@ -34,8 +34,7 @@ def get_user():
         return None
 
 def get_tips():
-    query = ("SELECT event_name, first_day, last_day, first_time, last_time, location, adress, organizer, website, image, description, tipster FROM event ORDER BY location DESC")
-    
+    query = ("SELECT event_id, event_name, first_day, last_day, first_time, last_time, location, adress, organizer, website, image, description, tipster FROM event ORDER BY location DESC")
     cur.execute(query)
     return cur.fetchall() 
 
@@ -89,7 +88,7 @@ def eventpage():
 @route("/logout")
 def logout():
     session = request.environ.get("beaker.session")
-    session.cookie.delete()
+    session.delete() 
     redirect("/login")
 
 @route("/login")
