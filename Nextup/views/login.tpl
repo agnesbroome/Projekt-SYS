@@ -15,8 +15,8 @@
                     %if error == True:
                     <div class="alert alert-danger">Fel användarnamn eller lösenord!</div>
                     %end
-                    %if session.delete():
-                        <div class="alert alert-success">Du är  nu utloggad</div>
+                    <!--%if session.delete():
+                        <div class="alert alert-success">Du är  nu utloggad</div>-->
                         <form action="/process" method="post">
                             <div class="input-group form-group">
                                 <span class="input-group-addon" id="basic-addon1">Användarnamn</span><input type="text" class="form-control" aria-describedby="basic-addon1" name="id">

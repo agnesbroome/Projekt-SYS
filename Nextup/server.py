@@ -4,7 +4,7 @@ from beaker.middleware import SessionMiddleware
 import MySQLdb
 import datetime
 import validators
-#from modules import log
+
 
 #OPTIONS
 #Log in to database
@@ -32,6 +32,12 @@ def get_user():
         return user
     except:
         return None
+
+def get_tips():
+    query = ("SELECT event_name, first_day, last_day, first_time, last_time, location, adress, organizer, website, description, tipster FROM event ORDER BY location DESC")
+    
+    cur.execute(query)
+    return cur.fetchall() 
 
 #Static Routes
 
@@ -75,13 +81,15 @@ def faq():
     return template("faq")
 
 @route("/eventpage")
-def events():
-    return template("eventpage")
+def eventpage():
+    tips = get_tips()
+    print tips
+    return template("eventpage", tips=tips)
 
 @route("/logout")
 def logout():
     session = request.environ.get("beaker.session")
-    session.delete()
+    session.cookie.delete()
     redirect("/login")
 
 @route("/login")
@@ -163,13 +171,16 @@ def tips_process():
         error.append("error14")
     
     if len(error) > 0:
-        redirect("tips")
+        redirect("/tips")
+        
     else:    
             query = ("INSERT INTO event (event_name, first_day, last_day, first_time, last_time, location, adress, organizer, website, image, description, tipster, tipster_mail) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)")
             cur.execute(query, (event_name, first_day, last_day,    first_time, last_time, location, adress, organizer, website, image, description, tipster, tipster_mail))
             db.commit()
-            redirect("/")
+            redirect("/tips")
 
+          
+            
 run(app=app)
 
 
