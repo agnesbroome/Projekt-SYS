@@ -87,31 +87,13 @@
                     <div class="panel-body">
                         <table class="table table-hover table-condensed">
                             <tbody>
+                            % for tip in tips:
                                 <tr>
-                                    <td>Datum</td>
-                                    <td>Tid</td>
-                                    <td><a href="eventpage">Eventnamn</a></td>
+                                    <td>{{tip['first_day']}}</td>
+                                    <td>{{tip['first_time']}}</td>
+                                    <td><a href="/event_page/{{tip['event_ID']}}">{{tip['event_name']}}</a></td>
                                 </tr>
-                                <tr>
-                                    <td>Datum</td>
-                                    <td>Tid</td>
-                                    <td>Eventnamn </td>
-                                </tr>
-                                <tr>
-                                    <td>Datum</td>
-                                    <td>Tid</td>
-                                    <td>Eventnamn </td>
-                                </tr>
-                                <tr>
-                                    <td>Datum</td>
-                                    <td>Tid</td>
-                                    <td>Eventnamn </td>
-                                </tr>
-                                <tr>
-                                    <td>Datum</td>
-                                    <td>Tid</td>
-                                    <td>Eventnamn </td>
-                                </tr>
+                            %end
                             </tbody>
                         </table>
                     </div>

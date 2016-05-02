@@ -22,37 +22,39 @@
         <!-- /Page Heading/Breadcrumbs -->
 
         <!-- Eventpage -->
-        %for tip in tips:
-        <div class="headevent">
-            <h2>{{tip['event_name']}}</h2>  
-        </div>
+        <main id="event_page">
+            %for tip in tips:
+            <div id="event_page", class="headevent">
+                <h2>{{tip['event_name']}}</h2>  
+            </div>
         
-            %if tips == tips:
+                %if tips == tips:
                 
-        <div class="row">
-            <div class="col-md-6">
-                 <img class="img-responsive" src="static/images/two.jpg" alt="">
-            </div>  
-            <div id="eventinfo" class="col-md-6">
+            <div class="row">
+                <div class="col-md-6">
+                    <img class="img-responsive" src="static/images/two.jpg" alt="">
+                </div>  
+                <div id="eventinfo" class="col-md-6">
             
                
-                <h2>{{tip['first_day']}} - {{tip['last_day']}}</h2>
-                <h2>{{tip['first_time']}} - {{tip['last_time']}}</h2>
-                <h2>{{tip['location']}}</h2>
-                <h2>{{tip['adress']}}</h2>
-                <h2>{{tip['organizer']}}</h2>
-                <h2><a href="{{tip['website']}}">{{tip['website']}}</a></h2>
-            </div>
-            </div>
-            <div id="description">
-                <p>{{tip['description']}}</p>
-            </div>
-            <div id="tipster">
-                <p>Lagt till av: <strong>{{tip['tipster']}} </strong></p>
-            </div>
+                    <h2>{{tip['first_day']}} - {{tip['last_day']}}</h2>
+                    <h2>{{tip['first_time']}} - {{tip['last_time']}}</h2>
+                    <h2>{{tip['location']}}</h2>
+                    <h2>{{tip['adress']}}</h2>
+                    <h2>{{tip['organizer']}}</h2>
+                    <h2><a href="{{tip['website']}}">{{tip['website']}}</a></h2>
+                </div>
+                </div>
+                <div id="description">
+                    <p>{{tip['description']}}</p>
+                </div>
+                <div id="tipster">
+                    <p>Lagt till av: <strong>{{tip['tipster']}} </strong></p>
+                </div>
+                %end
             %end
-        %end
-        </div>  
+            </div>  
+    </main>
         <!-- /Eventpage -->
     <!-- /Page Content -->
 
