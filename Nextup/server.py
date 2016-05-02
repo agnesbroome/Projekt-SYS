@@ -32,16 +32,19 @@ def get_user():
         return user
     except:
         return None
-
-def get_tips():
-<<<<<<< HEAD
-    query = ("SELECT event_ID, event_name, first_day, last_day, first_time, last_time, location, adress, organizer, website, image, description, tipster FROM event ORDER BY location DESC")
-    
-=======
-    query = ("SELECT event_id, event_name, first_day, last_day, first_time, last_time, location, adress, organizer, website, image, description, tipster FROM event ORDER BY location DESC")
->>>>>>> origin/master
+def get_events():
+    query = "SELECT * FROM event \
+       WHERE location = '%s'" % ("NULL")
     cur.execute(query)
-    return cur.fetchall() 
+    events = cur.fetchall()
+    return events
+    
+# def get_tips():
+
+#     query = ("SELECT event_id, event_name, first_day, last_day, first_time, last_time, location, adress, organizer, website, image, description, tipster FROM event ORDER BY location DESC")
+
+#     cur.execute(query)
+#     return cur.fetchall() 
 
 #Static Routes
 
@@ -55,13 +58,13 @@ def server_static(filename):
 #Här är alla routes, de man kan nå via vår hemsida efter grundnamnet. typ www.nextup.se. Så www.nextup.se/ är hem, som ni ser nedan. www.nextup.se/tips så kommer man till den routen. Allt detta sköter vår serverfil, dvs. denna filen.
 @route("/")
 def index():
-    tips = get_tips()
+    # tips = get_tips()
     return template("index", tips=tips)
 
 @route("/admin")
 def admin():
     if get_user() != None:
-        return template("admin", user=get_user())
+        return template("admin", user=get_user(), events=get_events())
     else:
         redirect("/login")
 
