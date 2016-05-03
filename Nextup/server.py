@@ -41,10 +41,8 @@ def get_tips():
 def get_events():
     query = "SELECT * FROM event \
        WHERE status = '%s'" % ("new")
-
     cur.execute(query)
     return cur.fetchall()
-    
     
 #Static Routes
 
@@ -187,8 +185,18 @@ def tips_process():
         db.commit()
         redirect("/tips")
 
-          
-            
+@route("/admin_process", method="post")
+def admin_process():
+    status = request.forms.getall("status")
+    ID = request.forms.getall("event_id")
+    query = "UPDATE event \
+    SET status = '%s' \
+    WHERE event_ID = '%s'" %(status[0], ID[0])
+    cur.execute(query)
+    db.commit()
+    print query
+    redirect("/admin")
+    
 run(app=app)
 
 

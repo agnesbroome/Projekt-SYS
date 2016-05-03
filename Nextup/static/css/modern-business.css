@@ -82,6 +82,7 @@ header.carousel .fill {
     font-size: 100px;
 }
 
+
 /* Pricing Page Styles */
 
 .price {
@@ -117,7 +118,9 @@ footer {
 #copy{
     text-align: center;   
 }
-
+#event_id{
+    visibility: hidden;
+}
 /* Responsive Styles */
 
 @media(max-width:991px) {
