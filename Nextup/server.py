@@ -86,7 +86,7 @@ def tips():
 @route("/events")
 def events():
     tips = get_tips()
-    return template("events", tips=tips)
+    return template("events", tips=tips, events=get_active())
 
 @route("/about")
 def about():

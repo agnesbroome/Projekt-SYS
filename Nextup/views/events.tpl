@@ -36,6 +36,7 @@
         % end
         
         <!-- /Event listing  -->
+        <!-- Section 2 - Center -->
         <div class="col-md-4">
                 <div class="panel panel-default">
                     <div class="panel-heading">
@@ -44,6 +45,13 @@
                     <div class="panel-body">
                         <table class="table table-hover table-condensed">
                             <tbody>
+                                %for i in events:
+                                <tr>
+                                    <td>{{i['event_name']}}</td>
+                                    <td>{{i['first_day']}}</td>
+                                    <td>{{i['first_time']}}</td>
+                                </tr>
+                                %end
                             </tbody>
                         </table>
                     </div>
