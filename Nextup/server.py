@@ -8,7 +8,7 @@ import validators
 
 #OPTIONS
 #Log in to database
-db = MySQLdb.connect("195.178.232.7", port=4040, user="AF6712", passwd="Kanelbulle88", db="AF6712", charset='utf8');
+db = MySQLdb.connect("195.178.232.16", port=3306, user="AF6712", passwd="Kanelbulle88", db="AF6712", charset='utf8');
 cur = db.cursor(MySQLdb.cursors.DictCursor)
 
 #SESSIONS
@@ -38,7 +38,7 @@ def get_user():
     
 def get_events():
     query = "SELECT * FROM event \
-       WHERE location = '%s'" % ("NULL")
+       WHERE status = '%s'" % ("new")
 
     cur.execute(query)
     events = cur.fetchall()
