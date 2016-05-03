@@ -28,15 +28,11 @@
         <div class="row">
             <div class="col-md-8">
                 <h3>Kontaktformulär</h3>
-                <form name="sentMessage" id="contactForm" action="mailto:mariaholmberg283@hotmail.com" method="post" enctype="text/plain">
+                <form name="sentMessage" id="contactForm" method="post" enctype="text/plain">
                     <div class="input-group form-group">
                             <span class="input-group-addon" id="basic-addon3">Namn</span>
                             <input type="text" class="form-control" aria-describedby="basic-addon3" id="name" required data-validation-required-message="Please enter your name.">
                             <p class="help-block"></p>
-                    </div>
-                    <div class="input-group form-group">
-                            <span class="input-group-addon" id="basic-addon3">Telefon</span>
-                            <input type="tel" class="form-control" aria-describedby="basic-addon3" id="phone" required data-validation-required-message="Please enter your phone number.">
                     </div>
                     <div class="input-group form-group">
                             <span class="input-group-addon" id="basic-addon3">Email</span>
