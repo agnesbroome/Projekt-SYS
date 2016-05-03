@@ -38,9 +38,9 @@ def get_tips():
     cur.execute(query)
     return cur.fetchall()
     
-def get_events():
+def get_events(handler):
     query = "SELECT * FROM event \
-       WHERE status = '%s'" % ("new")
+       WHERE status = '%s'" % (handler)
     cur.execute(query)
     return cur.fetchall()
     
@@ -59,10 +59,10 @@ def index():
     # tips = get_tips()
     return template("index", tips=tips)
 
-@route("/admin")
-def admin():
+@route("/admin/<handler>")
+def admin(handler):
     if get_user() != None:
-        return template("admin", user=get_user(), events=get_events())
+        return template("admin", user=get_user(), events=get_events(handler))
     else:
         redirect("/login")
 
@@ -116,7 +116,7 @@ def process():
         session["Username"] = result["Username"]
         session["ID"] = result["ID"]
         session.save()
-        redirect("admin")
+        redirect("/admin/new")
     else:
         return template("login", user=get_user(), error=True)
 
@@ -195,7 +195,7 @@ def admin_process():
     cur.execute(query)
     db.commit()
     print query
-    redirect("/admin")
+    redirect("/admin/new")
     
 run(app=app)
 

@@ -56,7 +56,10 @@ h1 > small {
     background-color: #4671D5;
     min-width: 120px;
 }
-
+/* Admin Page */
+#admin_container{
+    padding-top: 15px;
+}
 /* Home Page Carousel */
 
 header.carousel {

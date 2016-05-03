@@ -3,10 +3,23 @@
     
 <!-- Include headsection and global navigation -->
 % include("headadminlogin.tpl")
-<div class="container-fluid">
+<div id="admin_container" class="container-fluid">
   <div class="row">
     <div class="col-md-2">
-        
+        <ul class="list-group">
+            <li class="list-group-item">
+            <span class="badge">0</span>
+                Nya event
+            </li>
+            <li class="list-group-item">
+            <span class="badge">2</span>
+                Publicerade event
+          </li>
+            <li class="list-group-item">
+            <span class="badge">10</span>
+                Passerade event
+          </li>            
+        </ul>
     </div>
   	<div class="col-md-10">
         %if len(events) > 0:
