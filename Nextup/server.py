@@ -40,6 +40,13 @@ def get_active():
        LIMIT 5" % ("active")
     cur.execute(query)
     return cur.fetchall()
+
+def get_tips():
+    query = "SELECT * FROM event \
+       WHERE status = '%s' \
+       ORDER BY first_day ASC" % ("active")
+    cur.execute(query)
+    return cur.fetchall()
     
 def get_events(handler):
     query = "SELECT * FROM event \
