@@ -30,9 +30,8 @@
             </div>
             <div class="col-md-6">
                 <h2>Om NextUP! Malmö</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed voluptate nihil eum consectetur similique? Consectetur, quod, incidunt, harum nisi dolores delectus reprehenderit voluptatem perferendis dicta dolorem non blanditiis ex fugiat.</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, magni, aperiam vitae illum voluptatum aut sequi impedit non velit ab ea pariatur sint quidem corporis eveniet. Odit, temporibus reprehenderit dolorum!</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et, consequuntur, modi mollitia corporis ipsa voluptate corrupti eum ratione ex ea praesentium quibusdam? Aut, in eum facere corrupti necessitatibus perspiciatis quis?</p>
+                    <p>I Malmö finns ett stort utbud av event spridda mellan många olika områden. För en person kan det vara lätt att idag missa stora delar av detta utbud eftersom det är svårt att få information om event som ligger utanför vanliga beteende-, rörelse- eller intresseområden.</p>
+                    <p>Ett behov av en plattform som ger dessa personer en mer samlad bild finns därför. Vi avser av den orsaken att bygga en webbplats som ska fungera som en samlad översikt av event i Malmö. Sidan kommer fungera som en peer-to-peer lösning och inte efterlikna events egna hemsidor. Förhoppningen är att sidan ska ge besökaren möjligheten att vidga sina vyer och få del av hela Malmös kulturliv.</p>
             </div>
         </div>
         <!-- /Intro Content -->
