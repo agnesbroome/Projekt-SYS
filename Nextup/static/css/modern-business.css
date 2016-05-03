@@ -133,7 +133,7 @@ footer {
 }
 ul {list-style-type: none;}
 body {font-family: Verdana, sans-serif;}
-
+/* Style Calender */
 /* Month header */
 .month {
     text-align: center;
@@ -204,6 +204,8 @@ body {font-family: Verdana, sans-serif;}
     background: #303030;
     color: white !important
 }
+/* End calender Style */
+
 /* Responsive Styles */
 
 @media(max-width:991px) {

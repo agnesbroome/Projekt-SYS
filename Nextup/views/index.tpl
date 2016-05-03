@@ -114,7 +114,7 @@
     <li class="prev">&#10094;</li>
     <li class="next">&#10095;</li>
     <li>August<br>
-      <span style="font-size:18px">2016</span>
+      <span style="font-size:14px">2016</span>
     </li>
   </ul>
 </div>
