@@ -35,16 +35,20 @@ def get_user():
 def get_events():
     query = "SELECT * FROM event \
        WHERE location = '%s'" % ("NULL")
+
+
+def get_tips():
+    query = ("SELECT event_ID, event_name, first_day, last_day, first_time, last_time, location, adress, organizer, website, image, description, tipster, status FROM event ORDER BY location DESC")
+    
+def get_events():
+    query = "SELECT * FROM event \
+       WHERE location = '%s'" % ("NULL")
+
     cur.execute(query)
     events = cur.fetchall()
     return events
     
-# def get_tips():
 
-#     query = ("SELECT event_id, event_name, first_day, last_day, first_time, last_time, location, adress, organizer, website, image, description, tipster FROM event ORDER BY location DESC")
-
-#     cur.execute(query)
-#     return cur.fetchall() 
 
 #Static Routes
 
@@ -93,6 +97,7 @@ def faq():
 def eventpage():
     tips = get_tips()
     return template("eventpage", tips=tips)
+    
 
 @route("/logout")
 def logout():
@@ -177,15 +182,15 @@ def tips_process():
     tipster_mail = request.forms.get("tipster_mail")
     if not validators.email(tipster_mail):
         error.append("error14")
-    
+    status = "new"
     if len(error) > 0:
         redirect("/tips")
         
     else:    
-            query = ("INSERT INTO event (event_name, first_day, last_day, first_time, last_time, location, adress, organizer, website, image, description, tipster, tipster_mail) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)")
-            cur.execute(query, (event_name, first_day, last_day,    first_time, last_time, location, adress, organizer, website, image, description, tipster, tipster_mail))
-            db.commit()
-            redirect("/tips")
+        query = ("INSERT INTO event (event_name, first_day, last_day, first_time, last_time, location, adress, organizer, website, image, description, tipster, tipster_mail, status) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)")
+        cur.execute(query, (event_name, first_day, last_day,    first_time, last_time, location, adress, organizer, website, image, description, tipster, tipster_mail, status))
+        db.commit()
+        redirect("/tips")
 
           
             

@@ -23,25 +23,14 @@
 
         <!-- Eventpage -->
         <main id="event_page">
-            %for tip in tips:
-            <div id="event_page", class="headevent">
+            <div class="headevent">
                 <h2>{{tip['event_name']}}</h2>  
             </div>
-        
-<<<<<<< HEAD
-                %if tips == tips:
-=======
-            <!--%if tips == tips:-->
-           
-                %if tip ['event_ID'] == i:
->>>>>>> origin/master
-                
             <div class="row">
                 <div class="col-md-6">
                     <img class="img-responsive" src="static/images/two.jpg" alt="">
                 </div>  
                 <div id="eventinfo" class="col-md-6">
-            
                
                     <h2>{{tip['first_day']}} - {{tip['last_day']}}</h2>
                     <h2>{{tip['first_time']}} - {{tip['last_time']}}</h2>
@@ -57,8 +46,6 @@
                 <div id="tipster">
                     <p>Lagt till av: <strong>{{tip['tipster']}} </strong></p>
                 </div>
-                %end
-            %end
             </div>  
     </main>
         <!-- /Eventpage -->
