@@ -7,18 +7,18 @@
   <div class="row">
     <div class="col-md-2">
         <ul class="list-group">
-            <li class="list-group-item">
+            <a href="/admin/new" class="list-group-item">
             <span class="badge">0</span>
                 Nya event
-            </li>
-            <li class="list-group-item">
+            </a>
+            <a href="/admin/active" class="list-group-item">
             <span class="badge">2</span>
                 Publicerade event
-          </li>
-            <li class="list-group-item">
+          </a>
+            <a href="/admin/old" class="list-group-item">
             <span class="badge">10</span>
                 Passerade event
-          </li>            
+          </a>            
         </ul>
     </div>
   	<div class="col-md-10">
@@ -58,7 +58,8 @@
                             <input id="event_id" name="event_id" value="{{i['event_ID']}}"></input>
                             <td>
                                 <select name="status">
-                                    <option value="new">Ny</option>
+                                    <option>{{i['status']}}</option>
+                                    <option value="new">Nytt</option>
                                     <option value="active">Publicera</option>
                                     <option value="old">Ta bort</option>
                                 </select>
@@ -70,7 +71,7 @@
                 <button type="submit" class="btn btn-lg btn-primary">Bekräfta</button>
             </form>
       %else:
-        <h3>Inga nya event att visa!</h3>
+        <h3>Inga event att visa!</h3>
       %end
   	</div>
   </div>

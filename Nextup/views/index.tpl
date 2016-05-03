@@ -87,6 +87,13 @@
                     <div class="panel-body">
                         <table class="table table-hover table-condensed">
                             <tbody>
+                                %for i in events:
+                                <tr>
+                                    <td>{{i['event_name']}}</td>
+                                    <td>{{i['first_day']}}</td>
+                                    <td>{{i['first_time']}}</td>
+                                </tr>
+                                %end
                             </tbody>
                         </table>
                     </div>
