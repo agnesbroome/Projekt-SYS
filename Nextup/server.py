@@ -47,6 +47,14 @@ def get_tips():
        ORDER BY first_day ASC" % ("active")
     cur.execute(query)
     return cur.fetchall()
+# def fetch_length():
+#     new = "SELECT * FROM event \
+#        WHERE status = 'new'"
+#     active = "SELECT * FROM event \
+#        WHERE status = 'active'"
+#     old = "SELECT * FROM event \
+#        WHERE status = 'old'"
+
     
 def get_events(handler):
     query = "SELECT * FROM event \
@@ -75,7 +83,7 @@ def reroute():
 @route("/admin/<handler>")
 def admin(handler):
     if get_user() != None:
-        return template("admin", user=get_user(), events=get_events(handler))
+        return template("admin", user=get_user(), events=get_events(handler), length = fetch_length())
     else:
         redirect("/login")
 
@@ -133,8 +141,6 @@ def process():
     else:
         return template("login", user=get_user(), error=True)
 
-
-    
 #Denna route hanterar vad som händer med formuläret när det skickats, I html filen står det att den skall postas till /tipsprocess. Vilket är denna. Sedan hämtar vi ut alla värden ifrån formuläret, dessa skall sedan lagras i databasen. Vi kontrollerar även samtliga värden med diverse insticksmoduler! Vi skapar en tom error "lista" sedan lagras alla fel i den listan, om de existerar.
 
 @route("/tips_process", method="post")
@@ -202,15 +208,11 @@ def tips_process():
 def admin_process():
     status = request.forms.getall("status")
     ID = request.forms.getall("event_id")
-    query = "UPDATE event \
-    SET status = '%s' \
-    WHERE event_ID = '%s'" %(status[0], ID[0])
-    cur.execute(query)
-    db.commit()
-    print query
-    redirect("/admin/new")
-    
+    for i, j in zip(status, ID):   
+        query = "UPDATE event \
+        SET status = '%s' \
+        WHERE event_ID = '%s'" %(i, j)
+        cur.execute(query)
+        db.commit()
+    redirect("admin/new")
 run(app=app)
-
-
-

@@ -11,7 +11,7 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="col-md-6 col-md-offset-3">
-                    <h1 class="page-header">Logga in som administratör</h1> 
+                    <h1 class="page-header">Logga in som administratör</h1>
                     %if error == True:
                     <div class="alert alert-danger">Fel användarnamn eller lösenord!</div>
                     %end

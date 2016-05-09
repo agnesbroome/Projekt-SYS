@@ -7,6 +7,7 @@
   <div class="row">
     <div class="col-md-2">
         <ul class="list-group">
+            {{length}}
             <a href="/admin/new" class="list-group-item">
             <span class="badge">0</span>
                 Nya event
@@ -52,7 +53,7 @@
                             <td>{{i['organizer']}}</td>
                             <td>{{i['website']}}</td>
                             <td>{{i['image']}}</td>
-                            <td>{{i['description']}}</td>
+                            <td><textarea rows="5" cols="50" readonly>{{i['description']}}</textarea></td>
                             <td>{{i['tipster']}}</td>
                             <td>{{i['tipster_mail']}}</td>
                             <input id="event_id" name="event_id" value="{{i['event_ID']}}"></input>

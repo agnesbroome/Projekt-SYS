@@ -17,7 +17,6 @@
             <li data-target="#myCarousel" data-slide-to="4"></li>
         </ol>
         <!-- /Indicators -->
-        
         <!-- Wrapper for slides -->
         <div class="carousel-inner">
             %for i in events: 
