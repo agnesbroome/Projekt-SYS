@@ -13,32 +13,50 @@
             <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
             <li data-target="#myCarousel" data-slide-to="1"></li>
             <li data-target="#myCarousel" data-slide-to="2"></li>
+            <li data-target="#myCarousel" data-slide-to="3"></li>
+            <li data-target="#myCarousel" data-slide-to="4"></li>
         </ol>
         <!-- /Indicators -->
         
         <!-- Wrapper for slides -->
         <div class="carousel-inner">
+            %for i in events: 
             <div class="item active">
                 <div class="fill" style="background-image:url('/static/images/one.jpg');"></div>
                 <div class="carousel-caption">
                     <!--ref:  http://static1.squarespace.com/static/55c37beae4b0336075603f86/55c3cd80e4b01531b3208f2e/5603032be4b008bd0ad4e6fb/1455546867623/?format=1500w -->
-                    <h2>Exempel 1</h2>
+                    <h2><a href="eventpage">{{i['event_name']}}</h2>
                 </div>
             </div>
             <div class="item">
                 <div class="fill" style="background-image:url('/static/images/two.jpg');"></div>
                 <div class="carousel-caption">
                     <!--ref: http://skygarden.london/sites/default/files/Sky%20Garden%20Events%2029th%20April%20-%202MB39.jpg -->
-                    <h2>Exempel 2</h2>
+                    <h2><a href="eventpage">{{i['event_name']}}</h2>
                 </div>
             </div>
             <div class="item">
                 <div class="fill" style="background-image:url('/static/images/three.jpg');"></div>
                 <div class="carousel-caption">
                     <!--ref: http://www.blueevents-agency.com/wp-content/uploads/2013/11/explore-events-food-and-wine-events.jpg -->
-                    <h2>Exempel 3</h2>
+                    <h2><a href="eventpage">{{i['event_name']}}</h2>
                 </div>
             </div>
+            <div class="item">
+                <div class="fill" style="background-image:url('/static/images/three.jpg');"></div>
+                <div class="carousel-caption">
+                    <!--ref: http://www.blueevents-agency.com/wp-content/uploads/2013/11/explore-events-food-and-wine-events.jpg -->
+                    <h2><a href="eventpage">{{i['event_name']}}</h2>
+                </div>
+            </div>
+            <div class="item">
+                <div class="fill" style="background-image:url('/static/images/three.jpg');"></div>
+                <div class="carousel-caption">
+                    <!--ref: http://www.blueevents-agency.com/wp-content/uploads/2013/11/explore-events-food-and-wine-events.jpg -->
+                    <h2><a href="eventpage">{{i['event_name']}}</h2>
+                </div>
+            </div>
+            %end
         </div>
         <!-- /Wrapper for slides -->
 
