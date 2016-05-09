@@ -9,9 +9,7 @@ import smtplib
 from email.MIMEMultipart import MIMEMultipart
 from email.MIMEText import MIMEText
  
-=======
 
->>>>>>> Stashed changes
 #OPTIONS
 #Log in to database
 db = MySQLdb.connect("195.178.232.16", port=3306, user="AF6712", passwd="Kanelbulle88", db="AF6712", charset='utf8');
@@ -204,8 +202,7 @@ def tips_process():
     if not validators.url(website):
         error.append("error10")
     image = request.forms.get("image")
-    image_save= open("./%s" % ("static/images/uploaded/" + event_name + ".jpg"), 'w')
-    
+    image_save= open("./%s" % ("static/images/uploaded/" + event_ID + ".jpg"), 'w')
     image_save.write(image)
     image_save.close()
     description = request.forms.get("description")
