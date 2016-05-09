@@ -28,22 +28,19 @@
         <div class="row">
             <div class="col-md-8">
                 <h3>Kontaktformulär</h3>
-                <form name="sentMessage" id="contactForm" method="post" enctype="text/plain">
+                %if sent == True:
+                    <div class="alert alert-success">Ditt mail har skickats!</div>
+                %end
+                <form action="/contact_process" method="post">
                     <div class="input-group form-group">
-                            <span class="input-group-addon" id="basic-addon3">Namn</span>
-                            <input type="text" class="form-control" aria-describedby="basic-addon3" id="name" required data-validation-required-message="Please enter your name.">
+                            <span class="input-group-addon">Email</span>
+                            <input type="email" class="form-control" name="email" required data-validation-required-message="Vänligen fyll i din email">
                             <p class="help-block"></p>
                     </div>
                     <div class="input-group form-group">
-                            <span class="input-group-addon" id="basic-addon3">Email</span>
-                            <input type="email" class="form-control" aria-describedby="basic-addon3" id="email" required data-validation-required-message="Please enter your email address.">
-                    </div>
-                    <div class="input-group form-group">
                             <label class="form-group">Meddelande</label>
-                            <textarea rows="10" cols="100" class="form-control" aria-describedby="basic-addon3" id="message" required data-validation-required-message="Please enter your message" maxlength="999" style="resize:none"></textarea>
+                            <textarea rows="10" cols="100" class="form-control" name="message" required data-validation-required-message="Please enter your message" maxlength="999" style="resize:none"></textarea>
                     </div>
-                    <div id="success"></div>
-                    <!-- For success/fail messages -->
                     <button type="submit" class="btn btn-lg btn-primary">Skicka</button>
                 </form>
             </div>

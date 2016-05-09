@@ -4,8 +4,10 @@ from beaker.middleware import SessionMiddleware
 import MySQLdb
 import datetime
 import validators
-
-
+import smtplib
+from email.MIMEMultipart import MIMEMultipart
+from email.MIMEText import MIMEText
+ 
 #OPTIONS
 #Log in to database
 db = MySQLdb.connect("195.178.232.16", port=3306, user="AF6712", passwd="Kanelbulle88", db="AF6712", charset='utf8');
@@ -47,14 +49,24 @@ def get_tips():
        ORDER BY first_day ASC" % ("active")
     cur.execute(query)
     return cur.fetchall()
-# def fetch_length():
-#     new = "SELECT * FROM event \
-#        WHERE status = 'new'"
-#     active = "SELECT * FROM event \
-#        WHERE status = 'active'"
-#     old = "SELECT * FROM event \
-#        WHERE status = 'old'"
 
+def fetch_length_new():
+    new = "SELECT status FROM event \
+        WHERE status = 'new'"
+    cur.execute(new)
+    return len(cur.fetchall())
+
+def fetch_length_active():
+    active = "SELECT status FROM event \
+        WHERE status = 'active'"
+    cur.execute(active)
+    return len(cur.fetchall())
+
+def fetch_length_old():
+    old = "SELECT status FROM event \
+        WHERE status = 'old'"
+    cur.execute(old)
+    return len(cur.fetchall())
     
 def get_events(handler):
     query = "SELECT * FROM event \
@@ -83,13 +95,13 @@ def reroute():
 @route("/admin/<handler>")
 def admin(handler):
     if get_user() != None:
-        return template("admin", user=get_user(), events=get_events(handler), length = fetch_length())
+        return template("admin", user=get_user(), events=get_events(handler), new=fetch_length_new(), active=fetch_length_active(), old=fetch_length_old())
     else:
         redirect("/login")
 
 @route("/tips")
 def tips():
-    return template("tips", error=[])
+    return template("tips", error=[], success=False)
 
 @route("/events")
 def events():
@@ -102,7 +114,7 @@ def about():
 
 @route("/contact")
 def contact():
-    return template("contact")
+    return template("contact", sent=False)
 
 @route("/faq")
 def faq():
@@ -196,13 +208,13 @@ def tips_process():
         error.append("error14")
     status = "new"
     if len(error) > 0:
-        redirect("/tips")
+        return template("tips", error=error, success=False)
         
     else:    
         query = ("INSERT INTO event (event_name, first_day, last_day, first_time, last_time, location, adress, organizer, website, image, description, tipster, tipster_mail, status) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)")
         cur.execute(query, (event_name, first_day, last_day,    first_time, last_time, location, adress, organizer, website, image, description, tipster, tipster_mail, status))
         db.commit()
-        redirect("/tips")
+        return template("tips", success=True)
 
 @route("/admin_process", method="post")
 def admin_process():
@@ -215,4 +227,25 @@ def admin_process():
         cur.execute(query)
         db.commit()
     redirect("admin/new")
+
+@route("/contact_process", method="post")
+def contact_process():
+    fromaddr = "danielhagerstrom@gmail.com"
+    toaddr = "danielhagerstrom@gmail.com"
+    msg = MIMEMultipart()
+    msg['From'] = fromaddr
+    msg['To'] = toaddr
+    msg['Subject'] = request.forms.get("email")
+         
+    body = request.forms.get("message")
+    msg.attach(MIMEText(body, 'plain'))
+         
+    server = smtplib.SMTP('smtp.gmail.com', 587)
+    server.starttls()
+    server.login('danielhagerstrom', "xjjgvx46174617")
+    text = msg.as_string()
+    server.sendmail(fromaddr, toaddr, text)
+    server.quit()
+    return template("contact", sent=True)
+        
 run(app=app)

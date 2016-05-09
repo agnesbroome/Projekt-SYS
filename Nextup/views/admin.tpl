@@ -7,17 +7,16 @@
   <div class="row">
     <div class="col-md-2">
         <ul class="list-group">
-            {{length}}
             <a href="/admin/new" class="list-group-item">
-            <span class="badge">0</span>
+            <span class="badge">{{new}}</span>
                 Nya event
             </a>
             <a href="/admin/active" class="list-group-item">
-            <span class="badge">2</span>
+            <span class="badge">{{active}}</span>
                 Publicerade event
           </a>
             <a href="/admin/old" class="list-group-item">
-            <span class="badge">10</span>
+            <span class="badge">{{old}}</span>
                 Passerade event
           </a>            
         </ul>
