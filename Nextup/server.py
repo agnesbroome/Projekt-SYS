@@ -4,10 +4,14 @@ from beaker.middleware import SessionMiddleware
 import MySQLdb
 import datetime
 import validators
+<<<<<<< Updated upstream
 import smtplib
 from email.MIMEMultipart import MIMEMultipart
 from email.MIMEText import MIMEText
  
+=======
+
+>>>>>>> Stashed changes
 #OPTIONS
 #Log in to database
 db = MySQLdb.connect("195.178.232.16", port=3306, user="AF6712", passwd="Kanelbulle88", db="AF6712", charset='utf8');
@@ -71,6 +75,9 @@ def fetch_length_old():
 def get_events(handler):
     query = "SELECT * FROM event \
        WHERE status = '%s'" % (handler)
+
+    query = ("SELECT event_ID, event_name, first_day, last_day, first_time, last_time, location, adress, organizer, website, image, description, tipster FROM event ORDER BY location DESC")
+
     cur.execute(query)
     return cur.fetchall()
     
@@ -129,7 +136,7 @@ def eventpage():
 def logout():
     session = request.environ.get("beaker.session")
     session.delete() 
-    redirect("/login")
+    redirect("/login", session=session)
 
 @route("/login")
 def login():
@@ -196,7 +203,11 @@ def tips_process():
     website = request.forms.get("website")
     if not validators.url(website):
         error.append("error10")
-    image = request.files.get("image")
+    image = request.forms.get("image")
+    image_save= open("./%s" % ("static/images/uploaded/" + event_name + ".jpg"), 'w')
+    
+    image_save.write(image)
+    image_save.close()
     description = request.forms.get("description")
     if description == "":
         error.append("error12")
@@ -211,8 +222,10 @@ def tips_process():
         return template("tips", error=error, success=False)
         
     else:    
-        query = ("INSERT INTO event (event_name, first_day, last_day, first_time, last_time, location, adress, organizer, website, image, description, tipster, tipster_mail, status) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)")
+        #query = ("INSERT INTO event SET image= 'targetpath'"); 
+        query = ("INSERT INTO event (event_name, first_day, last_day, first_time, last_time, location, adress, organizer, website, description, tipster, tipster_mail, status) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)")
         cur.execute(query, (event_name, first_day, last_day,    first_time, last_time, location, adress, organizer, website, image, description, tipster, tipster_mail, status))
+        #cur.execute(query, (image))
         db.commit()
         return template("tips", success=True)
 
