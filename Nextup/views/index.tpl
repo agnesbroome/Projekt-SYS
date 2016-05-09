@@ -111,9 +111,9 @@
                     <div class="panel-body">
                         <div class="month"> 
   <ul>
-    <li class="prev">&#10094;</li>
-    <li class="next">&#10095;</li>
-    <li>August<br>
+    <li class="prev"><a href="index">&#10094;</a></li>
+    <li class="next"><a href="index">&#10095;</a></li>
+    <li>Augusti<br>
       <span style="font-size:14px">2016</span>
     </li>
   </ul>
@@ -130,37 +130,37 @@
 </ul>
 
 <ul class="days"> 
-  <li>1</li>
-  <li>2</li>
-  <li>3</li>
-  <li>4</li>
-  <li>5</li>
-  <li>6</li>
-  <li>7</li>
-  <li>8</li>
-  <li>9</li>
-  <li><span class="active">10</span></li>
-  <li>11</li>
-  <li>12</li>
-  <li>13</li>
-  <li>14</li>
-  <li>15</li>
-  <li>16</li>
-  <li>17</li>
-  <li>18</li>
-  <li>19</li>
-  <li>20</li>
-  <li>21</li>
-  <li>22</li>
-  <li>23</li>
-  <li>24</li>
-  <li>25</li>
-  <li>26</li>
-  <li>27</li>
-  <li>28</li>
-  <li>29</li>
-  <li>30</li>
-  <li>31</li>
+  <li><a href="events">1</li>
+  <li><a href="events">2</li>
+  <li><a href="events">3</li>
+  <li><a href="events">4</li>
+  <li><a href="events">5</li>
+  <li><a href="events">6</li>
+  <li><a href="events">7</li>
+  <li><a href="events">8</li>
+  <li><a href="events">9</li>
+  <li><a href="events"><span class="active">10</span></li>
+  <li><a href="events">11</li>
+  <li><a href="events">12</li>
+  <li><a href="events">13</li>
+  <li><a href="events">14</li>
+  <li><a href="events">15</li>
+  <li><a href="events">16</li>
+  <li><a href="events">17</li>
+  <li><a href="events">18</li>
+  <li><a href="events">19</li>
+  <li><a href="events">20</li>
+  <li><a href="events">21</li>
+  <li><a href="events">22</li>
+  <li><a href="events">23</li>
+  <li><a href="events">24</li>
+  <li><a href="events">25</li>
+  <li><a href="events">26</li>
+  <li><a href="events">27</li>
+  <li><a href="events">28</li>
+  <li><a href="events">29</li>
+  <li><a href="events">30</li>
+  <li><a href="events">31</li>
 </ul>
 <!--<a href="#" class="btn btn-default">Learn More</a> -->
                     </div>
