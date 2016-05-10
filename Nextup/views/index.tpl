@@ -42,14 +42,14 @@
                 </div>
             </div>
             <div class="item">
-                <div class="fill" style="background-image:url('/static/images/three.jpg');"></div>
+                <div class="fill" style="background-image:url('/static/images/four.jpg');"></div>
                 <div class="carousel-caption">
                     <!--ref: http://www.blueevents-agency.com/wp-content/uploads/2013/11/explore-events-food-and-wine-events.jpg -->
                     <h2><a href="eventpage">{{i['event_name']}}</h2>
                 </div>
             </div>
             <div class="item">
-                <div class="fill" style="background-image:url('/static/images/three.jpg');"></div>
+                <div class="fill" style="background-image:url('/static/images/five.jpg');"></div>
                 <div class="carousel-caption">
                     <!--ref: http://www.blueevents-agency.com/wp-content/uploads/2013/11/explore-events-food-and-wine-events.jpg -->
                     <h2><a href="eventpage">{{i['event_name']}}</h2>
