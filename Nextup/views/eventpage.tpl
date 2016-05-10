@@ -29,7 +29,7 @@
                 </div>
                 <div class="row">
                     <div class="col-md-6">
-                        <img class="img-responsive" src="static/images/two.jpg" alt="">
+                        <img class="img-responsive" src="../static/images/two.jpg" alt="">
                     </div>  
                     <div id="eventinfo" class="col-md-6">
                    
@@ -48,12 +48,24 @@
                         <p>Lagt till av: <strong>{{i['tipster']}} </strong></p>
                     </div>
             %end
-            </div>
-    </main>
+        </main>
+    </div>
+        
         <!-- /Eventpage -->
     <!-- /Page Content -->
+    <!-- Footer -->
+    <footer>
+        <div class="row">
+            <div class="col-lg-12">
+                <p id="copy">Copyright &copy; NextUP! 2016</p>
+            </div>
+        </div>
+    </footer>
+<!-- jQuery -->
+<script src="../static/js/jquery.js"></script>
 
-<!-- Include footsection -->
-% include("foot.tpl")
+<!-- Bootstrap Core JavaScript -->
+<script src="../static/js/bootstrap.min.js"></script>
+</body>
 </html>
 
