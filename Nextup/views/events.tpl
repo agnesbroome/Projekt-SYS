@@ -22,14 +22,11 @@
         <!-- /Page Heading/Breadcrumbs -->
 
         <!-- Event listing  -->
-        % for tip in tips:
+        % for i in events:
         <div class="tip">
-            % if tip["image"] != "":
-            <img src="{{tip['image']}}" alt="En bild">
-            % end
-            <h2>{{tip['event_name']}}</h2>
-            <h3>{{tip['first_day']}} - {{tip['last_day']}}</h3>
-          <p>{{!tip['description']}}</p>
+            <h2>{{i['event_name']}}</h2>
+            <h3>{{i['first_day']}} - {{i['last_day']}}</h3>
+          <p>{{i['description']}}</p>
         </div>
         % end
         
