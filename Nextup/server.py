@@ -37,7 +37,7 @@ def get_user():
         return user
     except:
         return None
-    
+
 def get_active():
     query = "SELECT * FROM event \
        WHERE status = '%s' \

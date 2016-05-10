@@ -23,6 +23,9 @@
 
         <!-- Eventpage -->
         <main id="event_page">
+            %if len(single) < 1:
+                <div class="alert alert-danger">Eventet du letar efter hittades inte!</div>
+            %end
             %for i in single:
                 <div id="event_page", class="headevent">
                     <h2>{{i['event_name']}}</h2>  
