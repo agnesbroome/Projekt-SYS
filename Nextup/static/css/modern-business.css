@@ -119,8 +119,10 @@ header.carousel .fill {
 #calender_nu_float{
     float: inherit;
 }
-#right_position{
-    
+#event_chooser{
+    position: fixed;
+    right: 0;
+    bottom: 0;
 }
 
 /* Footer Styles */
