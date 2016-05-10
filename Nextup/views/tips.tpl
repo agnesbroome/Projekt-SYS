@@ -108,5 +108,5 @@
         <!-- /.row -->
 <!-- Include footsection -->
 % include("foot.tpl")
-<!-- <script src="static/js/tipsscript.js"></script>-->
+<script src="static/js/tipsscript.js"></script>
 </html>

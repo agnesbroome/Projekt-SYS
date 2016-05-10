@@ -124,6 +124,15 @@ header.carousel .fill {
     right: 0;
     bottom: 0;
 }
+#categories_events{
+    text-align: center;
+}
+#categories_events > i{
+    padding: 20px;
+}
+#categories_events > label{
+    margin: 0;
+}
 
 /* Footer Styles */
 

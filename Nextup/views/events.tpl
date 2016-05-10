@@ -41,6 +41,14 @@
             <li><a href="#">November</a></li>
             <li><a href="#">December</a></li>
           </ul>
+        </div>
+        <div id="categories_events">
+            <i class="fa fa-music" aria-hidden="true"></i><label> Musik </label>
+            <i class="fa fa-glass" aria-hidden="true"></i><label> Uteliv </label>
+            <i class="fa fa-paint-brush" aria-hidden="true"></i><label> Konst </label>
+            <i class="fa fa-hand-peace-o" aria-hidden="true"></i><label> Scen </label>
+            <i class="fa fa-cc-visa" aria-hidden="true"></i><label> Shopping </label>
+            <i class="fa fa-question-circle-o" aria-hidden="true"></i><label> Övrigt </label>
         </div>           
         % for i in events:
         <div class="tip">
@@ -51,6 +59,7 @@
             <i class="fa fa-paint-brush fa-3x" aria-hidden="true"></i>
             <i class="fa fa-hand-peace-o fa-3x" aria-hidden="true"></i>
             <i class="fa fa-cc-visa fa-3x" aria-hidden="true"></i>
+            <i class="fa fa-question-circle-o fa-3x" aria-hidden="true"></i>
             <hr>
         </div>
         % end
@@ -58,6 +67,6 @@
         <!-- /Event listing  -->
     <!-- /Page Content -->
 <!-- Include footsection -->
-<script src="events.js"></script>
 % include("foot.tpl")
+<script src="/static/js/events.js"></script>
 </html>
