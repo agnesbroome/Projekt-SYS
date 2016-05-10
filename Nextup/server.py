@@ -212,8 +212,9 @@ def tips_process():
         if ext not in ('.png','.jpg','.jpeg'):
             return 'File extension not allowed.'
 
-        save_path = "/static/images/uploaded/"
-        image.save(save_path)
+        save_path = "static/images/uploaded"
+        file_path = "{path}/{file}".format(path=save_path, file=image.filename)
+        image.save(file_path)
     else:
         pass
     description = request.forms.get("description")
@@ -231,9 +232,9 @@ def tips_process():
         
     else:    
         query = ("INSERT INTO event (event_name, first_day, last_day, first_time, last_time, location, adress, organizer, website, image, description, tipster, tipster_mail, status) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)")
-        cur.execute(query, (event_name, first_day, last_day,    first_time, last_time, location, adress, organizer, website, image, description, tipster, tipster_mail, status))
+        cur.execute(query, (event_name, first_day, last_day,    first_time, last_time, location, adress, organizer, website, file_path, description, tipster, tipster_mail, status))
         db.commit()
-        return template("tips", success=True)
+        return template("tips", error=error, success=True)
 
 @route("/admin_process", method="post")
 def admin_process():

@@ -104,7 +104,7 @@
                 </div>
                 <div class="row">
                     <div class="col-md-6">
-                        <img class="img-responsive" src="../static/images/two.jpg" alt="">
+                        <img class="img-responsive" src="../{{i['image']}}" alt="no image found">
                     </div>  
                     <div id="eventinfo" class="col-md-6">
                    

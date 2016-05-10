@@ -24,6 +24,7 @@
             <div class="col-md-8">
                 %if len(error) > 0:
                     <div class="alert alert-danger">Vänligen fyll i fälten korrekt - se rödmarkerade fält</div>
+                    {{error}}
                 %end
                 %if success == True:
                     <div class="alert alert-success">Ditt tips har skickats!</div>

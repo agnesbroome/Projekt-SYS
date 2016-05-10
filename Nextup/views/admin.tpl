@@ -51,7 +51,7 @@
                             <td>{{i['adress']}}</td>
                             <td>{{i['organizer']}}</td>
                             <td>{{i['website']}}</td>
-                            <td>{{i['image']}}</td>
+                            <td><img class="admin_img" src="../../{{i['image']}}" /></td>
                             <td><textarea rows="5" cols="50" readonly>{{i['description']}}</textarea></td>
                             <td>{{i['tipster']}}</td>
                             <td>{{i['tipster_mail']}}</td>

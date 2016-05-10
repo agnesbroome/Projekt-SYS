@@ -60,6 +60,9 @@ h1 > small {
 #admin_container{
     padding-top: 15px;
 }
+.admin_img{
+    height: 50px;
+}
 /* Home Page Carousel */
 
 header.carousel {
