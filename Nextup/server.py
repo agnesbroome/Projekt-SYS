@@ -207,13 +207,15 @@ def tips_process():
     if not validators.url(website):
         error.append("error10")
     image = request.files.get("image")
-    name, ext = os.path.splitext(image.filename)
-    if ext not in ('.png','.jpg','.jpeg'):
-        return 'File extension not allowed.'
+    if image:
+        name, ext = os.path.splitext(image.filename)
+        if ext not in ('.png','.jpg','.jpeg'):
+            return 'File extension not allowed.'
 
-    save_path = "/static/images/uploaded/"
-    image.save(save_path) # appends upload.filename automatically
-    return 'OK'
+        save_path = "/static/images/uploaded/"
+        image.save(save_path)
+    else:
+        pass
     description = request.forms.get("description")
     if description == "":
         error.append("error12")
