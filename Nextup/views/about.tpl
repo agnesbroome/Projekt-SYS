@@ -48,7 +48,7 @@
                         <h3>Maria Holmberg<br>
                             <small>Job Title</small>
                         </h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste saepe et quisquam nesciunt maxime.</p>
+                        <p>32 år, studerar första året på Infprmationsarkitektprogrammet 180p Malmö Högskola. </p>
                         <ul class="list-inline">
                             <li><a href="#"><i class="fa fa-2x fa-facebook-square"></i></a>
                             </li>
