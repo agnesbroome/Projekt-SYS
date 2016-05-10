@@ -51,8 +51,8 @@
             <i class="fa fa-question-circle-o" aria-hidden="true"></i><label> Övrigt </label>
         </div>           
         % for i in events:
-        <div class="tip">
-            <h2>{{i['event_name']}}</h2>
+        <div class="event_flow">
+            <a href="eventpage/{{i['event_ID']}}"><h2>{{i['event_name']}}</h2></a>
             <h3>{{i['first_day']}} - {{i['last_day']}}</h3>
             <i class="fa fa-music fa-3x" aria-hidden="true"></i>
             <i class="fa fa-glass fa-3x" aria-hidden="true"></i>

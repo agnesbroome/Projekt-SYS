@@ -119,6 +119,13 @@ header.carousel .fill {
 #calender_nu_float{
     float: inherit;
 }
+.event_flow > a{
+    text-decoration: none;
+    color: #000;
+}
+.event_flow > a:hover{
+    text-decoration: underline;
+}
 #event_chooser{
     position: fixed;
     right: 0;
