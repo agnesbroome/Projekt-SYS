@@ -5,6 +5,8 @@ import MySQLdb
 import datetime
 import validators
 import smtplib
+import os
+import sys
 from email.MIMEMultipart import MIMEMultipart
 from email.MIMEText import MIMEText
  
@@ -197,10 +199,14 @@ def tips_process():
     website = request.forms.get("website")
     if not validators.url(website):
         error.append("error10")
-    image = request.forms.get("image")
-    image_save= open("./%s" % ("static/images/uploaded/" + event_ID + ".jpg"), 'w')
-    image_save.write(image)
-    image_save.close()
+    image = request.files.get("image")
+    name, ext = os.path.splitext(image.filename)
+    if ext not in ('.png','.jpg','.jpeg'):
+        return 'File extension not allowed.'
+
+    save_path = "/static/images/uploaded/"
+    image.save(save_path) # appends upload.filename automatically
+    return 'OK'
     description = request.forms.get("description")
     if description == "":
         error.append("error12")

@@ -28,7 +28,7 @@
                 %if success == True:
                     <div class="alert alert-success">Ditt tips har skickats!</div>
                 %end
-                <form id="tipsform" action="/tips_process" method="post" accept-charset="UTF-8">
+                <form id="tipsform" action="/tips_process" method="post" enctype="multipart/form-data" accept-charset="UTF-8">
                     <div class="input-group form-group">
                           <span class="input-group-addon" id="basic-addon3">Eventnamn</span>
                         <input type="text" class="form-control" aria-describedby="basic-addon3" name="event_name" id="event_name">
@@ -84,7 +84,7 @@
                     </div>
                     <div class="form-group">
                         <label for="exampleInputFile">Välj bild till ditt event</label>
-                        <input type="file" accept="image/*" id="exampleInputFile" name="image">
+                        <input type="file" accept="image/*" name="image">
                         <p class="help-block">Bilden får inte överstiga X kb</p>
                     </div>
                     <div class="form-group">
