@@ -53,6 +53,12 @@ def get_tips():
     cur.execute(query)
     return cur.fetchall()
 
+def single_event(SE):
+    query = "SELECT * FROM event \
+    WHERE event_ID = '%s'" % (SE)
+    cur.execute(query)
+    return cur.fetchall()
+
 def fetch_length_new():
     new = "SELECT status FROM event \
         WHERE status = 'new'"
@@ -123,9 +129,10 @@ def contact():
 def faq():
     return template("faq")
 
-@route("/eventpage")
-def eventpage():
-    return template("eventpage", tips=get_tips())
+@route("/eventpage/<handler>")
+def eventpage(handler):
+    handler=handler
+    return template("eventpage", single=single_event(handler))
     
 
 @route("/logout")
