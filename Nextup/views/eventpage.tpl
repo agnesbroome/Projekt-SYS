@@ -102,18 +102,35 @@
                 <div id="event_page", class="headevent">
                     <h2>{{i['event_name']}}</h2>  
                 </div>
-                <div class="row">
+                <div class="row" >
                     <div class="col-md-6">
                         <img class="img-responsive" src="../{{i['image']}}" alt="no image found">
                     </div>  
                     <div id="eventinfo" class="col-md-6">
-                   
-                        <h2>{{i['first_day']}} - {{i['last_day']}}</h2>
-                        <h2>{{i['first_time']}} - {{i['last_time']}}</h2>
-                        <h2>{{i['location']}}</h2>
-                        <h2>{{i['adress']}}</h2>
-                        <h2>{{i['organizer']}}</h2>
-                        <h2><a href="{{i['website']}}">{{i['website']}}</a></h2>
+                        <table class="table-hover table-condensed table-borderless">
+                            <tbody>
+                                <tr>
+                                    <th>NÄR</th>
+                                    <td>{{i['first_day']}} Kl. {{i['first_time']}} till {{i['last_day']}} Kl. {{i['last_time']}}</td>
+                                </tr>
+                                <tr>
+                                    <th>VAR</th>
+                                    <td>{{i['location']}}</td>
+                                </tr>
+                                <tr>
+                                    <th>ADRESS</th>
+                                    <td>{{i['adress']}}</td>
+                                </tr>
+                                 <tr>
+                                     <th>ARRANGÖR</th>
+                                    <td>{{i['organizer']}}</td>
+                                </tr>
+                                <tr>
+                                    <th>WEBBPLATS</th>
+                                    <td><a href="{{i['website']}}">{{i['website']}}</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                     </div>
                     <div id="description">
@@ -125,7 +142,6 @@
             %end
         </main>
     </div>
-        
         <!-- /Eventpage -->
     <!-- /Page Content -->
     <!-- Footer -->
