@@ -4,6 +4,7 @@
 <!-- Include headsection and global navigation -->
 % include("head.tpl")
 
+
     <!-- Page Content -->
     <div class="container">
 
@@ -99,7 +100,7 @@
                     <div class="input-group form-group">
                           <span class="input-group-addon" id="basic-addon3">E-post</span>
                         <input type="email" class="form-control" aria-describedby="basic-addon3" name="tipster_mail" data-error="Detta är inte en korrekt E-post" required>
-                        <div class="help-block with-errors"></div>
+                        
                     </div>
                 <button type="submit" class="btn btn-lg btn-primary">Skicka</button>
             </div>
@@ -110,4 +111,6 @@
 <!-- Include footsection -->
 % include("foot.tpl")
 <!--<script src="static/js/tipsscript.js"></script> -->
+<!-- Include Bootstrap Validation form -->
+<script src="static/js/formscript.js"></script>
 </html>
