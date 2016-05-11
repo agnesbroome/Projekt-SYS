@@ -113,7 +113,13 @@ header.carousel .fill {
     margin-top: 20px;
 }
 #tipster {
-    float:right
+    float:right;
+}
+#description{
+    margin-top: 20px;
+}
+.table-borderless{
+    border: none;
 }
 /* Events Styles */
 #calender_nu_float{
