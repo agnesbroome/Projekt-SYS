@@ -44,7 +44,7 @@ label{
 }
 
 h1 > small {
-    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: "Helvetica Neue", Helvetica,Arial, sans-serif;
     font-size:0.4em;
     font-style: italic;
 }
