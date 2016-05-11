@@ -29,10 +29,10 @@
                 %if success == True:
                     <div class="alert alert-success">Ditt tips har skickats!</div>
                 %end
-                <form id="tipsform" action="/tips_process" method="post" enctype="multipart/form-data" accept-charset="UTF-8">
+                <form id="tipsform" data-toggle="validator" role="form" action="/tips_process" method="post" enctype="multipart/form-data" accept-charset="UTF-8">
                     <div class="input-group form-group">
                           <span class="input-group-addon" id="basic-addon3">Eventnamn</span>
-                        <input type="text" class="form-control" aria-describedby="basic-addon3" name="event_name" id="event_name">
+                        <input type="text" class="form-control" aria-describedby="basic-addon3" name="event_name" id="event_name" required>
                     </div>
                     <div class="form-group">
                         <label class="checkbox-inline">
@@ -98,7 +98,8 @@
                     </div>
                     <div class="input-group form-group">
                           <span class="input-group-addon" id="basic-addon3">E-post</span>
-                        <input type="text" class="form-control" aria-describedby="basic-addon3" name="tipster_mail">
+                        <input type="email" class="form-control" aria-describedby="basic-addon3" name="tipster_mail" data-error="Detta är inte en korrekt E-post" required>
+                        <div class="help-block with-errors"></div>
                     </div>
                 <button type="submit" class="btn btn-lg btn-primary">Skicka</button>
             </div>
