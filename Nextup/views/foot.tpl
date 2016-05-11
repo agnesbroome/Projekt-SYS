@@ -16,11 +16,8 @@
     <!-- Bootstrap Core JavaScript -->
     <script src="static/js/bootstrap.min.js"></script>
 
-    <!-- Script to Activate the Carousel -->
-    <script>
-    $('.carousel').carousel({
-        interval: 5000 //changes the speed
-    })
-    </script>
+    <!-- Bootstrap Validator JavaScript -->
+    <script src="static/js/bootstrapValidator.min.js"></script>
+
 </body>
 <!-- /Footer -->

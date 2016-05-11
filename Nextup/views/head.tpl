@@ -7,6 +7,10 @@
     <meta name="author" content="">
 
     <title>NextUP!</title>
+    
+    <!-- Bootsrap Validation CSS -->
+    <link href="/static/css/bootsrapvalidator.min.css" rel="stylesheet">
+    <link href="/static/css/bootstrapvalidator.css" rel="stylesheet">
 
     <!-- Bootstrap Core CSS -->
     <link href="/static/css/bootstrap.min.css" rel="stylesheet">
