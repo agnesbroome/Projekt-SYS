@@ -52,16 +52,22 @@
         </div>           
         % for i in events:
         <div class="event_flow">
-            <a href="eventpage/{{i['event_ID']}}"><h2>{{i['event_name']}}</h2></a>
+            
+            <a href="eventpage/{{i['event_ID']}}">
+            <div class="col-md-2 col-sm-1" id="img_events">
+                <img class="img-responsive" src="../{{i['image']}}" alt="no image found">
+            </div>      
+            <h2>{{i['event_name']}}</h2></a>
             <h3>{{i['first_day']}} - {{i['last_day']}}</h3>
-            <i class="fa fa-music fa-3x" aria-hidden="true"></i>
-            <i class="fa fa-glass fa-3x" aria-hidden="true"></i>
-            <i class="fa fa-paint-brush fa-3x" aria-hidden="true"></i>
-            <i class="fa fa-hand-peace-o fa-3x" aria-hidden="true"></i>
-            <i class="fa fa-cc-visa fa-3x" aria-hidden="true"></i>
-            <i class="fa fa-question-circle-o fa-3x" aria-hidden="true"></i>
+            <div class="col-md-12 categories_symbols">
+                <i class="fa fa-music fa-3x" aria-hidden="true"></i>
+                <i class="fa fa-glass fa-3x" aria-hidden="true"></i>
+                <i class="fa fa-paint-brush fa-3x" aria-hidden="true"></i>
+                <i class="fa fa-hand-peace-o fa-3x" aria-hidden="true"></i>
+                <i class="fa fa-cc-visa fa-3x" aria-hidden="true"></i>
+                <i class="fa fa-question-circle-o fa-3x" aria-hidden="true"></i>
             <hr>
-        </div>
+            </div>
         % end
         
         <!-- /Event listing  -->

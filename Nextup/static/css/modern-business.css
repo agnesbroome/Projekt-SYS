@@ -130,6 +130,22 @@ h1 > small {
 #categories_events > label{
     margin: 0;
 }
+.categories_symbols{
+    margin-left: 170px;
+    margin-top: -20px;
+}
+#img_events img {
+    width:90%;
+    height: 100px;
+    margin-top: 20px;
+}
+.event_flow h2 {
+    height: auto;
+}
+hr {
+    width: 100%;
+    margin-left: 0px;
+}
 
 /* Footer Styles */
 
