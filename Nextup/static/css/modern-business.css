@@ -32,6 +32,9 @@ body {
 label{
     font-weight: normal;
 }
+
+/*Index Page style */
+
 #indexheader{
     font-family: 'Mr Dafoe', cursive;
     font-size: 4em;
@@ -57,6 +60,7 @@ h1 > small {
     background-color: #4671D5;
     min-width: 120px;
 }
+
 /* Admin Page */
 #admin_container{
     padding-top: 15px;

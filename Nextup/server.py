@@ -42,7 +42,7 @@ def get_active():
     query = "SELECT * FROM event \
        WHERE status = '%s' \
        ORDER BY first_day ASC \
-       LIMIT 5" % ("active")
+       LIMIT 100" % ("active")
     cur.execute(query)
     return cur.fetchall()
 
