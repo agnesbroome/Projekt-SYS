@@ -59,6 +59,8 @@
             </div>      
             <h2>{{i['event_name']}}</h2></a>
             <h3>{{i['first_day']}} - {{i['last_day']}}</h3>
+        
+     
             <div class="col-md-12 categories_symbols">
                 <i class="fa fa-music fa-3x" aria-hidden="true"></i>
                 <i class="fa fa-glass fa-3x" aria-hidden="true"></i>
