@@ -25,7 +25,7 @@
                         <p>Här kan du se vad som händer runt om i vårt underbara Malmö! Vår mission är att vi ska ha örat mot trottoaren och fingret på pulsen så just du kan få hjälp att hitta vad du och dina vänner ska göra i helgen!</p> 
                         <p>Om du har koll på ett fett event som du vill dela med andra i Malmö så lägg till det i vårt flöde!</p>
                         <h5>Have a good one!</h5>
-                        <p>Hälsningar Tema NextUP!</p>
+                        <p>Hälsningar Team NextUP!</p>
                         
 <a href="events" class="btn btn-default">Se events</a>
                     </div>
