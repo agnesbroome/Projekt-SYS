@@ -17,17 +17,17 @@
             <!-- Main funktionality Section -->
             <!-- Section 1 - Left -->
             <div class="col-md-4">
-                <div class="panel panel-default">
+                <div class="panel panel-default heigt-homepagepanel-index">
                     <div class="panel-heading">
                         <h4><i class="glyphicon glyphicon-heart"></i> Välkommen till NextUP!</h4>
                     </div>
                     <div class="panel-body">
-                        <p>Här kan du se vad som händer runt om i vårt underbara Malmö! Vår mission är att vi ska ha örat mot trottoaren och fingret på pulsen så just du kan få hjälp att hitta vad du och dina vänner ska göra i helgen!</p> 
-                        <p>Om du har koll på ett fett event som du vill dela med andra i Malmö så lägg till det i vårt flöde!</p>
-                        <h5>Have a good one!</h5>
+                        <p>Här kan du se vad som händer runt om i vårt underbara Malmö!</p> 
+                        <p>Vår mission är att vi ska ha örat mot trottoaren och fingret på pulsen så just du kan få hjälp att hitta vad du och dina vänner ska göra i helgen!</p> 
+                        <p>Have a good one!</p>
                         <p>Hälsningar Team NextUP!</p>
                         
-<a href="events" class="btn btn-default">Se events</a>
+<a href="events" class="btn btn-default">Se alla events</a>
                     </div>
                 </div>
             </div>
@@ -35,14 +35,17 @@
             
             <!-- Section 2 - Center -->
             <div class="col-md-4">
-                <div class="panel panel-default">
+                <div class="panel panel-default heigt-homepagepanel-index">
                     <div class="panel-heading">
                         <h4><i class="fa fa-bullhorn"></i> Tipsa om event</h4>
                     </div>
                     <div class="panel-body">
-                        <p>Välkommen till NextUP! Här kan du ta del av och tipsa oss om event och aktiviteter som äger rum runt om i Malmöområdet. Ska du ordna en klubb? Kanske styra upp en loppmarknad med grannarna? Då kan du tipsa oss så lägger vi upp det här så att hela Malmö får reda på det! Tryck på knappen här nedanför så kommer du till vårt tipsformulär.
+                        <p>Ska du ordna en klubb? Kanske styra upp en loppmarknad med grannarna?</p>
+                        <p>Eller om du bara du har koll på ett fett event som du vill dela med andra i Malmö så lägg till det i vårt flöde!</p>
+                        <p>Tryck på knappen här nedanför så kommer du till vårt tipsformulär.
 </p>
-                        <a href="tips" class="btn btn-default">Tipsa här</a>
+                        <br>
+                        <a href="tips" class="btn btn-default">Tipsa oss här</a>
                     </div>
                 </div>
             </div>
@@ -50,11 +53,11 @@
             
             <!-- Section 3 - Right -->
             <div class="col-md-4">
-                <div class="panel panel-default pre-scrollable">
+                <div class="panel panel-default heigt-homepagepanel-index">
                     <div class="panel-heading">
                         <h4><i class="glyphicon glyphicon-star"></i> Kommande events</h4>
                     </div>
-                    <div class="panel-body">
+                    <div class="panel-body pre-scrollable">
                         <table class="table table-hover table-condensed">
                             <tbody>
                                 %for i in events:
@@ -68,7 +71,6 @@
                         </table>
                     </div>
                 </div>
-            </div>
             <!-- /Section 3 - Right -->
         </div>
         <!-- /Main funktionality Section -->

@@ -35,6 +35,10 @@ label{
 
 /*Index Page style */
 
+.heigt-homepagepanel-index{
+    height: 340px;
+}
+ 
 #indexheader{
     font-family: 'Mr Dafoe', cursive;
     font-size: 4em;
