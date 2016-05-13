@@ -9,20 +9,11 @@
 
     </div>
     <!-- /.container -->
-
     <!-- jQuery -->
     <script src="static/js/jquery.js"></script>
-
     <!-- Bootstrap Core JavaScript -->
     <script src="static/js/bootstrap.min.js"></script>
-
-<<<<<<< Updated upstream
     <!-- Bootstrap Validator JavaScript -->
     <script src="static/js/bootstrapValidator.min.js"></script>
-
-=======
-   
-   
->>>>>>> Stashed changes
 </body>
 <!-- /Footer -->
