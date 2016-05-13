@@ -13,7 +13,6 @@ body {
 body {
     padding-top: 50px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
 }
-
 .img-portfolio {
     margin-bottom: 30px;
 }
@@ -33,17 +32,26 @@ body {
 label{
     font-weight: normal;
 }
+
+/*Index Page style */
+
+.heigt-homepagepanel-index{
+    height: 340px;
+}
+ 
 #indexheader{
     font-family: 'Mr Dafoe', cursive;
     font-size: 4em;
+    border: none;
 }
+
 #logo{
     font-family: 'Mr Dafoe', cursive;
     font-size: 2em;
 }
 
 h1 > small {
-    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: "Helvetica Neue", Helvetica,Arial, sans-serif;
     font-size:0.4em;
     font-style: italic;
 }
@@ -56,30 +64,13 @@ h1 > small {
     background-color: #4671D5;
     min-width: 120px;
 }
+
 /* Admin Page */
 #admin_container{
     padding-top: 15px;
 }
 .admin_img{
     height: 50px;
-}
-/* Home Page Carousel */
-
-header.carousel {
-    height: 50%;
-}
-
-header.carousel .item,
-header.carousel .item.active,
-header.carousel .carousel-inner {
-    height: 100%;
-}
-
-header.carousel .fill {
-    width: 100%;
-    height: 100%;
-    background-position: center;
-    background-size: cover;
 }
 
 /* 404 Page Styles */
@@ -109,16 +100,23 @@ header.carousel .fill {
 }
 
 /* Eventpage Styles */
+
+.headevent{
+    margin-bottom: 20px;
+}
 #symbols{
     margin-top: 20px;
 }
 #tipster {
-    float:right
+    float:right;
+}
+#description{
+    margin-top: 20px;
+}
+.table-borderless{
+    border: none;
 }
 /* Events Styles */
-#calender_nu_float{
-    float: inherit;
-}
 .event_flow > a{
     text-decoration: none;
     color: #000;
@@ -138,6 +136,22 @@ header.carousel .fill {
     padding-left:10px;
     color: #000;
 }
+.categories_symbols{
+    margin-left: 170px;
+    margin-top: -20px;
+}
+#img_events img {
+    width:90%;
+    height: 100px;
+    margin-top: 20px;
+}
+.event_flow h2 {
+    height: auto;
+}
+hr {
+    width: 100%;
+    margin-left: 0px;
+}
 
 /* Footer Styles */
 
@@ -152,26 +166,6 @@ footer {
 }
 ul {list-style-type: none;}
 body {font-family: Verdana, sans-serif;}
-/* Style Calender */
-/* Month header */
-.month {
-    text-align: center;
-    padding: 25px 25px;
-    width: 100%;
-    background: #707070;
-}
-
-/* Month list */
-.month ul {
-    margin: 0;
-    padding: 0;
-}
-
-.month ul li {
-    color: white;
-    font-size: 20px;
-    text-transform: uppercase;
-    letter-spacing: 3px;
 }
 
 /* Previous button inside month header */
@@ -185,45 +179,6 @@ body {font-family: Verdana, sans-serif;}
     float: right;
     padding-top: 10px;
 }
-
-/* Weekdays (Mon-Sun) */
-.weekdays {
-    margin: 0;
-    padding: 10px 0;
-    background-color:#ddd;
-}
-
-.weekdays li {
-    display: inline-block;
-    width: 11.6%;
-    color: #666;
-    text-align: center;
-}
-
-/* Days (1-31) */
-.days {
-    padding: 10px 0;
-    background: #eee;
-    margin: 0;
-}
-
-.days li {
-    list-style-type: none;
-    display: inline-block;
-    width: 11.6%;
-    text-align: center;
-    margin-bottom: 5px;
-    font-size:12px;
-    color:#777;
-}
-
-/* Highlight the "current" day */
-.days li .active {
-    padding: 5px;
-    background: #303030;
-    color: white !important
-}
-/* End calender Style */
 
 /* Responsive Styles */
 

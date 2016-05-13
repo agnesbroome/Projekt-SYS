@@ -7,10 +7,6 @@
     <meta name="author" content="">
 
     <title>NextUP!</title>
-    
-    <!-- Bootsrap Validation CSS -->
-    <link href="/static/css/bootsrapvalidator.min.css" rel="stylesheet">
-    <link href="/static/css/bootstrapvalidator.css" rel="stylesheet">
 
     <!-- Bootstrap Core CSS -->
     <link href="/static/css/bootstrap.min.css" rel="stylesheet">
@@ -31,9 +27,7 @@
     <![endif]-->
 
 </head>
-
-<body>
-
+<body background="static/images/one.jpg">
     <!-- Navigation -->
     <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
         <div class="container">

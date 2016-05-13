@@ -42,7 +42,7 @@ def get_active():
     query = "SELECT * FROM event \
        WHERE status = '%s' \
        ORDER BY first_day ASC \
-       LIMIT 5" % ("active")
+       LIMIT 100" % ("active")
     cur.execute(query)
     return cur.fetchall()
 
@@ -82,6 +82,13 @@ def get_events(handler):
        WHERE status = '%s'" % (handler)
     cur.execute(query)
     return cur.fetchall()
+
+
+def get_category():
+    query = "SELECT * FROM category \
+        WHERE event_ID = '%s'"
+    cur.execute(query)
+    return cur.fetchal()
     
 #Static Routes
 
@@ -233,8 +240,12 @@ def tips_process():
         query = ("INSERT INTO event (event_name, first_day, last_day, first_time, last_time, location, adress, organizer, website, image, description, tipster, tipster_mail, status) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)")
         cur.execute(query, (event_name, first_day, last_day,    first_time, last_time, location, adress, organizer, website, file_path, description, tipster, tipster_mail, status))
         db.commit()
+        query = ("INSERT INTO category_event (category_ID, event_ID) VALUES (%s, %s)")
+        cur.execute(query, (category_ID, event_ID))
+        db.commit()
         return template("tips", error=error, success=True)
-
+  
+    
 @route("/admin_process", method="post")
 def admin_process():
     status = request.forms.getall("status")
