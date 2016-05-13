@@ -43,12 +43,12 @@
           </ul>
         </div>
         <div id="categories_events">
-            <i class="fa fa-music" aria-hidden="true"></i><label> Musik </label>
-            <i class="fa fa-glass" aria-hidden="true"></i><label> Uteliv </label>
-            <i class="fa fa-paint-brush" aria-hidden="true"></i><label> Konst </label>
-            <i class="fa fa-hand-peace-o" aria-hidden="true"></i><label> Scen </label>
-            <i class="fa fa-cc-visa" aria-hidden="true"></i><label> Shopping </label>
-            <i class="fa fa-question-circle-o" aria-hidden="true"></i><label> Övrigt </label>
+            <span class="label label-info">Musik<i class="fa fa-music" aria-hidden="true"></i></span>
+            <span class="label label-info">Uteliv<i class="fa fa-glass" aria-hidden="true"></i></span>
+            <span class="label label-info">Konst<i class="fa fa-paint-brush" aria-hidden="true"></i></span>
+            <span class="label label-info">Scen<i class="fa fa-hand-peace-o" aria-hidden="true"></i></span>
+            <span class="label label-info">Shopping<i class="fa fa-cc-visa" aria-hidden="true"></i></span>
+            <span class="label label-info">Övrigt<i class="fa fa-question-circle-o" aria-hidden="true"></i></span>
         </div>           
         % for i in events:
         <div class="event_flow">
