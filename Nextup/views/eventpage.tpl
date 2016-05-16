@@ -111,7 +111,7 @@
                             <tbody>
                                 <tr>
                                     <th>NÄR</th>
-                                    <td>{{i['first_day']}} Kl. {{i['first_time']}} till {{i['last_day']}} Kl. {{i['last_time']}}</td>
+                                    <td>{{i['first_day']}} Kl. {{str(i['first_time'])[:-3]}} till {{i['last_day']}} Kl. {{str(i['last_time'])[:-3]}}</td>
                                 </tr>
                                 <tr>
                                     <th>VAR</th>
