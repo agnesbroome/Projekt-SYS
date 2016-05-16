@@ -111,11 +111,17 @@
                             <tbody>
                                 <tr>
                                     <th>NÄR</th>
-                                    %time_start = i['first_time']
-                                    %time_end = i['last_time']
-                                    %if len(time_start), len(time_end) == 4:
+                                    %time_start = str(i['first_time'])[:-3]
+                                    %time_end = str(i['last_time'])[:-3]
+                                    %if len(time_start) or len(time_end) == 4:
 
-                                    <td>{{i['first_day']}} Kl. 0{{time_start}}%else{{time_start}}%end till {{i['last_day']}} Kl. 0{{time_end}}%else{{time_end}}%end</td>
+                                    <td>
+                                        <i class="fa fa-calendar" aria-hidden="true"></i>
+                                        {{i['first_day']}} till 
+                                        {{i['last_day']}}<br>
+                                        <i class="fa fa-clock-o" aria-hidden="true"></i>{{time_start}} till
+                                        {{time_end}}
+                                    </td>
                                 </tr>
                                 <tr>
                                     <th>VAR</th>
