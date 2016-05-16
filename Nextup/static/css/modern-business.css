@@ -21,9 +21,6 @@ body {
 .img-portfolio {
     margin-bottom: 30px;
 }
-.labelclass{
-    padding-right: 10px;
-}
 .input-group-addon{
     min-width: 100px;
 }
@@ -72,7 +69,6 @@ h1 > small {
     background-color: #4671D5;
     min-width: 120px;
 }
-
 /* Admin Page */
 #admin_container{
     padding-top: 15px;
@@ -113,12 +109,6 @@ h1 > small {
     margin-bottom: 20px;
 }
 #symbols{
-    margin-top: 20px;
-}
-#tipster {
-    float:right;
-}
-#description{
     margin-top: 20px;
 }
 .table-borderless{
