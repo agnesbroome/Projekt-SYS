@@ -111,7 +111,11 @@
                             <tbody>
                                 <tr>
                                     <th>NÄR</th>
-                                    <td>{{i['first_day']}} Kl. {{str(i['first_time'])[:-3]}} till {{i['last_day']}} Kl. {{str(i['last_time'])[:-3]}}</td>
+                                    %time_start = i['first_time']
+                                    %time_end = i['last_time']
+                                    %if len(time_start), len(time_end) == 4:
+
+                                    <td>{{i['first_day']}} Kl. 0{{time_start}}%else{{time_start}}%end till {{i['last_day']}} Kl. 0{{time_end}}%else{{time_end}}%end</td>
                                 </tr>
                                 <tr>
                                     <th>VAR</th>

@@ -51,7 +51,7 @@
             
             <!-- Section 3 - Right -->
             <div class="col-md-4">
-                <div class="panel panel-default heigt-homepagepanel-index upcoming">
+                <div class="panel panel-default heigt-homepagepanel-index">
                     <div class="panel-heading">
                         <h4><i class="glyphicon glyphicon-star"></i> Kommande events</h4>
                     </div>

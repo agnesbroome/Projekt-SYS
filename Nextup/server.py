@@ -38,11 +38,11 @@ def get_user():
     except:
         return None
 
-def get_active():
+def get_active(amount):
     query = "SELECT * FROM event \
        WHERE status = '%s' \
        ORDER BY first_day ASC \
-       LIMIT 100" % ("active")
+       LIMIT %s" % ("active", amount)
     cur.execute(query)
     return cur.fetchall()
 
@@ -102,7 +102,7 @@ def server_static(filename):
 #Här är alla routes, de man kan nå via vår hemsida efter grundnamnet. typ www.nextup.se. Så www.nextup.se/ är hem, som ni ser nedan. www.nextup.se/tips så kommer man till den routen. Allt detta sköter vår serverfil, dvs. denna filen.
 @route("/")
 def index():
-    return template("index", events=get_active())
+    return template("index", events=get_active('5'))
 
 @route("/admin")
 def reroute():
@@ -121,7 +121,7 @@ def tips():
 
 @route("/events")
 def events():
-    return template("events", events=get_active())
+    return template("events", events=get_active('100000'))
 
 @route("/about")
 def about():

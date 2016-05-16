@@ -138,7 +138,6 @@
         <!-- /.row -->
 <!-- Include footsection -->
 % include("foot.tpl")
-<!--<script src="static/js/tipsscript.js"></script> -->
 <!-- Include Bootstrap Validation form -->
 <script src="static/js/formscript.js"></script>
 </html>
