@@ -7,7 +7,7 @@
     <!-- Page Content -->
     <div class="container">
         <div class="row">
-            <div class="col-lg-12">
+            <div class="col-lg-12 index">
                 <h1 class="page-header" id="indexheader">
                     Next UP! <small>Eventscen Malmö</small>
                 </h1>
@@ -63,7 +63,12 @@
                                     <td><a href="eventpage/{{i['event_ID']}}">{{i['event_name']}}</a></td>
                                     <td>{{i['first_day']}}</td>
                                     %time = str(i['first_time'])[:-3]
-                                    <td>{{time}}</td>
+                                    %if len(time) == 4:
+                                        <td>0{{time}}</td>
+                                        %else:
+                                            <td>{{time}}</td>
+                                        %end
+
                                 </tr>
                                 %end
                             </tbody>
