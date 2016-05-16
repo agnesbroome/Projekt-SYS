@@ -26,7 +26,7 @@
         <!-- Intro Content -->
         <div class="row">
             <div class="col-md-6">
-                <img class="img-responsive" src="http://placehold.it/750x450" alt="">
+                <img class="img-responsive" src="static/images/three.jpg" alt="">
             </div>
             <div class="col-md-6">
                 <h2>Om NextUP! Malmö</h2>
@@ -46,17 +46,9 @@
                     <img class="img-responsive" src="static/images/maria.jpg" alt="">
                     <div class="caption">
                         <h3>Maria Holmberg<br>
-                            <small>Job Title</small>
+                            <small>Head of Communication</small>
                         </h3>
-                        <p>32 år, studerar första året på Infprmationsarkitektprogrammet 180p Malmö Högskola. </p>
-                        <ul class="list-inline">
-                            <li><a href="#"><i class="fa fa-2x fa-facebook-square"></i></a>
-                            </li>
-                            <li><a href="#"><i class="fa fa-2x fa-linkedin-square"></i></a>
-                            </li>
-                            <li><a href="#"><i class="fa fa-2x fa-twitter-square"></i></a>
-                            </li>
-                        </ul>
+                        <p>Maria har ovanligt bra förmåga att strukturera, organisera och att driva ett arbete framåt. Därför har Maria ansvar för planering, dagbok och tidsrapportering.</p>
                     </div>
                 </div>
             </div>
@@ -65,17 +57,9 @@
                     <img class="img-responsive" src="static/images/emma.jpg" alt="">
                     <div class="caption">
                         <h3>Emma Zachs<br>
-                            <small>Job Title</small>
+                            <small>Head of Documentation</small>
                         </h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste saepe et quisquam nesciunt maxime.</p>
-                        <ul class="list-inline">
-                            <li><a href="#"><i class="fa fa-2x fa-facebook-square"></i></a>
-                            </li>
-                            <li><a href="#"><i class="fa fa-2x fa-linkedin-square"></i></a>
-                            </li>
-                            <li><a href="#"><i class="fa fa-2x fa-twitter-square"></i></a>
-                            </li>
-                        </ul>
+                        <p>Emma är en ordningsam person med en bra förmåga att se behov av detaljuppdatering och färdigställande av dokument, därför har Emma ansvar för dokumentationen i projektet.</p>
                     </div>
                 </div>
             </div>
@@ -84,17 +68,9 @@
                     <img class="img-responsive" src="static/images/daniel.jpg" alt="">
                     <div class="caption">
                         <h3>Daniel Hägerström<br>
-                            <small>Job Title</small>
+                            <small>Head of Education and Personal</small>
                         </h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste saepe et quisquam nesciunt maxime.</p>
-                        <ul class="list-inline">
-                            <li><a href="#"><i class="fa fa-2x fa-facebook-square"></i></a>
-                            </li>
-                            <li><a href="#"><i class="fa fa-2x fa-linkedin-square"></i></a>
-                            </li>
-                            <li><a href="#"><i class="fa fa-2x fa-twitter-square"></i></a>
-                            </li>
-                        </ul>
+                        <p>Daniel har med sin större erfarenhet inom de arbetsredskap som skall användas i projektet fördel i att ta ansvar för kompetensutveckling, utveckling i HTML, CSS och kod.</p>
                     </div>
                 </div>
             </div>
@@ -103,17 +79,9 @@
                     <img class="img-responsive" src="static/images/niklas.jpg" alt="">
                     <div class="caption">
                         <h3>Niklas Sätterwall<br>
-                            <small>Job Title</small>
+                            <small>Head of Quality Assurance</small>
                         </h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste saepe et quisquam nesciunt maxime.</p>
-                        <ul class="list-inline">
-                            <li><a href="#"><i class="fa fa-2x fa-facebook-square"></i></a>
-                            </li>
-                            <li><a href="#"><i class="fa fa-2x fa-linkedin-square"></i></a>
-                            </li>
-                            <li><a href="#"><i class="fa fa-2x fa-twitter-square"></i></a>
-                            </li>
-                        </ul>
+                        <p>Niklas är bra på att se helheten i ett sammanhang och bryta ner det till logiska delar. Därför har Niklas det övergripande ansvar för testning och kod.</p>
                     </div>
                 </div>
             </div>
@@ -122,17 +90,9 @@
                     <img class="img-responsive" src="static/images/agnes.jpg" alt="">
                     <div class="caption">
                         <h3>Agnes Broomé Clason<br>
-                            <small>Job Title</small>
+                            <small>Head of Design and Usability</small>
                         </h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste saepe et quisquam nesciunt maxime.</p>
-                        <ul class="list-inline">
-                            <li><a href="#"><i class="fa fa-2x fa-facebook-square"></i></a>
-                            </li>
-                            <li><a href="#"><i class="fa fa-2x fa-linkedin-square"></i></a>
-                            </li>
-                            <li><a href="#"><i class="fa fa-2x fa-twitter-square"></i></a>
-                            </li>
-                        </ul>
+                        <p>Agnes har en fantastisk känsla för det visuella, är bra på att sätta sig in i användarens perspektiv. Därför är Agnes ansvarig för design och användargränssnitt.</p>
                     </div>
                 </div>
             </div>
