@@ -116,11 +116,9 @@
                                     %if len(time_start) or len(time_end) == 4:
 
                                     <td>
-                                        <i class="fa fa-calendar" aria-hidden="true"></i>
-                                        {{i['first_day']}} till 
-                                        {{i['last_day']}}<br>
-                                        <i class="fa fa-clock-o" aria-hidden="true"></i>{{time_start}} till
-                                        {{time_end}}
+                                        <strong>{{i['first_day']}}</strong><small> Kl. {{time_start}}</small> till <strong> 
+                                        {{i['last_day']}}</strong><small> Kl. {{time_end}}</small>
+                                        
                                     </td>
                                 </tr>
                                 <tr>
@@ -137,7 +135,7 @@
                                 </tr>
                                 <tr>
                                     <th>WEBBPLATS</th>
-                                    <td><a href="{{i['website']}}">{{i['website']}}</a></td>
+                                    <td><a href="{{i['website']}}">Länk till arrangörens sida</a></td>
                                 </tr>
                             </tbody>
                         </table>

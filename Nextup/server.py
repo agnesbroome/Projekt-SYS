@@ -7,6 +7,7 @@ import validators
 import smtplib
 import os
 import sys
+import time
 from email.MIMEMultipart import MIMEMultipart
 from email.MIMEText import MIMEText
  
@@ -28,6 +29,8 @@ session_opts = {
 #Variable that runs with the server file.
 app = SessionMiddleware(app(), session_opts)
 
+current_date = (time.strftime("%Y-%m-%d"))
+
 def get_user():
     try:
         user = {}
@@ -40,9 +43,9 @@ def get_user():
 
 def get_active(amount):
     query = "SELECT * FROM event \
-       WHERE status = '%s' \
+       WHERE status = '%s' AND last_day > '%s' \
        ORDER BY first_day ASC \
-       LIMIT %s" % ("active", amount)
+       LIMIT %s" % ("active", current_date , amount)
     cur.execute(query)
     return cur.fetchall()
 
@@ -178,6 +181,7 @@ def tips_process():
     if event_name == "":
         error.append("error01")
     category = request.POST.getall("category")
+    int_category = map(int, category)
     if len(category) == 0:
         error.append("error02")
     first_day = request.forms.get("first_day")
@@ -240,8 +244,12 @@ def tips_process():
         query = ("INSERT INTO event (event_name, first_day, last_day, first_time, last_time, location, adress, organizer, website, image, description, tipster, tipster_mail, status) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)")
         cur.execute(query, (event_name, first_day, last_day,    first_time, last_time, location, adress, organizer, website, file_path, description, tipster, tipster_mail, status))
         db.commit()
-        query = ("INSERT INTO category_event (category_ID, event_ID) VALUES (%s, %s)")
-        cur.execute(query, (category_ID, event_ID))
+        query2 = "SELECT event_ID FROM event \
+        WHERE event_name = '%s'" % (event_name)
+        cur.execute(query2)
+        new_event_id = cur.fetchall()
+        query3 = ("INSERT INTO category_event (ID_event, ID_category) VALUES (%s, %r)")
+        cur.execute(query3, (new_event_id, tuple(int_category)))
         db.commit()
         return template("tips", error=error, success=True)
   

@@ -172,7 +172,7 @@ footer {
     text-align: center;   
 }
 #event_id{
-    visibility: hidden;
+    display: none;
 }
 ul {list-style-type: none;}
 body {font-family: Verdana, sans-serif;}

@@ -41,25 +41,25 @@
                     <div class="form-group">
                         <div class="checkbox">
                         <label class="checkbox-inline">
-                            <input type="checkbox" name="category" value="Mat"> Mat
+                            <input type="checkbox" name="category" value="1"> Mat
                         </label>
                         <label class="checkbox-inline">
-                            <input type="checkbox" name="category" value="Uteliv"> Uteliv
+                            <input type="checkbox" name="category" value="2"> Uteliv
                         </label>
                         <label class="checkbox-inline">
-                            <input type="checkbox" name="category" value="Scen"> Scen
+                            <input type="checkbox" name="category" value="3"> Scen
                         </label>
                         <label class="checkbox-inline">
-                            <input type="checkbox" name="category" value="Shopping"> Shopping
+                            <input type="checkbox" name="category" value="4"> Shopping
                         </label>
                         <label class="checkbox-inline">
-                            <input type="checkbox" name="category" value="Musik"> Musik
+                            <input type="checkbox" name="category" value="5"> Musik
                         </label>
                         <label class="checkbox-inline">
-                            <input type="checkbox" name="category" value="Konst"> Konst
+                            <input type="checkbox" name="category" value="6"> Konst
                         </label>
                         <label class="checkbox-inline">
-                            <input type="checkbox" name="category" value="Annat"> Övrigt
+                            <input type="checkbox" name="category" value="7"> Övrigt
                         </label>                                                
                     </div>
                     </div>
@@ -139,5 +139,5 @@
 <!-- Include footsection -->
 % include("foot.tpl")
 <!-- Include Bootstrap Validation form -->
-<script src="static/js/formscript.js"></script>
+<!-- <script src="static/js/formscript.js"></script> -->
 </html>
