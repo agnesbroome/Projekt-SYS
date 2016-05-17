@@ -113,7 +113,12 @@
                                     <th>NÄR</th>
                                     %time_start = str(i['first_time'])[:-3]
                                     %time_end = str(i['last_time'])[:-3]
-                                    %if len(time_start) or len(time_end) == 4:
+                                    %if len(time_end) == 4:
+                                        %time_end = "0"+time_end
+                                        %end
+                                    %if len(time_start) == 4:
+                                        %time_start = "0"+time_start
+                                        %end
 
                                     <td>
                                         <strong>{{i['first_day']}}</strong><small> Kl. {{time_start}}</small> till <strong> 

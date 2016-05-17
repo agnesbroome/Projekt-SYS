@@ -136,5 +136,5 @@
 <!-- Include footsection -->
 % include("foot.tpl")
 <!-- Include Bootstrap Validation form -->
-<script src="static/js/formscript.js"></script>
+<!-- <script src="static/js/formscript.js"></script> -->
 </html>

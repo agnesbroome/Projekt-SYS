@@ -181,7 +181,6 @@ def tips_process():
     if event_name == "":
         error.append("error01")
     category = request.POST.getall("category")
-    int_category = map(int, category)
     if len(category) == 0:
         error.append("error02")
     first_day = request.forms.get("first_day")
@@ -217,6 +216,7 @@ def tips_process():
     if not validators.url(website):
         error.append("error10")
     image = request.files.get("image")
+    file_path = None
     if image:
         name, ext = os.path.splitext(image.filename)
         if ext not in ('.png','.jpg','.jpeg'):
@@ -240,16 +240,18 @@ def tips_process():
     if len(error) > 0:
         return template("tips", error=error, success=False)
         
-    else:    
+    else:
         query = ("INSERT INTO event (event_name, first_day, last_day, first_time, last_time, location, adress, organizer, website, image, description, tipster, tipster_mail, status) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)")
         cur.execute(query, (event_name, first_day, last_day,    first_time, last_time, location, adress, organizer, website, file_path, description, tipster, tipster_mail, status))
         db.commit()
-        query2 = "SELECT event_ID FROM event \
-        WHERE event_name = '%s'" % (event_name)
-        cur.execute(query2)
-        new_event_id = cur.fetchall()
-        query3 = ("INSERT INTO category_event (ID_event, ID_category) VALUES (%s, %r)")
-        cur.execute(query3, (new_event_id, tuple(int_category)))
+        new_event_id = cur.lastrowid
+        int_category = []
+        for i in category:
+            i = map(int, i)
+            i.append(new_event_id)
+            int_category.append(tuple(i))
+        query3 = ("INSERT INTO category_event (ID_category, ID_event) VALUES (%s, %s)")
+        cur.executemany(query3, int_category)
         db.commit()
         return template("tips", error=error, success=True)
   
