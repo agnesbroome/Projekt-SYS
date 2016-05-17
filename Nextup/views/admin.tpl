@@ -45,8 +45,8 @@
                             <td>{{i['event_name']}}</td>
                             <td>{{i['first_day']}}</td>
                             <td>{{i['last_day']}}</td>
-                            <td>{{i['first_time']}}</td>
-                            <td>{{i['last_time']}}</td>
+                            <td>{{str(i['first_time'])[:-3]}}</td>
+                            <td>{{str(i['last_time'])[:-3]}}</td>
                             <td>{{i['location']}}</td>
                             <td>{{i['adress']}}</td>
                             <td>{{i['organizer']}}</td>

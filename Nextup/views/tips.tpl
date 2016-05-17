@@ -23,43 +23,39 @@
         <!-- Tip form -->
         <div class="row">
             <div class="col-md-8">
-                %if len(error) > 0:
-                    <div class="alert alert-danger">Vänligen fyll i fälten korrekt - se rödmarkerade fält</div>
-                    {{error}}
-                %end
                 %if success == True:
                     <div class="alert alert-success">Ditt tips har skickats!</div>
                 %end
                 <form id="tipsform" data-toggle="validator" role="form" action="/tips_process" method="post" enctype="multipart/form-data" accept-charset="UTF-8">
                     <!-- Eventname -->
-                    <div class="input-group form-group">
-                          <span class="input-group-addon" id="basic-addon3">Eventnamn</span>
-                        <input type="text" class="form-control" aria-describedby="basic-addon3" name="event_name" id="event_name">
+                    <div class="form-group">
+                        <label for="event_name" class="control-label">Eventnamn</label>
+                        <input type="text" class="form-control" name="event_name" id="event_name">
                     </div>
                     <!-- /Eventname -->
                     <!-- Categorys -->
                     <div class="form-group">
                         <div class="checkbox">
                         <label class="checkbox-inline">
-                            <input type="checkbox" name="category" value="Mat"> Mat
+                            <input type="checkbox" name="category" value="1"> Mat
                         </label>
                         <label class="checkbox-inline">
-                            <input type="checkbox" name="category" value="Uteliv"> Uteliv
+                            <input type="checkbox" name="category" value="2"> Uteliv
                         </label>
                         <label class="checkbox-inline">
-                            <input type="checkbox" name="category" value="Scen"> Scen
+                            <input type="checkbox" name="category" value="3"> Scen
                         </label>
                         <label class="checkbox-inline">
-                            <input type="checkbox" name="category" value="Shopping"> Shopping
+                            <input type="checkbox" name="category" value="4"> Shopping
                         </label>
                         <label class="checkbox-inline">
-                            <input type="checkbox" name="category" value="Musik"> Musik
+                            <input type="checkbox" name="category" value="5"> Musik
                         </label>
                         <label class="checkbox-inline">
-                            <input type="checkbox" name="category" value="Konst"> Konst
+                            <input type="checkbox" name="category" value="6"> Konst
                         </label>
                         <label class="checkbox-inline">
-                            <input type="checkbox" name="category" value="Annat"> Övrigt
+                            <input type="checkbox" name="category" value="7"> Övrigt
                         </label>                                                
                     </div>
                     </div>
@@ -67,67 +63,68 @@
                     <!-- Date -->
                     <div class="form-group form-inline">
                         <div>
-                        <label class="labelclass">Start</label><span class="glyphicon glyphicon-calendar"></span>
-                        <input class="form-control" placeholder="ÅÅÅÅ-MM-DD" name="first_day">
-                        <label class="labelclass">Slut</label><span class="glyphicon glyphicon-calendar"></span>
-                        <input class="form-control" placeholder="ÅÅÅÅ-MM-DD" name="last_day">
+                        <label for="first_day" class="labelclass control-label">Start</label><span class="glyphicon glyphicon-calendar"></span>
+                        <input class="form-control" placeholder="ÅÅÅÅ-MM-DD" name="first_day" id="first_day">
+                        <label for="last_day" class="labelclass control-label">Slut</label><span class="glyphicon glyphicon-calendar"></span>
+                        <input class="form-control" placeholder="ÅÅÅÅ-MM-DD" name="last_day" id="last_day">
                         </div>
                     </div>
                     <!-- /Date -->
                     <!-- Time -->
                     <div class="form-group form-inline">
-                        <label class="labelclass">Start</label><span class="glyphicon glyphicon-time"></span>
-                        <input class="form-control" placeholder="HH:MM" name="first_time">
-                        <label class="labelclass">Slut</label><span class="glyphicon glyphicon-time"></span>
-                        <input class="form-control" placeholder="HH:MM" name="last_time">
+                        <label for="first_time" class="control-label">Start</label><span class="glyphicon glyphicon-time"></span>
+                        <input class="form-control" placeholder="HH:MM" name="first_time" id="first_time">
+                        <label for="last_time" class="control-label">Slut</label><span class="glyphicon glyphicon-time"></span>
+                        <input class="form-control" placeholder="HH:MM" name="last_time" id="last_time">
                     </div>
                     <!-- /Time -->
                     <!-- Location -->
-                    <div class="input-group form-group">
-                        <span class="input-group-addon" id="basic-addon3">Plats</span>
-                        <input type="text" class="form-control" name="location">
+                    <div class="form-group">
+                        <label for="location" class="control-label">Plats</label>
+                        <input type="text" class="form-control" name="location" id="location">
                     </div>
                     <!-- /Location -->
                     <!-- Adress -->
-                    <div class="input-group form-group">
-                          <span class="input-group-addon">Adress</span><input type="text" class="form-control" name="adress">
+                    <div class="form-group">
+                          <label for="adress" class="control-label">Adress</label>
+                          <input type="text" class="form-control" name="adress" id="adress">
                     </div>
                     <!-- /Adress -->
                     <!-- Organizer -->
-                    <div class="input-group form-group">
-                        <span class="input-group-addon" id="basic-addon3">Arrangör</span>
-                        <input type="text" class="form-control" aria-describedby="basic-addon3" name="organizer">
+                    <div class="form-group">
+                        <label for="organizer" class="control-label">Arrangör</label>
+                        <input type="text" class="form-control" name="organizer" id="organizer">
                     </div>
                     <!-- /Organizer -->
                     <!-- Website -->
-                    <div class="input-group form-group">
-                          <span class="input-group-addon" id="basic-addon3">Webbsida</span>
-                        <input type="text" class="form-control" aria-describedby="basic-addon3" name="website" placeholder="https://www.exempel.se">
+                    <div class="form-group">
+                        <label for="website" class="control-label">Webbsida</label>
+                        <input type="text" class="form-control" name="website" id="website" placeholder="https://www.exempel.se">
                     </div>
                     <!-- /Website -->
                     <!-- Image -->
                     <div class="form-group">
-                        <label for="exampleInputFile">Välj bild till ditt event</label>
-                        <input type="file" accept="image/*" name="image">
+                        <label for="image">Välj bild till ditt event</label>
+                        <input type="file" accept="image/*" name="image" id="image">
                         <p class="help-block">Bilden får inte överstiga X kb</p>
                     </div>
                     <!-- /Image -->
                     <!-- Description -->
                     <div class="form-group">
-                        <label>Beskrivning (Max 2000 tecken)</label>
-                          <textarea class="form-control" rows="10" name="description"></textarea>
+                        <label for="description" class="control-label">Beskrivning (Max 2000 tecken)</label>
+                          <textarea class="form-control" rows="10" name="description" id="description"></textarea>
                     </div>
                     <!-- /Description -->
                     <!-- Tipster -->
-                    <div class="input-group form-group">
-                          <span class="input-group-addon" id="basic-addon3">Tipsare</span>
-                        <input type="text" class="form-control" aria-describedby="basic-addon3" name="tipster">
+                    <div class="form-group">
+                        <label for="tipster" class="control-label">Tipsare</label>
+                        <input type="text" class="form-control" name="tipster" id="tipster">
                     </div>
                     <!-- /Tipster -->
                     <!-- email -->
-                    <div class="input-group form-group">
-                          <span class="input-group-addon" id="basic-addon3">E-post</span>
-                        <input type="text" class="form-control" aria-describedby="basic-addon3" name="tipster_mail"/>
+                    <div class="form-group">
+                        <label for="tipster_mail" class="control-label">E-post</label>
+                        <input type="text" class="form-control" name="tipster_mail" id="tipster_mail"/>
                     </div>
                     <!-- /email -->
                 <button type="submit" class="btn btn-lg btn-primary">Skicka</button>
@@ -138,7 +135,6 @@
         <!-- /.row -->
 <!-- Include footsection -->
 % include("foot.tpl")
-<!--<script src="static/js/tipsscript.js"></script> -->
 <!-- Include Bootstrap Validation form -->
-<script src="static/js/formscript.js"></script>
+<!-- <script src="static/js/formscript.js"></script> -->
 </html>

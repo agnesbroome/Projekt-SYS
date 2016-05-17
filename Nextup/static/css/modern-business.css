@@ -21,9 +21,6 @@ body {
 .img-portfolio {
     margin-bottom: 30px;
 }
-.labelclass{
-    padding-right: 10px;
-}
 .input-group-addon{
     min-width: 100px;
 }
@@ -41,10 +38,7 @@ label{
 /*Index Page style */
 
 .heigt-homepagepanel-index{
-    height: 340px;
-}
-.upcoming{
-    height: auto;
+    height: 360px;
 }
  
 #indexheader{
@@ -75,7 +69,6 @@ h1 > small {
     background-color: #4671D5;
     min-width: 120px;
 }
-
 /* Admin Page */
 #admin_container{
     padding-top: 15px;
@@ -118,12 +111,6 @@ h1 > small {
 #symbols{
     margin-top: 20px;
 }
-#tipster {
-    float:right;
-}
-#description{
-    margin-top: 20px;
-}
 .table-borderless{
     border: none;
 }
@@ -139,6 +126,7 @@ h1 > small {
     position: fixed;
     right: 0;
     bottom: 0;
+    z-index: 99;
 }
 #categories_events{
     text-align: center;
@@ -174,7 +162,7 @@ footer {
     text-align: center;   
 }
 #event_id{
-    visibility: hidden;
+    display: none;
 }
 ul {list-style-type: none;}
 body {font-family: Verdana, sans-serif;}

@@ -7,6 +7,7 @@ import validators
 import smtplib
 import os
 import sys
+import time
 from email.MIMEMultipart import MIMEMultipart
 from email.MIMEText import MIMEText
  
@@ -28,6 +29,8 @@ session_opts = {
 #Variable that runs with the server file.
 app = SessionMiddleware(app(), session_opts)
 
+current_date = (time.strftime("%Y-%m-%d"))
+
 def get_user():
     try:
         user = {}
@@ -38,11 +41,11 @@ def get_user():
     except:
         return None
 
-def get_active():
+def get_active(amount):
     query = "SELECT * FROM event \
-       WHERE status = '%s' \
+       WHERE status = '%s' AND last_day > '%s' \
        ORDER BY first_day ASC \
-       LIMIT 100" % ("active")
+       LIMIT %s" % ("active", current_date , amount)
     cur.execute(query)
     return cur.fetchall()
 
@@ -102,7 +105,7 @@ def server_static(filename):
 #Här är alla routes, de man kan nå via vår hemsida efter grundnamnet. typ www.nextup.se. Så www.nextup.se/ är hem, som ni ser nedan. www.nextup.se/tips så kommer man till den routen. Allt detta sköter vår serverfil, dvs. denna filen.
 @route("/")
 def index():
-    return template("index", events=get_active())
+    return template("index", events=get_active('5'))
 
 @route("/admin")
 def reroute():
@@ -121,7 +124,7 @@ def tips():
 
 @route("/events")
 def events():
-    return template("events", events=get_active())
+    return template("events", events=get_active('100000'))
 
 @route("/about")
 def about():
@@ -213,6 +216,7 @@ def tips_process():
     if not validators.url(website):
         error.append("error10")
     image = request.files.get("image")
+    file_path = None
     if image:
         name, ext = os.path.splitext(image.filename)
         if ext not in ('.png','.jpg','.jpeg'):
@@ -236,12 +240,18 @@ def tips_process():
     if len(error) > 0:
         return template("tips", error=error, success=False)
         
-    else:    
+    else:
         query = ("INSERT INTO event (event_name, first_day, last_day, first_time, last_time, location, adress, organizer, website, image, description, tipster, tipster_mail, status) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)")
         cur.execute(query, (event_name, first_day, last_day,    first_time, last_time, location, adress, organizer, website, file_path, description, tipster, tipster_mail, status))
         db.commit()
-        query = ("INSERT INTO category_event (category_ID, event_ID) VALUES (%s, %s)")
-        cur.execute(query, (category_ID, event_ID))
+        new_event_id = cur.lastrowid
+        int_category = []
+        for i in category:
+            i = map(int, i)
+            i.append(new_event_id)
+            int_category.append(tuple(i))
+        query3 = ("INSERT INTO category_event (ID_category, ID_event) VALUES (%s, %s)")
+        cur.executemany(query3, int_category)
         db.commit()
         return template("tips", error=error, success=True)
   

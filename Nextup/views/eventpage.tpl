@@ -111,7 +111,20 @@
                             <tbody>
                                 <tr>
                                     <th>NÄR</th>
-                                    <td>{{i['first_day']}} Kl. {{str(i['first_time'])[:-3]}} till {{i['last_day']}} Kl. {{str(i['last_time'])[:-3]}}</td>
+                                    %time_start = str(i['first_time'])[:-3]
+                                    %time_end = str(i['last_time'])[:-3]
+                                    %if len(time_end) == 4:
+                                        %time_end = "0"+time_end
+                                        %end
+                                    %if len(time_start) == 4:
+                                        %time_start = "0"+time_start
+                                        %end
+
+                                    <td>
+                                        <strong>{{i['first_day']}}</strong><small> Kl. {{time_start}}</small> till <strong> 
+                                        {{i['last_day']}}</strong><small> Kl. {{time_end}}</small>
+                                        
+                                    </td>
                                 </tr>
                                 <tr>
                                     <th>VAR</th>
@@ -127,7 +140,7 @@
                                 </tr>
                                 <tr>
                                     <th>WEBBPLATS</th>
-                                    <td><a href="{{i['website']}}">{{i['website']}}</a></td>
+                                    <td><a href="{{i['website']}}">Länk till arrangörens sida</a></td>
                                 </tr>
                             </tbody>
                         </table>
