@@ -87,6 +87,8 @@
                 <ol class="breadcrumb">
                     <li><a href="/">Hem</a>
                     </li>
+                    <li><a href="/events">Eventsamling</a>
+                    </li>
                     <li class="active">Eventsida</li>
                 </ol>
             </div>

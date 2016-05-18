@@ -40,13 +40,15 @@ label{
 /*Index Page style */
 
 .heigt-homepagepanel-index{
-    height: 360px;
+    height: 270px;
+    font-size: 10px;
 }
  
 #indexheader{
     font-family: 'Mr Dafoe', cursive;
     font-size: 4em;
     border: none;
+    padding-bottom: 250px;
 }
 .index{
     text-align: center;
@@ -67,11 +69,11 @@ h1 > small {
     opacity: 0.8;
 }
 
+/* Admin Page */
 #loginbutton {
     background-color: #4671D5;
     min-width: 120px;
 }
-/* Admin Page */
 #admin_container{
     padding-top: 15px;
 }
