@@ -68,7 +68,7 @@
                     <img class="img-responsive" src="static/images/daniel.jpg" alt="">
                     <div class="caption">
                         <h3>Daniel Hägerström<br>
-                            <small>Head of Education and Personal</small>
+                            <small>Head of Education and Personnel</small>
                         </h3>
                         <p>Daniel har med sin större erfarenhet inom de arbetsredskap som skall användas i projektet fördel i att ta ansvar för kompetensutveckling, utveckling i HTML, CSS och kod.</p>
                     </div>
