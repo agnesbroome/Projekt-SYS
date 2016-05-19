@@ -71,7 +71,8 @@
                         <h4><i class="fa fa-bullhorn"></i> Tipsa om event</h4>
                     </div>
                     <div class="panel-body">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus eveniet incidunt dicta nostrum quod?</p>
+                        <p>Välkommen till NextUP! Här kan du ta del av och tipsa oss om event och aktiviteter som äger rum runt om i Malmöområdet. Ska du ordna en klubb? Kanske styra upp en loppmarknad med grannarna? Då kan du tipsa oss så lägger vi upp det här så att hela Malmö får reda på det! Tryck på knappen här nedanför så kommer du till vårt tipsformulär.
+</p>
                         <a href="tips" class="btn btn-default">Tipsa här</a>
                     </div>
                 </div>
@@ -101,7 +102,6 @@
                         <h4><i class="glyphicon glyphicon-calendar"></i> Eventkalender</h4>
                     </div>
                     <div class="panel-body">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus eveniet incidunt dicta nostrum quod?</p>
                         <a href="#" class="btn btn-default">Learn More</a>
                     </div>
                 </div>
