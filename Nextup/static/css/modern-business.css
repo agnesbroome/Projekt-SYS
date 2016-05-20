@@ -7,7 +7,7 @@
 /* Global Styles */
 
 .container{
-    margin-bottom: 30px;
+    margin-bottom: 8px;
 }
 html,
 body {
@@ -132,7 +132,7 @@ h1 > small {
     margin: auto; 
 }
 #divforimg{
-     max-width:450;
+     max-width:450px;
 }
 
 /* Events Styles */
