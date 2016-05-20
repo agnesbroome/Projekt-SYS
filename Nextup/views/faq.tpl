@@ -35,7 +35,7 @@
                         </div>
                         <div id="collapseOne" class="panel-collapse collapse">
                             <div class="panel-body">
-                               NextUP! har för avsikt att samla alla event man annars hittar utspridda på hemsidor, Facebooksidor och andra sociala medieplattformer på en och samma plats. Om du kommer på att du vill göra något ikväll så kan du hitta event för allt från nattklubbar till vernissager hos oss. Kanske har du besök över helgen och vill visa upp Malmö för dina gäster? Då kan du välja datum i kalendern och se vad som händer just denna helg.
+                               <p>NextUP! har för avsikt att samla alla event man annars hittar utspridda på hemsidor, Facebooksidor och andra sociala medieplattformer på en och samma plats. Om du kommer på att du vill göra något ikväll så kan du hitta event för allt från nattklubbar till vernissager hos oss. Kanske har du besök över helgen och vill visa upp Malmö för dina gäster? Då kan du välja datum i kalendern och se vad som händer just denna helg.</p>
                             </div>
                         </div>
                     </div>
@@ -49,7 +49,7 @@
                         </div>
                         <div id="collapseTwo" class="panel-collapse collapse">
                             <div class="panel-body">
-                               Vi förlitar oss först och främst från tips från allmänhet, promoters, näringslivet och andra aktörer som känner till ett event som man anser att andra bör känna till. Med andra ord är vem som helst välkommen att tipsa oss om ett event. Detta gör man genom att fylla i vårt formulär som man sedan skickar in för granskning. Detta ska inte ta mer än högst ett par timmar och så fort eventet granskats så att det uppfyller de kriterier som finns så kommer det att postas i Eventsamlingen för alla att se.
+                               <p>Vi förlitar oss först och främst från tips från allmänhet, promoters, näringslivet och andra aktörer som känner till ett event som man anser att andra bör känna till. Med andra ord är vem som helst välkommen att tipsa oss om ett event. Detta gör man genom att fylla i vårt formulär som man sedan skickar in för granskning. Detta ska inte ta mer än högst ett par timmar och så fort eventet granskats så att det uppfyller de kriterier som finns så kommer det att postas i Eventsamlingen för alla att se.</p>
                             </div>
                         </div>
                     </div>
@@ -62,7 +62,21 @@
                         </div>
                         <div id="collapseThree" class="panel-collapse collapse">
                             <div class="panel-body">
-                                NextUP! är givetvis helt gratis och har som mål att bygga broar mellan människor i Malmö med hjälp av kultur, föreningsliv och näringsliv. Vi vill att det ska vara enkelt för människor att ha kul oavsett intresse!
+                                <p>NextUP! är givetvis helt gratis och har som mål att bygga broar mellan människor i Malmö med hjälp av kultur, föreningsliv och näringsliv. Vi vill att det ska vara enkelt för människor att ha kul oavsett intresse!</p>
+                            </div>
+                        </div>
+                    </div>
+                     <!-- /.panel -->
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseFour">Kommer mitt namn och e-mail synas i eventet?
+</a>
+                            </h4>
+                        </div>
+                        <div id="collapseFour" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <p>Ditt namn kommer att synas längst ner på eventets sida. Din e-mail adress har endast NextUP! Teamet tillgång till. </p>
                             </div>
                         </div>
                     </div>

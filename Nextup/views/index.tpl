@@ -26,7 +26,7 @@
                         <p>Vår mission är att vi ska ha örat mot trottoaren och fingret på pulsen så just du kan få hjälp att hitta vad du och dina vänner ska göra i helgen!</p> 
                         <p>Have a good one!</p>
                         <p>Hälsningar Team NextUP!</p>
-                        <a href="events" class="btn btn-default">Se alla events</a>
+                        <a href="events" class="btn btn-default">Se alla event</a>
                     </div>
                 </div>
             </div>

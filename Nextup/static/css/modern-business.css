@@ -6,14 +6,16 @@
 
 /* Global Styles */
 
+.container{
+    margin-bottom: 30px;
+}
 html,
 body {
     height: 100vh;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
-    background-size: cover
-    ;
+    background-size: cover;
 }
 body {
     padding-top: 50px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
@@ -38,13 +40,15 @@ label{
 /*Index Page style */
 
 .heigt-homepagepanel-index{
-    height: 360px;
+    height: 350px;
+    font-size: 15px;
 }
  
 #indexheader{
     font-family: 'Mr Dafoe', cursive;
     font-size: 4em;
     border: none;
+    padding-bottom: 50px;
 }
 .index{
     text-align: center;
@@ -65,11 +69,11 @@ h1 > small {
     opacity: 0.8;
 }
 
+/* Admin Page */
 #loginbutton {
     background-color: #4671D5;
     min-width: 120px;
 }
-/* Admin Page */
 #admin_container{
     padding-top: 15px;
 }
@@ -114,6 +118,23 @@ h1 > small {
 .table-borderless{
     border: none;
 }
+#tipster{
+    float: right;
+}
+#description{
+    max-width: 1000px;
+    margin: auto;
+    text-align: justify;
+}
+
+#imgevent{
+    max-height: 400px;
+    margin: auto; 
+}
+#divforimg{
+     max-width:450;
+}
+
 /* Events Styles */
 .event_flow > a{
     text-decoration: none;
@@ -151,6 +172,9 @@ hr {
     width: 100%;
     margin-left: 0px;
 }
+#description{
+    margin-top: 20px;
+}
 
 /* Footer Styles */
 
@@ -180,6 +204,11 @@ body {font-family: Verdana, sans-serif;}
     padding-top: 10px;
 }
 
+/* about */ 
+.thumbnail{
+    min-height: 523px;
+}
+
 /* Responsive Styles */
 
 @media(max-width:991px) {
@@ -197,4 +226,5 @@ body {font-family: Verdana, sans-serif;}
     header.carousel .carousel {
         height: 70%;
     }
-}
+
+

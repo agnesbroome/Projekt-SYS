@@ -110,6 +110,7 @@ def server_static(filename):
 #Routes
 
 #Här är alla routes, de man kan nå via vår hemsida efter grundnamnet. typ www.nextup.se. Så www.nextup.se/ är hem, som ni ser nedan. www.nextup.se/tips så kommer man till den routen. Allt detta sköter vår serverfil, dvs. denna filen.
+
 @route("/")
 def index():
     return template("index", events=get_active('5'))

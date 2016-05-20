@@ -63,18 +63,22 @@
                     <!-- Date -->
                     <div class="form-group form-inline">
                         <div>
-                        <label for="first_day" class="labelclass control-label">Start</label><span class="glyphicon glyphicon-calendar"></span>
+                        <label for="first_day" class="labelclass control-label">Start</label>
+                        <span class="glyphicon glyphicon-calendar"></span>
                         <input class="form-control" placeholder="ÅÅÅÅ-MM-DD" name="first_day" id="first_day">
-                        <label for="last_day" class="labelclass control-label">Slut</label><span class="glyphicon glyphicon-calendar"></span>
+                        <label for="last_day" class="labelclass control-label">Slut</label>
+                        <span class="glyphicon glyphicon-calendar"></span>
                         <input class="form-control" placeholder="ÅÅÅÅ-MM-DD" name="last_day" id="last_day">
                         </div>
                     </div>
                     <!-- /Date -->
                     <!-- Time -->
                     <div class="form-group form-inline">
-                        <label for="first_time" class="control-label">Start</label><span class="glyphicon glyphicon-time"></span>
+                        <label for="first_time" class="control-label">Start</label>
+                        <span class="glyphicon glyphicon-time"></span>
                         <input class="form-control" placeholder="HH:MM" name="first_time" id="first_time">
-                        <label for="last_time" class="control-label">Slut</label><span class="glyphicon glyphicon-time"></span>
+                        <label for="last_time" class="control-label">Slut</label>
+                        <span class="glyphicon glyphicon-time"></span>
                         <input class="form-control" placeholder="HH:MM" name="last_time" id="last_time">
                     </div>
                     <!-- /Time -->
@@ -99,7 +103,7 @@
                     <!-- Website -->
                     <div class="form-group">
                         <label for="website" class="control-label">Webbsida</label>
-                        <input type="text" class="form-control" name="website" id="website" placeholder="https://www.exempel.se">
+                        <input type="text" class="form-control" name="website" id="website" value="https://">
                     </div>
                     <!-- /Website -->
                     <!-- Image -->
