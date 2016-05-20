@@ -121,6 +121,19 @@ h1 > small {
 #tipster{
     float: right;
 }
+#description{
+    max-width: 1000px;
+    margin: auto;
+    text-align: justify;
+}
+
+#imgevent{
+    max-height: 400px;
+    margin: auto; 
+}
+#divforimg{
+     max-width:450;
+}
 
 /* Events Styles */
 .event_flow > a{
