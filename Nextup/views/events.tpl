@@ -56,7 +56,7 @@
             <hr>
             <div class="col-md-4" id="img_events">
                 <a href="eventpage/{{i['event_ID']}}">
-                <img class="img-responsive" src="../{{i['image']}}" alt="no image found" onError="this.src=../'no_image.png'"></a>
+                <img class="img-responsive" src="../{{i['image']}}" onerror="this.src='../static/images/uploaded/no_image.png'" alt="no image found" onError="this.src=../'no_image.png'"></a>
             </div>
                 <div class="col-md-6">
                     <a href="eventpage/{{i['event_ID']}}"><h3>{{i['event_name']}}</h3></a>

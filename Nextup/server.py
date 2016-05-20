@@ -1,4 +1,3 @@
-#test
 #coding:utf-8
 from bottle import *
 from beaker.middleware import SessionMiddleware
