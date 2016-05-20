@@ -20,6 +20,22 @@ body {
 body {
     padding-top: 50px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
 }
+
+a{
+    color: #FF6C00;
+}
+
+a:hover{
+    color: #000000;
+}
+.btn{
+    background-color: #FFAE72;
+    color: #000000;
+}
+.btn:hover{
+    color: #FF6C00;
+}
+
 .img-portfolio {
     margin-bottom: 30px;
 }
@@ -70,10 +86,7 @@ h1 > small {
 }
 
 /* Admin Page */
-#loginbutton {
-    background-color: #4671D5;
-    min-width: 120px;
-}
+
 #admin_container{
     padding-top: 15px;
 }

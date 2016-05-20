@@ -23,7 +23,7 @@
 
         <!-- Event listing  -->
         <div class="btn-group dropup" id="event_chooser">
-          <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <button type="button" class="btn btn-info dropdown-toggle btn-default" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Jag vill se alla event i  <span class="caret"></span>
             <span class="sr-only">Toggle Dropdown</span>
           </button>

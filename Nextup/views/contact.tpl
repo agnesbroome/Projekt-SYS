@@ -41,7 +41,7 @@
                             <label class="form-group">Meddelande</label>
                             <textarea rows="10" cols="100" class="form-control" name="message" required data-validation-required-message="Please enter your message" maxlength="999" style="resize:none"></textarea>
                     </div>
-                    <button type="submit" class="btn btn-lg btn-primary">Skicka</button>
+                    <button type="submit" class="btn btn-lg btn-default">Skicka</button>
                 </form>
             </div>
 
