@@ -115,7 +115,7 @@ def server_static(filename):
 
 @route("/")
 def index():
-    return template("index", events=get_active('5'))
+    return template("index", events=get_active('8'))
 
 @route("/admin")
 def reroute():

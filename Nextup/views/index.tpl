@@ -55,7 +55,7 @@
                         <h4><i class="glyphicon glyphicon-star"></i> Kommande events</h4>
                     </div>
                     <div class="panel-body">
-                        <table class="table table-hover table-condensed">
+                        <table class="table table-hover table-condensed" id="tableNE">
                             <tbody>
                                 %for i in events:
                                 <tr>
