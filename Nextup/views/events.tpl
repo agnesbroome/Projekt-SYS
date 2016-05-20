@@ -27,8 +27,8 @@
           Jag vill se alla event i  <span class="caret"></span>
             <span class="sr-only">Toggle Dropdown</span>
           </button>
-          <ul class="dropdown-menu">
-            <li><a href="#">Januari</a></li>
+          <ul class="dropdown-menu" id="sortlist">
+            <li><a href="events">Januari</a></li>
             <li><a href="#">Februari</a></li>
             <li><a href="#">Mars</a></li>
             <li><a href="#">April</a></li>

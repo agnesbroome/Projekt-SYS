@@ -95,6 +95,7 @@ def get_events(handler):
     return cur.fetchall()
 
 
+
 def get_category():
     query = "SELECT * FROM category \
         WHERE event_ID = '%s'"
@@ -296,5 +297,7 @@ def contact_process():
     server.sendmail(fromaddr, toaddr, text)
     server.quit()
     return template("contact", sent=True)
-        
+ 
+
+
 run(app=app)

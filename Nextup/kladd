@@ -1,0 +1,6 @@
+@route("/sorting")
+def sort_events():
+    query = "SELECT first_date, last_date FROM event"
+    cur.execute(query)
+    return cur.fetchall()
+    return template("events")
