@@ -31,9 +31,9 @@
                 %if sent == True:
                     <div class="alert alert-success">Ditt mail har skickats!</div>
                 %end
-                <form action="/contact_process" method="post">
+                <form action="/contact_process" method="post" id="contactform">
                     <div class="input-group form-group">
-                            <label for="event_name" class="control-label">E-mail</label>
+                            <label for="email" class="control-label">Din e-mail</label>
                             <input type="email" class="form-control" name="email" required data-validation-required-message="Vänligen fyll i din email">
                             <p class="help-block"></p>
                     </div>
@@ -51,4 +51,6 @@
         <hr>
 <!-- Include footsection -->
 % include("foot.tpl")
+        <!-- Include Bootstrap Validation form -->
+<script src="static/js/contactformscript.js"></script>
 </html>
