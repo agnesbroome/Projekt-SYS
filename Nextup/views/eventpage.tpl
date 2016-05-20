@@ -105,8 +105,8 @@
                     <h2>{{i['event_name']}}</h2>  
                 </div>
                 <div class="row" >
-                    <div class="col-md-6">
-                        <img class="img-responsive" src="../{{i['image']}}" alt="no image found">
+                    <div class="col-md-6" id="divforimg" >
+                        <img class="img-responsive" src="../{{i['image']}}" alt="no image found" id="imgevent">
                     </div>  
                     <div id="eventinfo" class="col-md-6">
                         <table class="table-hover table-condensed table-borderless">

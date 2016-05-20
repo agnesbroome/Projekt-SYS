@@ -23,7 +23,7 @@
                             <div class="input-group form-group">
                                 <span class="input-group-addon" id="basic-addon2">Lösenord</span><input type="password" class="form-control" aria-describedby="basic-addon2" name="pw">
                             </div>
-                            <button type="submit" id = "loginbutton"  class="btn btn-primary">Logga in</button>
+                            <button type="submit" id ="loginbutton"  class="btn btn-lg btn-default">Logga in</button>
                         </form>
                     
                 </div>

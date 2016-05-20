@@ -131,7 +131,7 @@
                         <input type="text" class="form-control" name="tipster_mail" id="tipster_mail"/>
                     </div>
                     <!-- /email -->
-                <button type="submit" class="btn btn-lg btn-primary">Skicka</button>
+                <button type="submit" class="btn btn-lg btn-default">Skicka</button>
             </div>
         <!-- /Tip form -->
         </form>

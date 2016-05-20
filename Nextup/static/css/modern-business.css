@@ -7,7 +7,7 @@
 /* Global Styles */
 
 .container{
-    margin-bottom: 30px;
+    margin-bottom: 8px;
 }
 html,
 body {
@@ -21,6 +21,24 @@ body {
     padding-top: 50px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
 }
 
+<<<<<<< HEAD
+=======
+a{
+    color: #FF6C00;
+}
+
+a:hover{
+    color: #000000;
+}
+.btn{
+    background-color: #FFAE72;
+    color: #000000;
+}
+.btn:hover{
+    color: #FF6C00;
+}
+
+>>>>>>> origin/master
 .img-portfolio {
     margin-bottom: 30px;
 }
@@ -71,15 +89,16 @@ h1 > small {
 }
 
 /* Admin Page */
-#loginbutton {
-    background-color: #4671D5;
-    min-width: 120px;
-}
+
 #admin_container{
     padding-top: 15px;
 }
 .admin_img{
     height: 50px;
+}
+.badge{
+    background-color: #FFAE72;
+    color: #000000;
 }
 
 /* 404 Page Styles */
@@ -121,6 +140,19 @@ h1 > small {
 }
 #tipster{
     float: right;
+}
+#description{
+    max-width: 1000px;
+    margin: auto;
+    text-align: justify;
+}
+
+#imgevent{
+    max-height: 400px;
+    margin: auto; 
+}
+#divforimg{
+     max-width:450px;
 }
 
 /* Events Styles */

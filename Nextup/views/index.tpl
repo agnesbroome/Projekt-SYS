@@ -42,7 +42,7 @@
                         <p>Eller om du bara du har koll på ett fett event som du vill dela med andra i Malmö så lägg till det i vårt flöde!</p>
                         <p>Tryck på knappen här nedanför så kommer du till vårt tipsformulär.</p>
                         <br>
-                        <a href="tips" class="btn btn-default">Tipsa oss här</a>
+                        <a href="tips" class="btn btn-lg btn-default">Tipsa oss här</a>
                     </div>
                 </div>
             </div>
