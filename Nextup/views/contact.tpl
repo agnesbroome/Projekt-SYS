@@ -33,7 +33,7 @@
                 %end
                 <form action="/contact_process" method="post">
                     <div class="input-group form-group">
-                            <span class="input-group-addon">Email</span>
+                            <label for="event_name" class="control-label">E-mail</label>
                             <input type="email" class="form-control" name="email" required data-validation-required-message="Vänligen fyll i din email">
                             <p class="help-block"></p>
                     </div>
