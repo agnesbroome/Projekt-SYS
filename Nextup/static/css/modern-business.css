@@ -20,6 +20,7 @@ body {
 body {
     padding-top: 50px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
 }
+
 .img-portfolio {
     margin-bottom: 30px;
 }
@@ -139,6 +140,12 @@ h1 > small {
 #categories_events{
     text-align: center;
 }
+
+.label-info {
+    background-color: #FFF;
+    color: #000000;
+}
+
 #categories_events > span > i{
     padding-left:10px;
     color: #000;
