@@ -85,11 +85,11 @@ h1 > small {
     opacity: 0.8;
 }
 
-.tableNE{
+#tableNE{
     font-size: 12px;
 }
 
-.tableNE td {
+#tableNE td {
     max-width: 200px;
     border: solid;
   	border-width: 1px 0;
