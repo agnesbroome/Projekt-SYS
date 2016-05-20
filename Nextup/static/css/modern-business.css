@@ -20,9 +20,6 @@ body {
 body {
     padding-top: 50px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
 }
-
-<<<<<<< HEAD
-=======
 a{
     color: #FF6C00;
 }
@@ -37,8 +34,6 @@ a:hover{
 .btn:hover{
     color: #FF6C00;
 }
-
->>>>>>> origin/master
 .img-portfolio {
     margin-bottom: 30px;
 }
