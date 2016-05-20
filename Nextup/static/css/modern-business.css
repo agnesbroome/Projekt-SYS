@@ -40,15 +40,15 @@ label{
 /*Index Page style */
 
 .heigt-homepagepanel-index{
-    height: 270px;
-    font-size: 10px;
+    height: 350px;
+    font-size: 15px;
 }
  
 #indexheader{
     font-family: 'Mr Dafoe', cursive;
     font-size: 4em;
     border: none;
-    padding-bottom: 250px;
+    padding-bottom: 50px;
 }
 .index{
     text-align: center;

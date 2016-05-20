@@ -103,7 +103,7 @@
                     <!-- Website -->
                     <div class="form-group">
                         <label for="website" class="control-label">Webbsida</label>
-                        <input type="text" class="form-control" name="website" id="website" placeholder="https://www.exempel.se">
+                        <input type="text" class="form-control" name="website" id="website" value="https://">
                     </div>
                     <!-- /Website -->
                     <!-- Image -->

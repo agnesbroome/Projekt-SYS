@@ -142,7 +142,7 @@
                                 </tr>
                                 <tr>
                                     <th>WEBBPLATS</th>
-                                    <td><a href="{{i['website']}}">Länk till arrangörens sida</a></td>
+                                    <td><a href="{{i['website']}}" target="_blank">Länk till arrangörens sida</a></td>
                                 </tr>
                             </tbody>
                         </table>
