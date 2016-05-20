@@ -33,7 +33,7 @@
                 %end
                 <form action="/contact_process" method="post">
                     <div class="input-group form-group">
-                            <span class="input-group-addon">Email</span>
+                            <label for="event_name" class="control-label">E-mail</label>
                             <input type="email" class="form-control" name="email" required data-validation-required-message="Vänligen fyll i din email">
                             <p class="help-block"></p>
                     </div>
@@ -41,7 +41,7 @@
                             <label class="form-group">Meddelande</label>
                             <textarea rows="10" cols="100" class="form-control" name="message" required data-validation-required-message="Please enter your message" maxlength="999" style="resize:none"></textarea>
                     </div>
-                    <button type="submit" class="btn btn-lg btn-primary">Skicka</button>
+                    <button type="submit" class="btn btn-lg btn-default">Skicka</button>
                 </form>
             </div>
 

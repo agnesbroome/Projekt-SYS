@@ -68,7 +68,7 @@
                     %end
                     </table>
                 </div>
-                <button type="submit" class="btn btn-lg btn-primary">Bekräfta</button>
+                <button type="submit" class="btn btn-lg btn-default">Bekräfta</button>
             </form>
       %else:
         <h3>Inga event att visa!</h3>
