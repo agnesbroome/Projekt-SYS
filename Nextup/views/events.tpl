@@ -52,27 +52,25 @@
             <span class="label label-info">Övrigt<i class="fa fa-question-circle-o" aria-hidden="true"></i></span>
         </div>           
         % for i in events:
-        <div class="event_flow">
-            
-            <a href="eventpage/{{i['event_ID']}}">
-            <div class="col-md-2 col-sm-1" id="img_events">
-                <img class="img-responsive" src="../{{i['image']}}" alt="no image found">
-            </div>      
-            <h3>{{i['event_name']}}</h3></a>
-            <h4>{{i['first_day']}} {{i['first_time']}}</h4>
-            <h4>{{i['location']}} {{i['adress']}}</h4>
-        
-     
-            <div class="col-md-12 categories_symbols">
-                <i class="fa fa-cutlery fa-2x" aria-hidden="true"></i>
-                <i class="fa fa-music fa-2x" aria-hidden="true"></i>
-                <i class="fa fa-glass fa-2x" aria-hidden="true"></i>
-                <i class="fa fa-paint-brush fa-2x" aria-hidden="true"></i>
-                <i class="fa fa-hand-peace-o fa-2x" aria-hidden="true"></i>
-                <i class="fa fa-cc-visa fa-2x" aria-hidden="true"></i>
-                <i class="fa fa-question-circle-o fa-2x" aria-hidden="true"></i>
+        <div class="event_flow col-md-12">
             <hr>
+            <div class="col-md-4" id="img_events">
+                <a href="eventpage/{{i['event_ID']}}"><img class="img-responsive" src="../{{i['image']}}" alt="no image found"></a>
             </div>
+                <div class="col-md-6">
+                    <a href="eventpage/{{i['event_ID']}}"><h3>{{i['event_name']}}</h3></a>
+                    <h4>{{i['first_day']}} {{i['first_time']}}</h4>
+                    <h4>{{i['location']}} {{i['adress']}}</h4>
+                    <i class="fa fa-cutlery fa-2x" aria-hidden="true"></i>
+                    <i class="fa fa-music fa-2x" aria-hidden="true"></i>
+                    <i class="fa fa-glass fa-2x" aria-hidden="true"></i>
+                    <i class="fa fa-paint-brush fa-2x" aria-hidden="true"></i>
+                    <i class="fa fa-hand-peace-o fa-2x" aria-hidden="true"></i>
+                    <i class="fa fa-cc-visa fa-2x" aria-hidden="true"></i>
+                    <i class="fa fa-question-circle-o fa-2x" aria-hidden="true"></i>
+                </div>
+        </div>
+            
         % end
         
         <!-- /Event listing  -->
