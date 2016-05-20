@@ -57,8 +57,9 @@
             <div class="col-md-2 col-sm-1" id="img_events">
                 <img class="img-responsive" src="../{{i['image']}}" alt="no image found">
             </div>      
-            <h2>{{i['event_name']}}</h2></a>
-            <h3>{{i['first_day']}} - {{i['last_day']}}</h3>
+            <h3>{{i['event_name']}}</h3></a>
+            <h4>{{i['first_day']}} {{i['first_time']}}</h4>
+            <h4>{{i['location']}} {{i['adress']}}</h4>
         
      
             <div class="col-md-12 categories_symbols">
