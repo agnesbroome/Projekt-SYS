@@ -62,6 +62,13 @@ def single_event(SE):
     cur.execute(query)
     return cur.fetchall()
 
+def get_cat(GC):
+    query = "SELECT * FROM category_event AS t1 INNER JOIN category AS t2\
+    WHERE t1.ID_event = %s AND t2.category_type = t1.ID_category" % (GC)
+    print query
+    cur.execute(query)
+    return cur.fetchall()
+
 def fetch_length_new():
     new = "SELECT status FROM event \
         WHERE status = 'new'"
@@ -141,7 +148,7 @@ def faq():
 @route("/eventpage/<handler>")
 def eventpage(handler):
     handler=handler
-    return template("eventpage", single=single_event(handler))
+    return template("eventpage", single=single_event(handler), categories=get_cat(handler))
     
 
 @route("/logout")

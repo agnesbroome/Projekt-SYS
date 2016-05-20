@@ -153,6 +153,9 @@
                         <p>Lagt till av: <strong>{{i['tipster']}} </strong></p>
                     </div>
             %end
+            %for i in categories:
+                <p>{{i}}</p>
+            %end
         </main>
     </div>
         <!-- /Eventpage -->
