@@ -28,7 +28,7 @@
             <span class="sr-only">Toggle Dropdown</span>
           </button>
           <ul class="dropdown-menu" id="sortlist">
-            <li><a href="events">Januari</a></li>
+            <li><a href="events" action="/sorting" method="post">Januari</a></li>
             <li><a href="#">Februari</a></li>
             <li><a href="#">Mars</a></li>
             <li><a href="#">April</a></li>
@@ -55,7 +55,8 @@
         <div class="event_flow col-md-12">
             <hr>
             <div class="col-md-4" id="img_events">
-                <a href="eventpage/{{i['event_ID']}}"><img class="img-responsive" src="../{{i['image']}}" alt="no image found"></a>
+                <a href="eventpage/{{i['event_ID']}}">
+                <img class="img-responsive" src="../{{i['image']}}" alt="no image found" onError="this.src=../'no_image.png'"></a>
             </div>
                 <div class="col-md-6">
                     <a href="eventpage/{{i['event_ID']}}"><h3>{{i['event_name']}}</h3></a>

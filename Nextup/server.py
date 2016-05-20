@@ -231,7 +231,6 @@ def tips_process():
         name, ext = os.path.splitext(image.filename)
         if ext not in ('.png','.jpg','.jpeg'):
             return 'File extension not allowed.'
-
         save_path = "static/images/uploaded"
         file_path = "{path}/{file}".format(path=save_path, file=image.filename)
         image.save(file_path)
@@ -298,6 +297,13 @@ def contact_process():
     server.quit()
     return template("contact", sent=True)
  
+@route("/sorting")
+def sort_events():
+    query = "SELECT first_date FROM event \
+    WHERE first_date = '2016-05-16'"
+    cur.execute(query)
+    return cur.fetchall()
+    return template("events")
 
 
 run(app=app)
