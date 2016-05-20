@@ -144,6 +144,15 @@
                                     <th>WEBBPLATS</th>
                                     <td><a href="{{i['website']}}" target="_blank">Länk till arrangörens sida</a></td>
                                 </tr>
+                                <tr>
+                                    <th>KATEGORI</th>
+                                    <td>
+                                    %for i in categories:
+                                        <div class="single_cat">{{i['category_type']}}</div>
+                                    %end
+                                    </td>
+                                </tr>
+                                %for i in single:
                             </tbody>
                         </table>
                     </div>
@@ -155,9 +164,17 @@
                         <p>Lagt till av: <strong>{{i['tipster']}} </strong></p>
                     </div>
             %end
-            %for i in categories:
-                <p>{{i}}</p>
-            %end
+
+                   <!--  <div class="col-md-12 categories_symbols">
+                        <i class="fa fa-cutlery fa-2x" aria-hidden="true"></i>
+                        <i class="fa fa-music fa-2x" aria-hidden="true"></i>
+                        <i class="fa fa-glass fa-2x" aria-hidden="true"></i>
+                        <i class="fa fa-paint-brush fa-2x" aria-hidden="true"></i>
+                        <i class="fa fa-hand-peace-o fa-2x" aria-hidden="true"></i>
+                        <i class="fa fa-cc-visa fa-2x" aria-hidden="true"></i>
+                        <i class="fa fa-question-circle-o fa-2x" aria-hidden="true"></i>
+                    <hr>
+                    </div> -->
         </main>
     </div>
         <!-- /Eventpage -->
@@ -175,6 +192,8 @@
 
 <!-- Bootstrap Core JavaScript -->
 <script src="../static/js/bootstrap.min.js"></script>
+<!-- Script for this page -->
+<script src="../static/js/singleevent.js"></script>
 </body>
 </html>
 

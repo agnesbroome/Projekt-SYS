@@ -63,9 +63,10 @@ def single_event(SE):
     return cur.fetchall()
 
 def get_cat(GC):
-    query = "SELECT * FROM category_event AS t1 INNER JOIN category AS t2\
-    WHERE t1.ID_event = %s AND t2.category_type = t1.ID_category" % (GC)
-    print query
+    query = "SELECT category_event.ID_event, category.category_type \
+    FROM category_event \
+    INNER JOIN category \
+    ON category_event.ID_category=category.category_ID AND category_event.ID_event = %s" % (GC)
     cur.execute(query)
     return cur.fetchall()
 

@@ -43,6 +43,7 @@
           </ul>
         </div>
         <div id="categories_events">
+            <span class="label label-info">Mat<i class="fa fa-cutlery" aria-hidden="true"></i></span>
             <span class="label label-info">Musik<i class="fa fa-music" aria-hidden="true"></i></span>
             <span class="label label-info">Uteliv<i class="fa fa-glass" aria-hidden="true"></i></span>
             <span class="label label-info">Konst<i class="fa fa-paint-brush" aria-hidden="true"></i></span>
@@ -63,12 +64,13 @@
         
      
             <div class="col-md-12 categories_symbols">
-                <i class="fa fa-music fa-3x" aria-hidden="true"></i>
-                <i class="fa fa-glass fa-3x" aria-hidden="true"></i>
-                <i class="fa fa-paint-brush fa-3x" aria-hidden="true"></i>
-                <i class="fa fa-hand-peace-o fa-3x" aria-hidden="true"></i>
-                <i class="fa fa-cc-visa fa-3x" aria-hidden="true"></i>
-                <i class="fa fa-question-circle-o fa-3x" aria-hidden="true"></i>
+                <i class="fa fa-cutlery fa-2x" aria-hidden="true"></i>
+                <i class="fa fa-music fa-2x" aria-hidden="true"></i>
+                <i class="fa fa-glass fa-2x" aria-hidden="true"></i>
+                <i class="fa fa-paint-brush fa-2x" aria-hidden="true"></i>
+                <i class="fa fa-hand-peace-o fa-2x" aria-hidden="true"></i>
+                <i class="fa fa-cc-visa fa-2x" aria-hidden="true"></i>
+                <i class="fa fa-question-circle-o fa-2x" aria-hidden="true"></i>
             <hr>
             </div>
         % end
