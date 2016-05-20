@@ -201,6 +201,15 @@ hr {
 #description{
     margin-top: 20px;
 }
+#orange{
+    background-color: #FFAE72;
+    color: #000000;
+    border-color: #ccc;
+}
+#orange:hover{
+    color: #FF6C00;
+    background-color: #ccc;
+}
 
 /* Footer Styles */
 
