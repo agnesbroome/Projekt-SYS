@@ -70,15 +70,6 @@ def get_cat(GC):
     cur.execute(query)
     return cur.fetchall()
 
-def get_cat_all():
-    query = "SELECT category_event.ID_event, category.category_type \
-    FROM category_event \
-    INNER JOIN category \
-    ON category_event.ID_category=category.category_ID"
-    cur.execute(query)
-    return cur.fetchall()
-
-
 def fetch_length_new():
     new = "SELECT status FROM event \
         WHERE status = 'new'"
@@ -143,7 +134,7 @@ def tips():
 
 @route("/events")
 def events():
-    return template("events", events=get_active('100000'), categories=get_cat_all())
+    return template("events", events=get_active('100000'))
 
 @route("/events/<month>")
 def month(month):
@@ -183,7 +174,7 @@ def month(month):
     if month == 'december':
         smonth = time.strftime("2016-12-00")
         emonth = time.strftime("2016-12-31")
-    return template("events", events=get_active_month(smonth,emonth), categories=get_cat_all())
+    return template("events", events=get_active_month(smonth,emonth))
 
 @route("/about")
 def about():

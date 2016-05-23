@@ -41,17 +41,7 @@
                 <a href="/events/november"><li value="11">November</li></a>
                 <a href="/events/december"><li value="12">December</li></a>
               </ul>
-            </div>
-        <div id="categories_events">
-            <span class="label label-info">Mat<i class="fa fa-cutlery" aria-hidden="true"></i></span>
-            <span class="label label-info">Musik<i class="fa fa-music" aria-hidden="true"></i></span>
-            <span class="label label-info">Uteliv<i class="fa fa-glass" aria-hidden="true"></i></span>
-            <span class="label label-info">Konst<i class="fa fa-paint-brush" aria-hidden="true"></i></span>
-            <span class="label label-info">Scen<i class="fa fa-hand-peace-o" aria-hidden="true"></i></span>
-            <span class="label label-info">Shopping<i class="fa fa-cc-visa" aria-hidden="true"></i></span>
-            <span class="label label-info">Övrigt<i class="fa fa-question-circle-o" aria-hidden="true"></i></span>
-        </div>
-
+            </div>  
         % for i in events:
         <div class="event_flow col-md-12">
             <hr>
@@ -64,16 +54,9 @@
                     <h4>{{str(i['first_time'])[:-3]}}</h4>
                     <h4 class="selector">{{i['first_day']}} - {{i['last_day']}}</h4>
                     <h4>{{i['location']}} {{i['adress']}}</h4>
-                    <i class="fa fa-cutlery fa-2x" aria-hidden="true"></i>
-                    <i class="fa fa-music fa-2x" aria-hidden="true"></i>
-                    <i class="fa fa-glass fa-2x" aria-hidden="true"></i>
-                    <i class="fa fa-paint-brush fa-2x" aria-hidden="true"></i>
-                    <i class="fa fa-hand-peace-o fa-2x" aria-hidden="true"></i>
-                    <i class="fa fa-cc-visa fa-2x" aria-hidden="true"></i>
-                    <i class="fa fa-question-circle-o fa-2x" aria-hidden="true"></i>
                 </div>
         </div>
-        % end
+        %end
         <!-- /Event listing  -->
     <!-- /Page Content -->
 <!-- Include footsection -->

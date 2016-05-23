@@ -97,6 +97,16 @@
 
         <!-- Eventpage -->
         <main id="event_page">
+            <div id="categories_events">
+                <span class="label label-info">Mat<i class="fa fa-cutlery fa-2x" aria-hidden="true"></i></span>
+                <span class="label label-info">Musik<i class="fa fa-music fa-2x" aria-hidden="true"></i></span>
+                <span class="label label-info">Uteliv<i class="fa fa-glass fa-2x" aria-hidden="true"></i></span>
+                <span class="label label-info">Konst<i class="fa fa-paint-brush fa-2x" aria-hidden="true"></i></span>
+                <span class="label label-info">Scen<i class="fa fa-hand-peace-o fa-2x" aria-hidden="true"></i></span>
+                <span class="label label-info">Shopping<i class="fa fa-cc-visa fa-2x" aria-hidden="true"></i></span>
+                <span class="label label-info">Övrigt<i class="fa fa-question-circle-o fa-2x" aria-hidden="true"></i></span>
+            </div>
+            <hr>
             %if len(single) < 1:
                 <div class="alert alert-danger">Eventet du letar efter hittades inte!</div>
             %end
