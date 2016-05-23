@@ -158,6 +158,25 @@ h1 > small {
 .event_flow > a:hover{
     text-decoration: underline;
 }
+#sortlist{
+    text-align: center;
+}
+#sortlist{
+    width: 240px;
+}
+#sortlist > a > li:hover{
+    text-decoration: none;
+    color: #fff;
+    padding-right: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #FFAE72;
+}
+#sortlist > a:hover{
+    margin-top: 20px;
+    text-decoration: none;
+}
+
 #event_chooser{
     position: fixed;
     right: 0;

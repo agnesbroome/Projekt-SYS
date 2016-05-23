@@ -51,22 +51,22 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a href="events">Eventsamling</a>
+                        <a href="../events">Eventsamling</a>
                     </li>
                     <li>
-                        <a href="tips">Tipsa om event</a>
+                        <a href="../tips">Tipsa om event</a>
                     </li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Kontakt <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                             <li>
-                                <a href="about">Om oss</a>
+                                <a href="../about">Om oss</a>
                             </li>
                             <li>
-                                <a href="contact">Kontakta oss</a>
+                                <a href="../contact">Kontakta oss</a>
                             </li>
                             <li>
-                                <a href="faq">FAQ</a>
+                                <a href="../faq">FAQ</a>
                             </li>                            
                         </ul>
                     </li>

@@ -22,26 +22,26 @@
         <!-- /Page Heading/Breadcrumbs -->
 
         <!-- Event listing  -->
-        <div class="btn-group dropup" id="event_chooser">
-          <button type="button" id="orange" class="btn btn-lg btn-info dropdown-toggle btn-default" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Jag vill se alla event i  <span class="caret"></span>
-            <span class="sr-only">Toggle Dropdown</span>
-          </button>
-          <ul class="dropdown-menu" id="sortlist">
-            <li><a href="events">Januari</a></li>
-            <li><a href="#">Februari</a></li>
-            <li><a href="#">Mars</a></li>
-            <li><a href="#">April</a></li>
-            <li><a href="#">Maj</a></li>
-            <li><a href="#">Juni</a></li>
-            <li><a href="#">Juli</a></li>
-            <li><a href="#">Augusti</a></li>
-            <li><a href="#">September</a></li>
-            <li><a href="#">Oktober</a></li>
-            <li><a href="#">November</a></li>
-            <li><a href="#">December</a></li>
-          </ul>
-        </div>
+            <div class="btn-group dropup" id="event_chooser">
+              <button type="button" id="orange" class="btn btn-lg btn-info dropdown-toggle btn-default" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Jag vill se alla event i  <span class="caret"></span>
+                <span class="sr-only">Toggle Dropdown</span>
+              </button>
+              <ul class="dropdown-menu" name="sortlist" id="sortlist">
+                <a href="/events/januari"><li value="01">Januari</li></a>
+                <a href="/events/februari"><li value="02">Februari</li></a>
+                <a href="/events/mars"><li value="03">Mars</li></a>
+                <a href="/events/april"><li value="04">April</li></a>
+                <a href="/events/maj"><li value="05">Maj</li></a>
+                <a href="/events/juni"><li value="06">Juni</li></a>
+                <a href="/events/juli"><li value="07">Juli</li></a>
+                <a href="/events/augusti"><li value="08">Augusti</li></a>
+                <a href="/events/september"><li value="09">September</li></a>
+                <a href="/events/oktober"><li value="10">Oktober</li></a>
+                <a href="/events/november"><li value="11">November</li></a>
+                <a href="/events/december"><li value="12">December</li></a>
+              </ul>
+            </div>
         <div id="categories_events">
             <span class="label label-info">Mat<i class="fa fa-cutlery" aria-hidden="true"></i></span>
             <span class="label label-info">Musik<i class="fa fa-music" aria-hidden="true"></i></span>
@@ -50,7 +50,8 @@
             <span class="label label-info">Scen<i class="fa fa-hand-peace-o" aria-hidden="true"></i></span>
             <span class="label label-info">Shopping<i class="fa fa-cc-visa" aria-hidden="true"></i></span>
             <span class="label label-info">Övrigt<i class="fa fa-question-circle-o" aria-hidden="true"></i></span>
-        </div>           
+        </div>
+
         % for i in events:
         <div class="event_flow col-md-12">
             <hr>
@@ -59,7 +60,8 @@
             </div>
                 <div class="col-md-6">
                     <a href="eventpage/{{i['event_ID']}}"><h3>{{i['event_name']}}</h3></a>
-                    <h4>{{i['first_day']}} {{i['first_time']}}</h4>
+                    <h4>{{str(i['first_time'])[:-3]}}</h4>
+                    <h4 class="selector">{{i['first_day']}} - {{i['last_day']}}</h4>
                     <h4>{{i['location']}} {{i['adress']}}</h4>
                     <i class="fa fa-cutlery fa-2x" aria-hidden="true"></i>
                     <i class="fa fa-music fa-2x" aria-hidden="true"></i>
@@ -70,9 +72,7 @@
                     <i class="fa fa-question-circle-o fa-2x" aria-hidden="true"></i>
                 </div>
         </div>
-            
         % end
-        
         <!-- /Event listing  -->
     <!-- /Page Content -->
 <!-- Include footsection -->

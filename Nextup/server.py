@@ -70,6 +70,15 @@ def get_cat(GC):
     cur.execute(query)
     return cur.fetchall()
 
+def get_cat_all():
+    query = "SELECT category_event.ID_event, category.category_type \
+    FROM category_event \
+    INNER JOIN category \
+    ON category_event.ID_category=category.category_ID"
+    cur.execute(query)
+    return cur.fetchall()
+
+
 def fetch_length_new():
     new = "SELECT status FROM event \
         WHERE status = 'new'"
@@ -94,13 +103,13 @@ def get_events(handler):
     cur.execute(query)
     return cur.fetchall()
 
-
-
-def get_category():
-    query = "SELECT * FROM category \
-        WHERE event_ID = '%s'"
+def get_active_month(smonth,emonth):
+    query = "SELECT * FROM event \
+       WHERE status = '%s' AND last_day > '%s' AND last_day < '%s' \
+       ORDER BY first_day ASC" % ("active", smonth, emonth)
     cur.execute(query)
-    return cur.fetchal()
+    return cur.fetchall()
+
     
 #Static Routes
 
@@ -134,7 +143,47 @@ def tips():
 
 @route("/events")
 def events():
-    return template("events", events=get_active('100000'))
+    return template("events", events=get_active('100000'), categories=get_cat_all())
+
+@route("/events/<month>")
+def month(month):
+    if month == 'januari':
+        smonth = time.strftime("2016-01-00")
+        emonth = time.strftime("2016-02-00")
+    if month == 'februari':
+        smonth = time.strftime("2016-02-00")
+        emonth = time.strftime("2016-03-00")
+    if month == 'mars':
+        smonth = time.strftime("2016-03-00")
+        emonth = time.strftime("2016-04-00")
+    if month == 'april':
+        smonth = time.strftime("2016-04-00")
+        emonth = time.strftime("2016-05-00")
+    if month == 'maj':
+        smonth = time.strftime("2016-05-00")
+        emonth = time.strftime("2016-06-00")
+    if month == 'juni':
+        smonth = time.strftime("2016-06-00")
+        emonth = time.strftime("2016-07-00")
+    if month == 'juli':
+        smonth = time.strftime("2016-07-00")
+        emonth = time.strftime("2016-08-00")
+    if month == 'augusti':
+        smonth = time.strftime("2016-08-00")
+        emonth = time.strftime("2016-09-00")
+    if month == 'september':
+        smonth = time.strftime("2016-09-00")
+        emonth = time.strftime("2016-10-00")
+    if month == 'oktober':
+        smonth = time.strftime("2016-10-00")
+        emonth = time.strftime("2016-11-00")
+    if month == 'november':
+        smonth = time.strftime("2016-11-00")
+        emonth = time.strftime("2016-12-00")
+    if month == 'december':
+        smonth = time.strftime("2016-12-00")
+        emonth = time.strftime("2016-12-31")
+    return template("events", events=get_active_month(smonth,emonth), categories=get_cat_all())
 
 @route("/about")
 def about():
@@ -297,7 +346,6 @@ def contact_process():
     server.sendmail(fromaddr, toaddr, text)
     server.quit()
     return template("contact", sent=True)
- 
 
 
 run(app=app)
