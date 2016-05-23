@@ -171,15 +171,12 @@ h1 > small {
     text-decoration: underline;
 }
 #sortlist{
-    text-align: center;
-}
-#sortlist{
     width: 240px;
 }
 #sortlist > a > li:hover{
     text-decoration: none;
     color: #fff;
-    padding-right: 15px;
+    padding-left: 15px;
     padding-top: 10px;
     padding-bottom: 10px;
     background-color: #FFAE72;
