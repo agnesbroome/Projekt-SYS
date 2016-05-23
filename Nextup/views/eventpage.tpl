@@ -56,7 +56,7 @@
                         <a href="../tips">Tipsa om event</a>
                     </li>
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Kontakt <b class="caret"></b></a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Kontakt<b class="caret"></b></a>
                         <ul class="dropdown-menu">
                             <li>
                                 <a href="../about">Om oss</a>
@@ -106,7 +106,8 @@
                 </div>
                 <div class="row" >
                     <div class="col-md-6" id="divforimg" >
-                        <img class="img-responsive" src="../{{i['image']}}" alt="no image found" id="imgevent">
+                            <img class="img-responsive" src="../{{i['image']}}" onerror="this.src='../static/images/uploaded/no_image.png'" alt="no image found" id="imgevent">
+
                     </div>  
                     <div id="eventinfo" class="col-md-6">
                         <table class="table-hover table-condensed table-borderless">

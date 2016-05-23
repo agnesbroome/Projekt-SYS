@@ -20,6 +20,7 @@ body {
 body {
     padding-top: 50px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
 }
+
 a{
     color: #FF6C00;
 }
@@ -34,6 +35,7 @@ a:hover{
 .btn:hover{
     color: #FF6C00;
 }
+
 .img-portfolio {
     margin-bottom: 30px;
 }
@@ -54,7 +56,7 @@ label{
 /*Index Page style */
 
 .heigt-homepagepanel-index{
-    height: 350px;
+    min-height:  350px;
     font-size: 15px;
 }
  
@@ -81,6 +83,16 @@ h1 > small {
 
 .img-hover:hover {
     opacity: 0.8;
+}
+
+#tableNE{
+    font-size: 12px;
+}
+
+#tableNE td {
+    max-width: 200px;
+    border: solid;
+  	border-width: 1px 0;
 }
 
 /* Admin Page */
@@ -196,6 +208,7 @@ h1 > small {
     padding-left:10px;
     color: #000;
 }
+
 hr {
     width: 100%;
     margin-left: 0px;

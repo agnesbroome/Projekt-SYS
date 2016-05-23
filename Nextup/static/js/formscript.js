@@ -26,7 +26,7 @@ $(document).ready(function () {
             first_day : {
                 validators: {
                     notEmpty : {
-                        message: "Var god skriv in ett datum!"
+                        message: "Var god skriv in ett startdatum!"
                     },
                     date: {
                         format: 'YYYY-MM-DD',
@@ -37,7 +37,7 @@ $(document).ready(function () {
             last_day : {
                 validators: {
                     notEmpty : {
-                        message: "Var god skriv in ett datum!"
+                        message: "Var god skriv in ett slutdatum!"
                     },
                     date: {
                         format: 'YYYY-MM-DD',
@@ -48,14 +48,15 @@ $(document).ready(function () {
             first_time : {
                 validators : {
                     notEmpty : {
-                        message: "Var god skriv in en tid!"
+                        message: "Var god skriv in en starttid!"
                     }
                 }
             },
+            
             last_time : {
                 validators : {
                     notEmpty : {
-                        message: "Var god skriv in en tid!"
+                        message: "Var god skriv in en sluttid!"
                     }
                 }
             },
@@ -83,7 +84,7 @@ $(document).ready(function () {
             website : {
                 validators : {
                     notEmpty : {
-                        message: "Var god skriv in adressen till eventets webbplats!"
+                        message: "Var god skriv in adressen till eventets webbplats, använd https://!"
                     },
                     uri: {
                         message: "Var god skriv in en korrekt URL!"

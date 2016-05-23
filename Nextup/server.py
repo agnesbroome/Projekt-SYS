@@ -124,7 +124,7 @@ def server_static(filename):
 
 @route("/")
 def index():
-    return template("index", events=get_active('5'))
+    return template("index", events=get_active('8'))
 
 @route("/admin")
 def reroute():
@@ -280,7 +280,6 @@ def tips_process():
         name, ext = os.path.splitext(image.filename)
         if ext not in ('.png','.jpg','.jpeg'):
             return 'File extension not allowed.'
-
         save_path = "static/images/uploaded"
         file_path = "{path}/{file}".format(path=save_path, file=image.filename)
         image.save(file_path)
@@ -346,6 +345,17 @@ def contact_process():
     server.sendmail(fromaddr, toaddr, text)
     server.quit()
     return template("contact", sent=True)
+<<<<<<< HEAD
+=======
+ 
+@route("/sorting")
+def sort_events():
+    query = "SELECT first_date FROM event \
+    WHERE first_date = '2016-05-16'"
+    cur.execute(query)
+    return cur.fetchall()
+    return template("events")
+>>>>>>> 0669c53b54aab3d9ebb487e205bbae0a7d980192
 
 
 run(app=app)

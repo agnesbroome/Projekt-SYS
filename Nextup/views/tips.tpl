@@ -36,6 +36,7 @@
                     <!-- Categorys -->
                     <div class="form-group">
                         <div class="checkbox">
+                        <p>Välj minst en kategori!</p>
                         <label class="checkbox-inline">
                             <input type="checkbox" name="category" value="1"> Mat
                         </label>
@@ -102,7 +103,7 @@
                     <!-- /Organizer -->
                     <!-- Website -->
                     <div class="form-group">
-                        <label for="website" class="control-label">Webbsida</label>
+                        <label for="website" class="control-label">Länk till webbsida</label>
                         <input type="text" class="form-control" name="website" id="website" value="https://">
                     </div>
                     <!-- /Website -->
@@ -140,5 +141,5 @@
 <!-- Include footsection -->
 % include("foot.tpl")
 <!-- Include Bootstrap Validation form -->
-<!-- <script src="static/js/formscript.js"></script> -->
+<script src="static/js/formscript.js"></script>
 </html>
