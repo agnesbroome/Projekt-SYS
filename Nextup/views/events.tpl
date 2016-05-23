@@ -22,7 +22,6 @@
         <!-- /Page Heading/Breadcrumbs -->
 
         <!-- Event listing  -->
-<<<<<<< HEAD
             <div class="btn-group dropup" id="event_chooser">
               <button type="button" id="orange" class="btn btn-lg btn-info dropdown-toggle btn-default" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Jag vill se alla event i  <span class="caret"></span>
@@ -43,28 +42,6 @@
                 <a href="/events/december"><li value="12">December</li></a>
               </ul>
             </div>
-=======
-        <div class="btn-group dropup" id="event_chooser">
-          <button type="button" id="orange" class="btn btn-lg btn-info dropdown-toggle btn-default" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Jag vill se alla event i  <span class="caret"></span>
-            <span class="sr-only">Toggle Dropdown</span>
-          </button>
-          <ul class="dropdown-menu" id="sortlist">
-            <li><a href="events" action="/sorting" method="post">Januari</a></li>
-            <li><a href="#">Februari</a></li>
-            <li><a href="#">Mars</a></li>
-            <li><a href="#">April</a></li>
-            <li><a href="#">Maj</a></li>
-            <li><a href="#">Juni</a></li>
-            <li><a href="#">Juli</a></li>
-            <li><a href="#">Augusti</a></li>
-            <li><a href="#">September</a></li>
-            <li><a href="#">Oktober</a></li>
-            <li><a href="#">November</a></li>
-            <li><a href="#">December</a></li>
-          </ul>
-        </div>
->>>>>>> 0669c53b54aab3d9ebb487e205bbae0a7d980192
         <div id="categories_events">
             <span class="label label-info">Mat<i class="fa fa-cutlery" aria-hidden="true"></i></span>
             <span class="label label-info">Musik<i class="fa fa-music" aria-hidden="true"></i></span>
