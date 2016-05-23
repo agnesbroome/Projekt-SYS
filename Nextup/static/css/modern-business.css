@@ -174,12 +174,9 @@ h1 > small {
     width: 240px;
 }
 #sortlist > a > li:hover{
-    text-decoration: none;
-    color: #fff;
+    text-decoration: underline;
+    color: #000;
     padding-left: 15px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    background-color: #FFAE72;
 }
 #sortlist > a:hover{
     margin-top: 20px;
