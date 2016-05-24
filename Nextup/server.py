@@ -96,7 +96,7 @@ def get_events(handler):
 
 def get_active_month(smonth,emonth):
     query = "SELECT * FROM event \
-       WHERE status = '%s' AND last_day > '%s' AND last_day < '%s' \
+       WHERE status = '%s' AND first_day > '%s' AND first_day <= '%s' \
        ORDER BY first_day ASC" % ("active", smonth, emonth)
     cur.execute(query)
     return cur.fetchall()
@@ -138,42 +138,43 @@ def events():
 
 @route("/events/<month>")
 def month(month):
+    year = time.strftime('%Y')
     if month == 'januari':
-        smonth = time.strftime("2016-01-00")
-        emonth = time.strftime("2016-02-00")
+        smonth = time.strftime(year+'-01-00')
+        emonth = time.strftime(year+'-01-31')
     if month == 'februari':
-        smonth = time.strftime("2016-02-00")
-        emonth = time.strftime("2016-03-00")
+        smonth = time.strftime(year+'-02-00')
+        emonth = time.strftime(year+'-02-31')
     if month == 'mars':
-        smonth = time.strftime("2016-03-00")
-        emonth = time.strftime("2016-04-00")
+        smonth = time.strftime(year+'-03-00')
+        emonth = time.strftime(year+'-03-31')
     if month == 'april':
-        smonth = time.strftime("2016-04-00")
-        emonth = time.strftime("2016-05-00")
+        smonth = time.strftime(year+'-04-00')
+        emonth = time.strftime(year+'-04-31')
     if month == 'maj':
-        smonth = time.strftime("2016-05-00")
-        emonth = time.strftime("2016-06-00")
+        smonth = time.strftime(year+'-05-00')
+        emonth = time.strftime(year+'-05-31')
     if month == 'juni':
-        smonth = time.strftime("2016-06-00")
-        emonth = time.strftime("2016-07-00")
+        smonth = time.strftime(year+'-06-00')
+        emonth = time.strftime(year+'-06-31')
     if month == 'juli':
-        smonth = time.strftime("2016-07-00")
-        emonth = time.strftime("2016-08-00")
+        smonth = time.strftime(year+'-07-00')
+        emonth = time.strftime(year+'-07-31')
     if month == 'augusti':
-        smonth = time.strftime("2016-08-00")
-        emonth = time.strftime("2016-09-00")
+        smonth = time.strftime(year+'-08-00')
+        emonth = time.strftime(year+'-08-31')
     if month == 'september':
-        smonth = time.strftime("2016-09-00")
-        emonth = time.strftime("2016-10-00")
+        smonth = time.strftime(year+'-09-00')
+        emonth = time.strftime(year+'-09-31')
     if month == 'oktober':
-        smonth = time.strftime("2016-10-00")
-        emonth = time.strftime("2016-11-00")
+        smonth = time.strftime(year+'-10-00')
+        emonth = time.strftime(year+'-10-31')
     if month == 'november':
-        smonth = time.strftime("2016-11-00")
-        emonth = time.strftime("2016-12-00")
+        smonth = time.strftime(year+'-11-00')
+        emonth = time.strftime(year+'-11-31')
     if month == 'december':
-        smonth = time.strftime("2016-12-00")
-        emonth = time.strftime("2016-12-31")
+        smonth = time.strftime(year+'-12-00')
+        emonth = time.strftime(year+'-12-31')
     return template("events", events=get_active_month(smonth,emonth))
 
 @route("/about")

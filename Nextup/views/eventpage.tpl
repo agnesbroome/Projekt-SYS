@@ -118,8 +118,8 @@
                     <div class="col-md-6" id="divforimg" >
                             <img class="img-responsive" src="../{{i['image']}}" onerror="this.src='../static/images/uploaded/no_image.png'" alt="no image found" id="imgevent">
 
-                    </div>  
-                    <div id="eventinfo" class="col-md-6">
+                    </div>
+                    <div id="eventinfo" class="col-md-6"> 
                         <table class="table-hover table-condensed table-borderless">
                             <tbody>
                                 <tr>

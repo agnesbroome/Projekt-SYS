@@ -77,10 +77,10 @@
                     <div class="form-group form-inline">
                         <label for="first_time" class="control-label">Start</label>
                         <span class="glyphicon glyphicon-time"></span>
-                        <input class="form-control" placeholder="HH:MM" name="first_time" id="first_time">
+                        <input class="form-control" pattern="[0-9][0-9]:[0-9][0-9]" placeholder="HH:MM" maxlength="5" name="first_time" id="first_time">
                         <label for="last_time" class="control-label">Slut</label>
                         <span class="glyphicon glyphicon-time"></span>
-                        <input class="form-control" placeholder="HH:MM" name="last_time" id="last_time">
+                        <input class="form-control" pattern="[0-9][0-9]:[0-9][0-9]" placeholder="HH:MM" maxlength="5" name="last_time" id="last_time">
                     </div>
                     <!-- /Time -->
                     <!-- Location -->

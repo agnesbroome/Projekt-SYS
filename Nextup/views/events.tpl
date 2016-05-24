@@ -54,7 +54,7 @@
                     <h4 class="selector">Datum:  {{i['first_day']}} - {{i['last_day']}}</h4>
                     <h4>Tid:  {{str(i['first_time'])[:-3]}}</h4>
                     <h4>Plats:  {{i['location']}}</h4>
-                    <h4>Adres:  {{i['adress']}}</h4>
+                    <h4>Address:  {{i['adress']}}</h4>
                 </div>
         </div>
         %end

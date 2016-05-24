@@ -20,5 +20,9 @@ $(document).on("ready", function(){
 	};
 	if($('.single_cat:contains("Övrigt")').length > 0){
 		$(".single_cat").parent().append('  <i class="fa fa-question-circle-o fa-2x" aria-hidden="true"></i>')
-	};		
+	};
+	// $(".likes > i").mouseout(function(){
+	// 	$(this).class('fa fa-thumbs-o-up fa-3x')
+	// })
+
 });
